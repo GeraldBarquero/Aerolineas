@@ -8,7 +8,7 @@
     <SchemaVersion>
     </SchemaVersion>
     <ProjectGuid>{9D37F50F-D04F-4C43-A7CE-6E22D359355B}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Library</OutputType>
     <RootNamespace>Aerolineas.BLL</RootNamespace>
     <AssemblyName>Aerolineas.BLL</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -51,6 +51,9 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
     <Import Include="System" />
@@ -76,6 +79,10 @@
     <Compile Include="BLL\LineaAerea_Destino\BllLineaAerea_Destino.vb" />
     <Compile Include="BLL\Pais\BllPais.vb" />
     <Compile Include="BLL\Vuelo\BllVuelo.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

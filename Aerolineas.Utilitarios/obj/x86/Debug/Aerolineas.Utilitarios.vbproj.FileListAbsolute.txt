@@ -1,1 +1,6 @@
 C:\Users\roberto.valverde\Desktop\2 cuatrimestre 2014\Progra 2\Proyecto\Aerolineas\Aerolineas\Aerolineas.Utilitarios\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\GitHub\Aerolineas\Aerolineas.Utilitarios\bin\Debug\Aerolineas.Utilitarios.dll
+E:\GitHub\Aerolineas\Aerolineas.Utilitarios\bin\Debug\Aerolineas.Utilitarios.pdb
+E:\GitHub\Aerolineas\Aerolineas.Utilitarios\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\GitHub\Aerolineas\Aerolineas.Utilitarios\obj\x86\Debug\Aerolineas.Utilitarios.dll
+E:\GitHub\Aerolineas\Aerolineas.Utilitarios\obj\x86\Debug\Aerolineas.Utilitarios.pdb

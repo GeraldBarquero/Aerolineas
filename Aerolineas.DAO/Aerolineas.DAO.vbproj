@@ -8,7 +8,7 @@
     <SchemaVersion>
     </SchemaVersion>
     <ProjectGuid>{C820B848-4608-494F-9C17-F54A78EE0F36}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Library</OutputType>
     <RootNamespace>Aerolineas.DAO</RootNamespace>
     <AssemblyName>Aerolineas.DAO</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -50,6 +50,9 @@
   </PropertyGroup>
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
   </PropertyGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />

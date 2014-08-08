@@ -8,7 +8,7 @@
     <SchemaVersion>
     </SchemaVersion>
     <ProjectGuid>{EDE64871-157A-4831-9A10-C56FC592C493}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Library</OutputType>
     <RootNamespace>Aerolineas.Utilitarios</RootNamespace>
     <AssemblyName>Aerolineas.Utilitarios</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -50,6 +50,9 @@
   </PropertyGroup>
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
   </PropertyGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
