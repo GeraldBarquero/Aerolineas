@@ -1,0 +1,4 @@
+C:\Users\roberto.valverde\Desktop\2 cuatrimestre 2014\Progra 2\Proyecto\Aerolineas\Aerolineas\Aerolineas.UI\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\roberto.valverde\Desktop\2 cuatrimestre 2014\Progra 2\Proyecto\Aerolineas\Aerolineas\Aerolineas.UI\obj\x86\Debug\Aerolineas.UI.FrmClientes.resources
+C:\Users\roberto.valverde\Desktop\2 cuatrimestre 2014\Progra 2\Proyecto\Aerolineas\Aerolineas\Aerolineas.UI\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\roberto.valverde\Desktop\2 cuatrimestre 2014\Progra 2\Proyecto\Aerolineas\Aerolineas\Aerolineas.UI\obj\x86\Debug\GenerateResource.write.1.tlog
