@@ -29,4 +29,10 @@ Public Class FrmLogin
     Private Sub Cancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cancel.Click
         Me.Close()
     End Sub
+
+    Private Sub LinkLabel1_LinkClicked(sender As System.Object, e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+        Dim FormCliente As New FrmNuevoClientes
+        Me.Hide()
+        FormCliente.ShowDialog()
+    End Sub
 End Class

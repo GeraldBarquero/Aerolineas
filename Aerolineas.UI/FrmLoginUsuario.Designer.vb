@@ -107,7 +107,7 @@ Partial Class FrmLogin
         Me.Lb_Username.Text = "&Nombre de usuario"
         Me.Lb_Username.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'FrmLoginUsuario
+        'FrmLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -123,7 +123,7 @@ Partial Class FrmLogin
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "FrmLoginUsuario"
+        Me.Name = "FrmLogin"
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "FrmLoginUsuario"
