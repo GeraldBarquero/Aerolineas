@@ -6,6 +6,7 @@ Public Class BllUsuario
 #Region "Variables"
     Dim UsuarioDao As New DalUsuario
     Dim sql As String = ""
+    Public TipoUsuario As String
 #End Region
 
 #Region "Procedimientos"
@@ -14,6 +15,7 @@ Public Class BllUsuario
         Dim resultado As Boolean
         Try
             resultado = UsuarioDao.ConsultarUsuario(xObjUsuario)
+            TipoUsuario = UsuarioDao.tipoUsuario
         Catch ex As Exception
             objRespuesta.ResponseCode = 0
             objRespuesta.ResponseMessage = ex.ToString

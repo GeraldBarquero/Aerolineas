@@ -11,12 +11,14 @@ Namespace DAL.Usuario
         Private _mensajeError As String = ""
         Private _sql As String = ""
         Private _ejecutar As New Ejecutar.Ejecutar
+        Public tipoUsuario As String
 #End Region
 
 #Region "Funciones"
 
         Public Function ConsultarUsuario(ByVal xObjUsuario As OBJETOS.ObjUsuario) As Boolean
             Dim objRespuesta As New OBJETOS.ObjRespuesta
+
             Try
                 _conectar.ConectaDb(_mensajeError)
                 _sql = "SpUsuarioObtener"
@@ -27,6 +29,9 @@ Namespace DAL.Usuario
                 'Dim myType As Type = GetType(OBJETOS.ObjUsuario)
                 Dim dr As SqlDataReader
                 dr = cmd.ExecuteReader()
+                While dr.Read()
+                    tipoUsuario = dr.Item("TipoUsuario")
+                End While
                 If dr.HasRows = True Then
                     Return True
                 Else
