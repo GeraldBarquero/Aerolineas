@@ -20,12 +20,14 @@ Public Class FrmNuevoClientes
 
     Private Sub bnt_Add_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles bnt_Add.Click
         objCliente.NombreCliente = Txt_NombreCliente.Text
-        objCliente.identificacion = Txt_IdentificacionCliente.Text
+        objCliente.identification = Txt_IdentificacionCliente.Text
         objCliente.direccionExacta = Rtxt_DireccionCliente.Text
         objCliente.Edad = Txt_EdadCliente.Text
         objCliente.telefonoCasa = Txt_TelefonoCasaCliente.Text
         objCliente.telefonoCelular = Txt_TelefonoCelularCliente.Text
         objCliente.email = Txt_EmailCliente.Text
+        objCliente.PaisResidencia = "Costa Rica"
+        objCliente.password = "123456"
 
         _clienteBll.InsertarCliente(objCliente)
 
