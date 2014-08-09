@@ -10,14 +10,3 @@ E:\GitHub\Aerolineas\Aerolineas.BLL\bin\Debug\Aerolineas.Utilitarios.pdb
 E:\GitHub\Aerolineas\Aerolineas.BLL\obj\x86\Debug\ResolveAssemblyReference.cache
 E:\GitHub\Aerolineas\Aerolineas.BLL\obj\x86\Debug\Aerolineas.BLL.dll
 E:\GitHub\Aerolineas\Aerolineas.BLL\obj\x86\Debug\Aerolineas.BLL.pdb
-C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.BLL\bin\Debug\Aerolineas.BLL.dll
-C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.BLL\bin\Debug\Aerolineas.BLL.pdb
-C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.BLL\bin\Debug\Aerolineas.DAO.dll
-C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.BLL\bin\Debug\Aerolineas.Entidades.dll
-C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.BLL\bin\Debug\Aerolineas.Utilitarios.dll
-C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.BLL\bin\Debug\Aerolineas.DAO.pdb
-C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.BLL\bin\Debug\Aerolineas.Entidades.pdb
-C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.BLL\bin\Debug\Aerolineas.Utilitarios.pdb
-C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.BLL\obj\x86\Debug\Aerolineas.BLL.vbprojResolveAssemblyReference.cache
-C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.BLL\obj\x86\Debug\Aerolineas.BLL.dll
-C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.BLL\obj\x86\Debug\Aerolineas.BLL.pdb
