@@ -69,11 +69,7 @@
   <PropertyGroup>
     <StartupObject>Aerolineas.UI.FrmLogin</StartupObject>
     <StartupObject>Aerolineas.UI.FrmNuevoClientes</StartupObject>
-<<<<<<< HEAD
-=======
->>>>>>> 4addfa57d6f8c9dfae68c867a0262060136f0783
-    <StartupObject>Aerolineas.UI.FrmClientes</StartupObject>
->>>>>>> 1998047a8f5ff89068d979376c72b09309f7343b
+   <StartupObject>Aerolineas.UI.FrmClientes</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
