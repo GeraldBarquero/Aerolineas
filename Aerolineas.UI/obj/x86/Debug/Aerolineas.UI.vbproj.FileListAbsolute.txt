@@ -35,3 +35,5 @@ C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.UI\obj\x
 C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.UI\obj\x86\Debug\Aerolineas.UI.vbproj.GenerateResource.Cache
 C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.UI\obj\x86\Debug\Aerolineas.UI.exe
 C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.UI\obj\x86\Debug\Aerolineas.UI.pdb
+E:\GitHub\Aerolineas\Aerolineas.UI\obj\x86\Debug\Aerolineas.UI.FrmLogin.resources
+E:\GitHub\Aerolineas\Aerolineas.UI\obj\x86\Debug\Aerolineas.UI.Resources.resources
