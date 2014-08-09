@@ -78,7 +78,6 @@
     <Compile Include="BLL\LineaAerea\BllLineaAerea.vb" />
     <Compile Include="BLL\LineaAerea_Destino\BllLineaAerea_Destino.vb" />
     <Compile Include="BLL\Pais\BllPais.vb" />
-    <Compile Include="BLL\Usuario\BllUsuario.vb" />
     <Compile Include="BLL\Vuelo\BllVuelo.vb" />
   </ItemGroup>
   <ItemGroup>
