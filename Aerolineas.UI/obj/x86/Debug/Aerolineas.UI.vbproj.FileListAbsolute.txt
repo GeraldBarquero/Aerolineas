@@ -2,18 +2,20 @@ C:\Users\roberto.valverde\Desktop\2 cuatrimestre 2014\Progra 2\Proyecto\Aeroline
 C:\Users\roberto.valverde\Desktop\2 cuatrimestre 2014\Progra 2\Proyecto\Aerolineas\Aerolineas\Aerolineas.UI\obj\x86\Debug\Aerolineas.UI.FrmClientes.resources
 C:\Users\roberto.valverde\Desktop\2 cuatrimestre 2014\Progra 2\Proyecto\Aerolineas\Aerolineas\Aerolineas.UI\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\roberto.valverde\Desktop\2 cuatrimestre 2014\Progra 2\Proyecto\Aerolineas\Aerolineas\Aerolineas.UI\obj\x86\Debug\GenerateResource.write.1.tlog
-E:\GitHub\Aerolineas\Aerolineas.UI\obj\x86\Debug\ResolveAssemblyReference.cache
-E:\GitHub\Aerolineas\Aerolineas.UI\obj\x86\Debug\Aerolineas.UI.FrmClientes.resources
-E:\GitHub\Aerolineas\Aerolineas.UI\obj\x86\Debug\GenerateResource.read.1.tlog
-E:\GitHub\Aerolineas\Aerolineas.UI\obj\x86\Debug\GenerateResource.write.1.tlog
 E:\GitHub\Aerolineas\Aerolineas.UI\bin\Debug\Aerolineas.UI.exe
 E:\GitHub\Aerolineas\Aerolineas.UI\bin\Debug\Aerolineas.UI.pdb
 E:\GitHub\Aerolineas\Aerolineas.UI\bin\Debug\Aerolineas.BLL.dll
 E:\GitHub\Aerolineas\Aerolineas.UI\bin\Debug\Aerolineas.Entidades.dll
 E:\GitHub\Aerolineas\Aerolineas.UI\bin\Debug\Aerolineas.Utilitarios.dll
+E:\GitHub\Aerolineas\Aerolineas.UI\bin\Debug\Aerolineas.DAO.dll
 E:\GitHub\Aerolineas\Aerolineas.UI\bin\Debug\Aerolineas.BLL.pdb
 E:\GitHub\Aerolineas\Aerolineas.UI\bin\Debug\Aerolineas.Entidades.pdb
 E:\GitHub\Aerolineas\Aerolineas.UI\bin\Debug\Aerolineas.Utilitarios.pdb
+E:\GitHub\Aerolineas\Aerolineas.UI\bin\Debug\Aerolineas.DAO.pdb
+E:\GitHub\Aerolineas\Aerolineas.UI\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\GitHub\Aerolineas\Aerolineas.UI\obj\x86\Debug\Aerolineas.UI.FrmNuevoClientes.resources
+E:\GitHub\Aerolineas\Aerolineas.UI\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\GitHub\Aerolineas\Aerolineas.UI\obj\x86\Debug\GenerateResource.write.1.tlog
 E:\GitHub\Aerolineas\Aerolineas.UI\obj\x86\Debug\Aerolineas.UI.exe
 E:\GitHub\Aerolineas\Aerolineas.UI\obj\x86\Debug\Aerolineas.UI.pdb
 C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.UI\bin\Debug\Aerolineas.UI.exe
