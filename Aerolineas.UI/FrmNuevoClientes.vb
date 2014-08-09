@@ -26,8 +26,8 @@ Public Class FrmNuevoClientes
         objCliente.telefonoCasa = Txt_TelefonoCasaCliente.Text
         objCliente.telefonoCelular = Txt_TelefonoCelularCliente.Text
         objCliente.email = Txt_EmailCliente.Text
-        objCliente.PaisResidencia = "Costa Rica"
-        objCliente.password = "123456"
+        objCliente.PaisResidencia = Txt_PaisResidenciaCliente.Text
+        objCliente.password = Txt_PasswordCliente.Text
 
         _clienteBll.InsertarCliente(objCliente)
 

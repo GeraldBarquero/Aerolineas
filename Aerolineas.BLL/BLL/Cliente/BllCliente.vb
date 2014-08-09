@@ -27,6 +27,21 @@ Namespace Clientes
             End Try
             Return objRespuesta
         End Function
+
+
+        Public Function Select_Cliente_All(ByVal xObjCliente As OBJETOS.ObjCliente) As OBJETOS.ObjRespuesta
+            Dim objRespuesta As New OBJETOS.ObjRespuesta
+            Try
+
+                objRespuesta = ClienteDao.Select_Cliente_All(xObjCliente)
+            Catch ex As Exception
+                objRespuesta.ResponseCode = 0
+                objRespuesta.ResponseMessage = ex.ToString
+                objRespuesta.DsResponse = Nothing
+            End Try
+            Return objRespuesta
+        End Function
+
 #End Region
 
 

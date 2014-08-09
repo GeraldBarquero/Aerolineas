@@ -37,11 +37,15 @@ Partial Class FrmNuevoClientes
         Me.Txt_EmailCliente = New System.Windows.Forms.TextBox()
         Me.Txt_IdentificacionCliente = New System.Windows.Forms.TextBox()
         Me.Rtxt_DireccionCliente = New System.Windows.Forms.RichTextBox()
+        Me.Lb_PaisResidenciaCliente = New System.Windows.Forms.Label()
+        Me.Txt_PaisResidenciaCliente = New System.Windows.Forms.TextBox()
+        Me.Lb_PaswordCliente = New System.Windows.Forms.Label()
+        Me.Txt_PasswordCliente = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'bnt_Add
         '
-        Me.bnt_Add.Location = New System.Drawing.Point(57, 422)
+        Me.bnt_Add.Location = New System.Drawing.Point(46, 457)
         Me.bnt_Add.Name = "bnt_Add"
         Me.bnt_Add.Size = New System.Drawing.Size(75, 23)
         Me.bnt_Add.TabIndex = 0
@@ -69,7 +73,7 @@ Partial Class FrmNuevoClientes
         'Lb_DireccionCliente
         '
         Me.Lb_DireccionCliente.AutoSize = True
-        Me.Lb_DireccionCliente.Location = New System.Drawing.Point(12, 114)
+        Me.Lb_DireccionCliente.Location = New System.Drawing.Point(12, 242)
         Me.Lb_DireccionCliente.Name = "Lb_DireccionCliente"
         Me.Lb_DireccionCliente.Size = New System.Drawing.Size(55, 13)
         Me.Lb_DireccionCliente.TabIndex = 3
@@ -78,7 +82,7 @@ Partial Class FrmNuevoClientes
         'Lb_Edad
         '
         Me.Lb_Edad.AutoSize = True
-        Me.Lb_Edad.Location = New System.Drawing.Point(14, 246)
+        Me.Lb_Edad.Location = New System.Drawing.Point(17, 322)
         Me.Lb_Edad.Name = "Lb_Edad"
         Me.Lb_Edad.Size = New System.Drawing.Size(35, 13)
         Me.Lb_Edad.TabIndex = 4
@@ -87,7 +91,7 @@ Partial Class FrmNuevoClientes
         'LbTelefonoCasaCliente
         '
         Me.LbTelefonoCasaCliente.AutoSize = True
-        Me.LbTelefonoCasaCliente.Location = New System.Drawing.Point(14, 278)
+        Me.LbTelefonoCasaCliente.Location = New System.Drawing.Point(14, 350)
         Me.LbTelefonoCasaCliente.Name = "LbTelefonoCasaCliente"
         Me.LbTelefonoCasaCliente.Size = New System.Drawing.Size(79, 13)
         Me.LbTelefonoCasaCliente.TabIndex = 5
@@ -96,7 +100,7 @@ Partial Class FrmNuevoClientes
         'Lb_TelefonoCelularCliente
         '
         Me.Lb_TelefonoCelularCliente.AutoSize = True
-        Me.Lb_TelefonoCelularCliente.Location = New System.Drawing.Point(14, 312)
+        Me.Lb_TelefonoCelularCliente.Location = New System.Drawing.Point(14, 384)
         Me.Lb_TelefonoCelularCliente.Name = "Lb_TelefonoCelularCliente"
         Me.Lb_TelefonoCelularCliente.Size = New System.Drawing.Size(87, 13)
         Me.Lb_TelefonoCelularCliente.TabIndex = 6
@@ -105,7 +109,7 @@ Partial Class FrmNuevoClientes
         'Lb_EmailCliente
         '
         Me.Lb_EmailCliente.AutoSize = True
-        Me.Lb_EmailCliente.Location = New System.Drawing.Point(14, 346)
+        Me.Lb_EmailCliente.Location = New System.Drawing.Point(14, 418)
         Me.Lb_EmailCliente.Name = "Lb_EmailCliente"
         Me.Lb_EmailCliente.Size = New System.Drawing.Size(38, 13)
         Me.Lb_EmailCliente.TabIndex = 7
@@ -120,28 +124,28 @@ Partial Class FrmNuevoClientes
         '
         'Txt_EdadCliente
         '
-        Me.Txt_EdadCliente.Location = New System.Drawing.Point(118, 239)
+        Me.Txt_EdadCliente.Location = New System.Drawing.Point(118, 315)
         Me.Txt_EdadCliente.Name = "Txt_EdadCliente"
         Me.Txt_EdadCliente.Size = New System.Drawing.Size(51, 20)
         Me.Txt_EdadCliente.TabIndex = 9
         '
         'Txt_TelefonoCasaCliente
         '
-        Me.Txt_TelefonoCasaCliente.Location = New System.Drawing.Point(118, 275)
+        Me.Txt_TelefonoCasaCliente.Location = New System.Drawing.Point(118, 347)
         Me.Txt_TelefonoCasaCliente.Name = "Txt_TelefonoCasaCliente"
         Me.Txt_TelefonoCasaCliente.Size = New System.Drawing.Size(169, 20)
         Me.Txt_TelefonoCasaCliente.TabIndex = 11
         '
         'Txt_TelefonoCelularCliente
         '
-        Me.Txt_TelefonoCelularCliente.Location = New System.Drawing.Point(118, 309)
+        Me.Txt_TelefonoCelularCliente.Location = New System.Drawing.Point(118, 381)
         Me.Txt_TelefonoCelularCliente.Name = "Txt_TelefonoCelularCliente"
         Me.Txt_TelefonoCelularCliente.Size = New System.Drawing.Size(169, 20)
         Me.Txt_TelefonoCelularCliente.TabIndex = 12
         '
         'Txt_EmailCliente
         '
-        Me.Txt_EmailCliente.Location = New System.Drawing.Point(118, 346)
+        Me.Txt_EmailCliente.Location = New System.Drawing.Point(118, 418)
         Me.Txt_EmailCliente.Name = "Txt_EmailCliente"
         Me.Txt_EmailCliente.Size = New System.Drawing.Size(302, 20)
         Me.Txt_EmailCliente.TabIndex = 13
@@ -155,17 +159,53 @@ Partial Class FrmNuevoClientes
         '
         'Rtxt_DireccionCliente
         '
-        Me.Rtxt_DireccionCliente.Location = New System.Drawing.Point(118, 114)
+        Me.Rtxt_DireccionCliente.Location = New System.Drawing.Point(118, 200)
         Me.Rtxt_DireccionCliente.Name = "Rtxt_DireccionCliente"
         Me.Rtxt_DireccionCliente.Size = New System.Drawing.Size(300, 96)
         Me.Rtxt_DireccionCliente.TabIndex = 16
         Me.Rtxt_DireccionCliente.Text = ""
+        '
+        'Lb_PaisResidenciaCliente
+        '
+        Me.Lb_PaisResidenciaCliente.AutoSize = True
+        Me.Lb_PaisResidenciaCliente.Location = New System.Drawing.Point(12, 164)
+        Me.Lb_PaisResidenciaCliente.Name = "Lb_PaisResidenciaCliente"
+        Me.Lb_PaisResidenciaCliente.Size = New System.Drawing.Size(86, 13)
+        Me.Lb_PaisResidenciaCliente.TabIndex = 17
+        Me.Lb_PaisResidenciaCliente.Text = "Pais Residencia:"
+        '
+        'Txt_PaisResidenciaCliente
+        '
+        Me.Txt_PaisResidenciaCliente.Location = New System.Drawing.Point(118, 161)
+        Me.Txt_PaisResidenciaCliente.Name = "Txt_PaisResidenciaCliente"
+        Me.Txt_PaisResidenciaCliente.Size = New System.Drawing.Size(169, 20)
+        Me.Txt_PaisResidenciaCliente.TabIndex = 18
+        '
+        'Lb_PaswordCliente
+        '
+        Me.Lb_PaswordCliente.AutoSize = True
+        Me.Lb_PaswordCliente.Location = New System.Drawing.Point(12, 121)
+        Me.Lb_PaswordCliente.Name = "Lb_PaswordCliente"
+        Me.Lb_PaswordCliente.Size = New System.Drawing.Size(56, 13)
+        Me.Lb_PaswordCliente.TabIndex = 19
+        Me.Lb_PaswordCliente.Text = "Password:"
+        '
+        'Txt_PasswordCliente
+        '
+        Me.Txt_PasswordCliente.Location = New System.Drawing.Point(118, 118)
+        Me.Txt_PasswordCliente.Name = "Txt_PasswordCliente"
+        Me.Txt_PasswordCliente.Size = New System.Drawing.Size(167, 20)
+        Me.Txt_PasswordCliente.TabIndex = 20
         '
         'FrmNuevoClientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(459, 492)
+        Me.Controls.Add(Me.Txt_PasswordCliente)
+        Me.Controls.Add(Me.Lb_PaswordCliente)
+        Me.Controls.Add(Me.Txt_PaisResidenciaCliente)
+        Me.Controls.Add(Me.Lb_PaisResidenciaCliente)
         Me.Controls.Add(Me.Rtxt_DireccionCliente)
         Me.Controls.Add(Me.Txt_IdentificacionCliente)
         Me.Controls.Add(Me.Txt_EmailCliente)
@@ -202,4 +242,8 @@ Partial Class FrmNuevoClientes
     Friend WithEvents Txt_EmailCliente As System.Windows.Forms.TextBox
     Friend WithEvents Txt_IdentificacionCliente As System.Windows.Forms.TextBox
     Friend WithEvents Rtxt_DireccionCliente As System.Windows.Forms.RichTextBox
+    Friend WithEvents Lb_PaisResidenciaCliente As System.Windows.Forms.Label
+    Friend WithEvents Txt_PaisResidenciaCliente As System.Windows.Forms.TextBox
+    Friend WithEvents Lb_PaswordCliente As System.Windows.Forms.Label
+    Friend WithEvents Txt_PasswordCliente As System.Windows.Forms.TextBox
 End Class

@@ -71,6 +71,7 @@
     <Compile Include="DAL\Destino\DalDestino.vb" />
     <Compile Include="DAL\Ejecutar.vb" />
     <Compile Include="DAL\Estado\DalEstado.vb" />
+    <Compile Include="DAL\LineaAerea\DalLineaAerea.vb" />
     <Compile Include="DAL\LineaAerea\LineaAerea.vb" />
     <Compile Include="DAL\LineaAerea_Destino\DalLineaAerea_Destino.vb" />
     <Compile Include="DAL\Pais\DalPais.vb" />

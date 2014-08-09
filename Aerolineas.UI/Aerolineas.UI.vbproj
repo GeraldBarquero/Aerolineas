@@ -69,7 +69,7 @@
   <PropertyGroup>
     <StartupObject>Aerolineas.UI.FrmLogin</StartupObject>
     <StartupObject>Aerolineas.UI.FrmNuevoClientes</StartupObject>
-    <StartupObject>Aerolineas.UI.FrmLogin</StartupObject>
+    <StartupObject>Aerolineas.UI.FrmClienteLista</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
@@ -133,10 +133,28 @@
     <Compile Include="FrmMenuClientes.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmNuevaLineaAerea.Designer.vb">
+      <DependentUpon>FrmNuevaLineaAerea.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNuevaLineaAerea.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmNuevoClientes.Designer.vb">
       <DependentUpon>FrmNuevoClientes.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmNuevoClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNuevoDestino.Designer.vb">
+      <DependentUpon>FrmNuevoDestino.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNuevoDestino.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmClienteLista.Designer.vb">
+      <DependentUpon>FrmClienteLista.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmClienteLista.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
@@ -152,6 +170,7 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
@@ -166,8 +185,17 @@
     <EmbeddedResource Include="FrmMenuClientes.resx">
       <DependentUpon>FrmMenuClientes.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmNuevaLineaAerea.resx">
+      <DependentUpon>FrmNuevaLineaAerea.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmNuevoClientes.resx">
       <DependentUpon>FrmNuevoClientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNuevoDestino.resx">
+      <DependentUpon>FrmNuevoDestino.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmClienteLista.resx">
+      <DependentUpon>FrmClienteLista.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
