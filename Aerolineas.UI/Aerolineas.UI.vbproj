@@ -67,7 +67,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Aerolineas.UI.FrmClientes</StartupObject>
+    <StartupObject>Aerolineas.UI.FrmNuevoClientes</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
@@ -113,10 +113,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmClientes.Designer.vb">
-      <DependentUpon>FrmClientes.vb</DependentUpon>
+    <Compile Include="FrmNuevoClientes.Designer.vb">
+      <DependentUpon>FrmNuevoClientes.vb</DependentUpon>
     </Compile>
-    <Compile Include="FrmClientes.vb">
+    <Compile Include="FrmNuevoClientes.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\Settings.Designer.vb">
@@ -132,8 +132,8 @@
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="FrmClientes.resx">
-      <DependentUpon>FrmClientes.vb</DependentUpon>
+    <EmbeddedResource Include="FrmNuevoClientes.resx">
+      <DependentUpon>FrmNuevoClientes.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
