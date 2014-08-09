@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="OBJETOS\ObjCliente.vb" />
     <Compile Include="OBJETOS\ObjRespuesta.vb" />
+    <Compile Include="OBJETOS\ObjUsuario.vb" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Data" />

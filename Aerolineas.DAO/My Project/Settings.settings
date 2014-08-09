@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="Conn" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">Data Source=LSTKCR39172;Initial Catalog=Aerolineas;Persist Security Info=True;User ID=Aerolineas;Password=Aerolineas
+      <Value Profile="(Default)">Data Source=localhost;Initial Catalog=Aerolineas;Persist Security Info=True;User ID=Aerolineas;Password=Aerolineas
 
 </Value>
     </Setting>
