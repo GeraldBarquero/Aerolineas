@@ -67,11 +67,8 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-<<<<<<< HEAD
     <StartupObject>Aerolineas.UI.FrmLogin</StartupObject>
-=======
     <StartupObject>Aerolineas.UI.FrmNuevoClientes</StartupObject>
->>>>>>> 4addfa57d6f8c9dfae68c867a0262060136f0783
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
