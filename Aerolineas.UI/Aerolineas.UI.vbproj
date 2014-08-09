@@ -69,7 +69,7 @@
   <PropertyGroup>
     <StartupObject>Aerolineas.UI.FrmLogin</StartupObject>
     <StartupObject>Aerolineas.UI.FrmNuevoClientes</StartupObject>
-   <StartupObject>Aerolineas.UI.FrmClientes</StartupObject>
+    <StartupObject>Aerolineas.UI.FrmLogin</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
@@ -115,11 +115,22 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmLoginUsuario.Designer.vb">
+      <DependentUpon>FrmLoginUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLoginUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmNuevoClientes.Designer.vb">
       <DependentUpon>FrmNuevoClientes.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmNuevoClientes.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="My Project\Settings.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -134,8 +145,16 @@
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FrmLoginUsuario.resx">
+      <DependentUpon>FrmLoginUsuario.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmNuevoClientes.resx">
       <DependentUpon>FrmNuevoClientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -145,6 +164,9 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AirportLogo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

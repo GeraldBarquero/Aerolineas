@@ -74,6 +74,7 @@
     <Compile Include="DAL\LineaAerea\LineaAerea.vb" />
     <Compile Include="DAL\LineaAerea_Destino\DalLineaAerea_Destino.vb" />
     <Compile Include="DAL\Pais\DalPais.vb" />
+    <Compile Include="DAL\Usuario\DalUsuario.vb" />
     <Compile Include="DAL\Vuelo\DalVuelo.vb" />
     <Compile Include="My Project\Settings.Designer.vb">
       <AutoGen>True</AutoGen>

@@ -16,7 +16,7 @@ Namespace Clientes
         Public Function InsertarCliente(ByVal xObjCliente As OBJETOS.ObjCliente) As OBJETOS.ObjRespuesta
             Dim objRespuesta As New OBJETOS.ObjRespuesta
 
-
+            Return objRespuesta
         End Function
 #End Region
 
