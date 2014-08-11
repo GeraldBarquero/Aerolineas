@@ -1,7 +1,7 @@
 ﻿Imports Aerolineas.Entidades
 Imports System.Data
 Imports System.Data.SqlClient
-Namespace Dal.Cliente
+Namespace DAL.Cliente
     Public Class DalCliente
 
 

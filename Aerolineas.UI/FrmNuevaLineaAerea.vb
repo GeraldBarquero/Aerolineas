@@ -15,9 +15,6 @@ Public Class FrmNuevaLineaAerea
     Private objLineaAerea As New OBJETOS.ObjLineaAerea
     Private _LineaAereaBll As New BLL.LineaAerea.BllLineaAerea
     Public objRespuesta As New OBJETOS.ObjRespuesta
-
-    ''CargarGridLineasAereas
-    Private _ejecutarBll As LineaAerea.BllLineaAerea
     Private _ds As New DataSet
 
 
@@ -40,12 +37,13 @@ Public Class FrmNuevaLineaAerea
         Else
             MessageBox.Show("La linea Aerea " & Txt_NombreLineaAerea.Text & " no se registro correctamente en la base de datos", "Fallido")
         End If
+        CargarGridLineasAereas()
     End Sub
 
     Public Sub CargarGridLineasAereas()
         Dim Objrespuesta As New OBJETOS.ObjRespuesta
 
-        Objrespuesta = _ejecutarBll.Select_LineaAereas_All(objLineaAerea)
+        Objrespuesta = _LineaAereaBll.Select_LineaAereas_All(objLineaAerea)
 
         _ds = Utilitarios.UTL.Utilitarios.Utilitarios.UnzipDataSet(Objrespuesta.ByteResponseObject)
         Dgv_ListaLineasAereas.DataSource = _ds.Tables("Datos")
@@ -57,7 +55,7 @@ Public Class FrmNuevaLineaAerea
     Sub datosIniciales()
         Try
             Dim objRespuesta As New OBJETOS.ObjRespuesta
-            objRespuesta = _ejecutarBll.Select_LineaAereas_All(objLineaAerea)
+            objRespuesta = _LineaAereaBll.Select_LineaAereas_All(objLineaAerea)
             _ds = Utilitarios.UTL.Utilitarios.Utilitarios.UnzipDataSet(objRespuesta.ByteResponseObject)
 
             Dgv_ListaLineasAereas.DataSource = _ds.Tables(0)

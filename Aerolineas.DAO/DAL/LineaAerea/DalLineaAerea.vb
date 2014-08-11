@@ -1,6 +1,6 @@
 ﻿Imports Aerolineas.Entidades
 
-Namespace Dal.LineaAerea
+Namespace DAL.LineaAerea
 
 
     Public Class DalLineaAerea

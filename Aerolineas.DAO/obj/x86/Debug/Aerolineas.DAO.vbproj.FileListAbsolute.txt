@@ -19,3 +19,13 @@ E:\GitHub\Aerolineas\Aerolineas.DAO\bin\Debug\Aerolineas.Utilitarios.pdb
 E:\GitHub\Aerolineas\Aerolineas.DAO\obj\x86\Debug\ResolveAssemblyReference.cache
 E:\GitHub\Aerolineas\Aerolineas.DAO\obj\x86\Debug\Aerolineas.DAO.dll
 E:\GitHub\Aerolineas\Aerolineas.DAO\obj\x86\Debug\Aerolineas.DAO.pdb
+D:\UIA\Git\Aerolineas\Aerolineas.DAO\bin\Debug\Aerolineas.DAO.dll.config
+D:\UIA\Git\Aerolineas\Aerolineas.DAO\bin\Debug\Aerolineas.DAO.dll
+D:\UIA\Git\Aerolineas\Aerolineas.DAO\bin\Debug\Aerolineas.DAO.pdb
+D:\UIA\Git\Aerolineas\Aerolineas.DAO\bin\Debug\Aerolineas.Entidades.dll
+D:\UIA\Git\Aerolineas\Aerolineas.DAO\bin\Debug\Aerolineas.Utilitarios.dll
+D:\UIA\Git\Aerolineas\Aerolineas.DAO\bin\Debug\Aerolineas.Entidades.pdb
+D:\UIA\Git\Aerolineas\Aerolineas.DAO\bin\Debug\Aerolineas.Utilitarios.pdb
+D:\UIA\Git\Aerolineas\Aerolineas.DAO\obj\x86\Debug\Aerolineas.DAO.vbprojResolveAssemblyReference.cache
+D:\UIA\Git\Aerolineas\Aerolineas.DAO\obj\x86\Debug\Aerolineas.DAO.dll
+D:\UIA\Git\Aerolineas\Aerolineas.DAO\obj\x86\Debug\Aerolineas.DAO.pdb

@@ -21,3 +21,14 @@ E:\GitHub\Aerolineas\Aerolineas.BLL\bin\Debug\Aerolineas.Utilitarios.pdb
 E:\GitHub\Aerolineas\Aerolineas.BLL\obj\x86\Debug\ResolveAssemblyReference.cache
 E:\GitHub\Aerolineas\Aerolineas.BLL\obj\x86\Debug\Aerolineas.BLL.dll
 E:\GitHub\Aerolineas\Aerolineas.BLL\obj\x86\Debug\Aerolineas.BLL.pdb
+D:\UIA\Git\Aerolineas\Aerolineas.BLL\bin\Debug\Aerolineas.BLL.dll
+D:\UIA\Git\Aerolineas\Aerolineas.BLL\bin\Debug\Aerolineas.BLL.pdb
+D:\UIA\Git\Aerolineas\Aerolineas.BLL\bin\Debug\Aerolineas.DAO.dll
+D:\UIA\Git\Aerolineas\Aerolineas.BLL\bin\Debug\Aerolineas.Entidades.dll
+D:\UIA\Git\Aerolineas\Aerolineas.BLL\bin\Debug\Aerolineas.Utilitarios.dll
+D:\UIA\Git\Aerolineas\Aerolineas.BLL\bin\Debug\Aerolineas.DAO.pdb
+D:\UIA\Git\Aerolineas\Aerolineas.BLL\bin\Debug\Aerolineas.Entidades.pdb
+D:\UIA\Git\Aerolineas\Aerolineas.BLL\bin\Debug\Aerolineas.Utilitarios.pdb
+D:\UIA\Git\Aerolineas\Aerolineas.BLL\obj\x86\Debug\Aerolineas.BLL.vbprojResolveAssemblyReference.cache
+D:\UIA\Git\Aerolineas\Aerolineas.BLL\obj\x86\Debug\Aerolineas.BLL.dll
+D:\UIA\Git\Aerolineas\Aerolineas.BLL\obj\x86\Debug\Aerolineas.BLL.pdb

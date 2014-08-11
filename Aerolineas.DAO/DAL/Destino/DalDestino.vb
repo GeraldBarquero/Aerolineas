@@ -1,5 +1,5 @@
 ﻿Imports Aerolineas.Entidades
-Namespace Dal.Destino
+Namespace DAL.Destino
 
 
 
