@@ -25,6 +25,8 @@ Partial Class FrmNuevaLineaAerea
         Me.Bnt_Add = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Txt_NombreLineaAerea = New System.Windows.Forms.TextBox()
+        Me.Dgv_ListaLineasAereas = New System.Windows.Forms.DataGridView()
+        CType(Me.Dgv_ListaLineasAereas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Bnt_Add
@@ -52,16 +54,26 @@ Partial Class FrmNuevaLineaAerea
         Me.Txt_NombreLineaAerea.Size = New System.Drawing.Size(170, 20)
         Me.Txt_NombreLineaAerea.TabIndex = 2
         '
+        'Dgv_ListaLineasAereas
+        '
+        Me.Dgv_ListaLineasAereas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.Dgv_ListaLineasAereas.Location = New System.Drawing.Point(314, 42)
+        Me.Dgv_ListaLineasAereas.Name = "Dgv_ListaLineasAereas"
+        Me.Dgv_ListaLineasAereas.Size = New System.Drawing.Size(547, 236)
+        Me.Dgv_ListaLineasAereas.TabIndex = 3
+        '
         'FrmNuevaLineaAerea
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 199)
+        Me.ClientSize = New System.Drawing.Size(886, 314)
+        Me.Controls.Add(Me.Dgv_ListaLineasAereas)
         Me.Controls.Add(Me.Txt_NombreLineaAerea)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Bnt_Add)
         Me.Name = "FrmNuevaLineaAerea"
         Me.Text = "FrmNuevaLineaAerea"
+        CType(Me.Dgv_ListaLineasAereas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -69,4 +81,5 @@ Partial Class FrmNuevaLineaAerea
     Friend WithEvents Bnt_Add As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Txt_NombreLineaAerea As System.Windows.Forms.TextBox
+    Friend WithEvents Dgv_ListaLineasAereas As System.Windows.Forms.DataGridView
 End Class

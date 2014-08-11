@@ -27,6 +27,8 @@ Partial Class FrmNuevoDestino
         Me.Txt_NombreDestino = New System.Windows.Forms.TextBox()
         Me.Lb_CodigoDestino = New System.Windows.Forms.Label()
         Me.Txt_CodigoDestino = New System.Windows.Forms.TextBox()
+        Me.Dgv_ListaDestinos = New System.Windows.Forms.DataGridView()
+        CType(Me.Dgv_ListaDestinos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Bnt_add
@@ -70,11 +72,20 @@ Partial Class FrmNuevoDestino
         Me.Txt_CodigoDestino.Size = New System.Drawing.Size(124, 20)
         Me.Txt_CodigoDestino.TabIndex = 4
         '
+        'Dgv_ListaDestinos
+        '
+        Me.Dgv_ListaDestinos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.Dgv_ListaDestinos.Location = New System.Drawing.Point(311, 36)
+        Me.Dgv_ListaDestinos.Name = "Dgv_ListaDestinos"
+        Me.Dgv_ListaDestinos.Size = New System.Drawing.Size(398, 177)
+        Me.Dgv_ListaDestinos.TabIndex = 5
+        '
         'FrmNuevoDestino
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 262)
+        Me.ClientSize = New System.Drawing.Size(736, 262)
+        Me.Controls.Add(Me.Dgv_ListaDestinos)
         Me.Controls.Add(Me.Txt_CodigoDestino)
         Me.Controls.Add(Me.Lb_CodigoDestino)
         Me.Controls.Add(Me.Txt_NombreDestino)
@@ -82,6 +93,7 @@ Partial Class FrmNuevoDestino
         Me.Controls.Add(Me.Bnt_add)
         Me.Name = "FrmNuevoDestino"
         Me.Text = "FrmNuevoDestino"
+        CType(Me.Dgv_ListaDestinos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -91,4 +103,5 @@ Partial Class FrmNuevoDestino
     Friend WithEvents Txt_NombreDestino As System.Windows.Forms.TextBox
     Friend WithEvents Lb_CodigoDestino As System.Windows.Forms.Label
     Friend WithEvents Txt_CodigoDestino As System.Windows.Forms.TextBox
+    Friend WithEvents Dgv_ListaDestinos As System.Windows.Forms.DataGridView
 End Class

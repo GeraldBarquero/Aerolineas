@@ -30,6 +30,21 @@ Namespace LineaAerea
         End Function
 
 
+
+        Public Function Select_LineaAereas_All(ByVal xObjLineaAerea As OBJETOS.ObjLineaAerea) As OBJETOS.ObjRespuesta
+            Dim objRespuesta As New OBJETOS.ObjRespuesta
+            Try
+
+                objRespuesta = LineaAereaDao.Select_LineaAereas_All(xObjLineaAerea)
+            Catch ex As Exception
+                objRespuesta.ResponseCode = 0
+                objRespuesta.ResponseMessage = ex.ToString
+                objRespuesta.DsResponse = Nothing
+            End Try
+            Return objRespuesta
+        End Function
+
+
 #End Region
 
     End Class

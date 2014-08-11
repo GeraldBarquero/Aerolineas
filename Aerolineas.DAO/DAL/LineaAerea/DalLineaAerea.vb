@@ -9,6 +9,8 @@ Namespace Dal.LineaAerea
         Private _ejecutar As New Ejecutar.Ejecutar
         Private _mensajeError As String = ""
 
+        Private _sql = ""
+
 #End Region
 
 #Region "Funciones"
@@ -26,7 +28,25 @@ Namespace Dal.LineaAerea
         End Function
 
 
+        Public Function Select_LineaAereas_All(ByVal xObjLineaAerea As OBJETOS.ObjLineaAerea) As OBJETOS.ObjRespuesta
+            Dim objRespuesta As New OBJETOS.ObjRespuesta
+            Try
+                _sql = "SpLineaAereaListar"
+                objRespuesta = _ejecutar.SQL_Ejecuta_Sentencia(xObjLineaAerea, _sql, _mensajeError)
+            Catch ex As Exception
+                objRespuesta.ResponseCode = 0
+                objRespuesta.ResponseMessage = ex.ToString
+                objRespuesta.DsResponse = Nothing
+            End Try
+            Return objRespuesta
+        End Function
+
+
+
 #End Region
+
+
+
 
     End Class
 End Namespace
