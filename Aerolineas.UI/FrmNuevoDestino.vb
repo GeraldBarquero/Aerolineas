@@ -17,6 +17,26 @@ Public Class FrmNuevoDestino
 
 
 
+    Sub datosIniciales()
+        Try
+            Dim objRespuesta As New OBJETOS.ObjRespuesta
+
+            'objRespuesta = _DestinoBll.Select_Destino_All(objDestino)
+            '_ds = Utilitarios.UTL.Utilitarios.Utilitarios.UnzipDataSet(objRespuesta.ByteResponseObject)
+            'Dgv_ListaDestinos.DataSource = _ds.Tables(0)
+            objRespuesta = _PaisBll.Select_Pais_All(objPais)
+            _ds = Utilitarios.UTL.Utilitarios.Utilitarios.UnzipDataSet(objRespuesta.ByteResponseObject)
+            Cmb_Pais.ValueMember = _ds.Tables(0).Columns("IdPais").ColumnName
+            Cmb_Pais.DisplayMember = _ds.Tables(0).Columns("NombrePais").ColumnName
+            Cmb_Pais.DataSource = _ds.Tables("Datos")
+        Catch ex As Exception
+        End Try
+    End Sub
+
+    Private Sub FrmNuevoDestino_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        datosIniciales()
+    End Sub
+
     Private Sub Bnt_add_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Bnt_add.Click
         objDestino.nombreDestino = Txt_NombreDestino.Text
         objDestino.codigoDestino = Txt_CodigoDestino.Text
@@ -35,25 +55,10 @@ Public Class FrmNuevoDestino
         End If
     End Sub
 
-
-
-    Sub datosIniciales()
-        Try
-            Dim objRespuesta As New OBJETOS.ObjRespuesta
-
-            'objRespuesta = _DestinoBll.Select_Destino_All(objDestino)
-            '_ds = Utilitarios.UTL.Utilitarios.Utilitarios.UnzipDataSet(objRespuesta.ByteResponseObject)
-            'Dgv_ListaDestinos.DataSource = _ds.Tables(0)
-            objRespuesta = _PaisBll.Select_Pais_All(objPais)
-            _ds = Utilitarios.UTL.Utilitarios.Utilitarios.UnzipDataSet(objRespuesta.ByteResponseObject)
-            Cmb_Pais.ValueMember = _ds.Tables(0).Columns("IdPais").ColumnName
-            Cmb_Pais.DisplayMember = _ds.Tables(0).Columns("NombrePais").ColumnName
-            Cmb_Pais.DataSource = _ds.Tables("Datos")
-        Catch ex As Exception
-        End Try
-    End Sub
-
-    Private Sub FrmNuevoDestino_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-        datosIniciales()
+    Private Sub BntCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BntCancelar.Click
+        Me.Dispose()
+        Me.Close()
+        Dim FrmMenuAdmin As New FrmMenuAdministrador
+        FrmMenuAdmin.ShowDialog()
     End Sub
 End Class

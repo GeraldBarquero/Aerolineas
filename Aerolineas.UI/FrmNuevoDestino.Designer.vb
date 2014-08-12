@@ -30,16 +30,17 @@ Partial Class FrmNuevoDestino
         Me.Dgv_ListaDestinos = New System.Windows.Forms.DataGridView()
         Me.Lb_Pais = New System.Windows.Forms.Label()
         Me.Cmb_Pais = New System.Windows.Forms.ComboBox()
+        Me.BntCancelar = New System.Windows.Forms.Button()
         CType(Me.Dgv_ListaDestinos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Bnt_add
         '
-        Me.Bnt_add.Location = New System.Drawing.Point(93, 217)
+        Me.Bnt_add.Location = New System.Drawing.Point(40, 217)
         Me.Bnt_add.Name = "Bnt_add"
         Me.Bnt_add.Size = New System.Drawing.Size(75, 23)
         Me.Bnt_add.TabIndex = 0
-        Me.Bnt_add.Text = "Agregar"
+        Me.Bnt_add.Text = "Insertar"
         Me.Bnt_add.UseVisualStyleBackColor = True
         '
         'Lb_NombreDestino
@@ -99,11 +100,21 @@ Partial Class FrmNuevoDestino
         Me.Cmb_Pais.Size = New System.Drawing.Size(121, 21)
         Me.Cmb_Pais.TabIndex = 7
         '
+        'BntCancelar
+        '
+        Me.BntCancelar.Location = New System.Drawing.Point(162, 217)
+        Me.BntCancelar.Name = "BntCancelar"
+        Me.BntCancelar.Size = New System.Drawing.Size(75, 23)
+        Me.BntCancelar.TabIndex = 8
+        Me.BntCancelar.Text = "Cancelar "
+        Me.BntCancelar.UseVisualStyleBackColor = True
+        '
         'FrmNuevoDestino
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(736, 262)
+        Me.Controls.Add(Me.BntCancelar)
         Me.Controls.Add(Me.Cmb_Pais)
         Me.Controls.Add(Me.Lb_Pais)
         Me.Controls.Add(Me.Dgv_ListaDestinos)
@@ -127,4 +138,5 @@ Partial Class FrmNuevoDestino
     Friend WithEvents Dgv_ListaDestinos As System.Windows.Forms.DataGridView
     Friend WithEvents Lb_Pais As System.Windows.Forms.Label
     Friend WithEvents Cmb_Pais As System.Windows.Forms.ComboBox
+    Friend WithEvents BntCancelar As System.Windows.Forms.Button
 End Class

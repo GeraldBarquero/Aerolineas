@@ -65,4 +65,11 @@ Public Class FrmNuevoClientes
         If Len(Txt_EmailCliente.Text.Trim) = 0 Then MsgBox("Verifica el campo Email", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Ayuda") : Txt_EmailCliente.Focus() : Exit Function
         Return True
     End Function
+
+    Private Sub BntCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BntCancelar.Click
+        Me.Dispose()
+        Me.Close()
+        Dim FrmMenuAdmin As New FrmMenuAdministrador
+        FrmMenuAdmin.ShowDialog()
+    End Sub
 End Class

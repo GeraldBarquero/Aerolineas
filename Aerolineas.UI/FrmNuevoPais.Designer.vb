@@ -26,6 +26,7 @@ Partial Class FrmNuevoPais
         Me.Lb_Pais = New System.Windows.Forms.Label()
         Me.Txt_Pais = New System.Windows.Forms.TextBox()
         Me.Bt_Aceptar = New System.Windows.Forms.Button()
+        Me.BntCancelar = New System.Windows.Forms.Button()
         CType(Me.Dgv_ListaPais, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -55,24 +56,34 @@ Partial Class FrmNuevoPais
         '
         'Bt_Aceptar
         '
-        Me.Bt_Aceptar.Location = New System.Drawing.Point(55, 106)
+        Me.Bt_Aceptar.Location = New System.Drawing.Point(26, 106)
         Me.Bt_Aceptar.Name = "Bt_Aceptar"
         Me.Bt_Aceptar.Size = New System.Drawing.Size(75, 23)
         Me.Bt_Aceptar.TabIndex = 3
         Me.Bt_Aceptar.Text = "Insertar"
         Me.Bt_Aceptar.UseVisualStyleBackColor = True
         '
-        'FrmPais
+        'BntCancelar
+        '
+        Me.BntCancelar.Location = New System.Drawing.Point(125, 106)
+        Me.BntCancelar.Name = "BntCancelar"
+        Me.BntCancelar.Size = New System.Drawing.Size(75, 23)
+        Me.BntCancelar.TabIndex = 4
+        Me.BntCancelar.Text = "Cancelar "
+        Me.BntCancelar.UseVisualStyleBackColor = True
+        '
+        'FrmNuevoPais
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(695, 262)
+        Me.Controls.Add(Me.BntCancelar)
         Me.Controls.Add(Me.Bt_Aceptar)
         Me.Controls.Add(Me.Txt_Pais)
         Me.Controls.Add(Me.Lb_Pais)
         Me.Controls.Add(Me.Dgv_ListaPais)
-        Me.Name = "FrmPais"
-        Me.Text = "FrmPais"
+        Me.Name = "FrmNuevoPais"
+        Me.Text = "FrmNuevoPais"
         CType(Me.Dgv_ListaPais, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -82,4 +93,5 @@ Partial Class FrmNuevoPais
     Friend WithEvents Lb_Pais As System.Windows.Forms.Label
     Friend WithEvents Txt_Pais As System.Windows.Forms.TextBox
     Friend WithEvents Bt_Aceptar As System.Windows.Forms.Button
+    Friend WithEvents BntCancelar As System.Windows.Forms.Button
 End Class

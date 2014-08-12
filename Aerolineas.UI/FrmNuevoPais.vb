@@ -19,14 +19,18 @@ Public Class FrmNuevoPais
         Catch ex As Exception
         End Try
     End Sub
-    Private Sub FrmPais_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+  
+    Private Sub FrmNuevoPais_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         datosIniciales()
     End Sub
+
 
     Private Sub Bt_Aceptar_Click(sender As System.Object, e As System.EventArgs) Handles Bt_Aceptar.Click
         objPais.nombrePais = Txt_Pais.Text
         objRespuesta = _PaisBll.InsertarPais(objPais)
+
         If objRespuesta.ResponseCode = 1 Then
+
             MessageBox.Show("Se ha registrado correctamente el país " & Txt_Pais.Text & " en la base de datos.", "Exitoso")
             Txt_Pais.Text = ""
             datosIniciales()
@@ -35,4 +39,14 @@ Public Class FrmNuevoPais
         End If
 
     End Sub
+
+    Private Sub BntCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BntCancelar.Click
+        Me.Dispose()
+        Me.Close()
+        Dim FrmMenuAdmin As New FrmMenuAdministrador
+        FrmMenuAdmin.ShowDialog()
+    End Sub
+
+
+
 End Class

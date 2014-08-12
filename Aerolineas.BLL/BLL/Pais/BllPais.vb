@@ -2,6 +2,7 @@
 Imports Aerolineas.Entidades
 
 Public Class BllPais
+
 #Region "Variables"
     Dim PaisDao As New DalPais
     Dim sql As String = ""

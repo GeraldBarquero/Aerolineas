@@ -28,6 +28,7 @@ Partial Class FrmNuevaLineaAerea
         Me.Dgv_ListaLineasAereas = New System.Windows.Forms.DataGridView()
         Me.LsBx_destinos = New System.Windows.Forms.ListBox()
         Me.Lb_Destinos = New System.Windows.Forms.Label()
+        Me.BntCancelar = New System.Windows.Forms.Button()
         CType(Me.Dgv_ListaLineasAereas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -81,11 +82,21 @@ Partial Class FrmNuevaLineaAerea
         Me.Lb_Destinos.TabIndex = 5
         Me.Lb_Destinos.Text = "Destinos:"
         '
+        'BntCancelar
+        '
+        Me.BntCancelar.Location = New System.Drawing.Point(197, 211)
+        Me.BntCancelar.Name = "BntCancelar"
+        Me.BntCancelar.Size = New System.Drawing.Size(75, 23)
+        Me.BntCancelar.TabIndex = 6
+        Me.BntCancelar.Text = "Cancelar "
+        Me.BntCancelar.UseVisualStyleBackColor = True
+        '
         'FrmNuevaLineaAerea
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(886, 314)
+        Me.Controls.Add(Me.BntCancelar)
         Me.Controls.Add(Me.Lb_Destinos)
         Me.Controls.Add(Me.LsBx_destinos)
         Me.Controls.Add(Me.Dgv_ListaLineasAereas)
@@ -105,4 +116,5 @@ Partial Class FrmNuevaLineaAerea
     Friend WithEvents Dgv_ListaLineasAereas As System.Windows.Forms.DataGridView
     Friend WithEvents LsBx_destinos As System.Windows.Forms.ListBox
     Friend WithEvents Lb_Destinos As System.Windows.Forms.Label
+    Friend WithEvents BntCancelar As System.Windows.Forms.Button
 End Class

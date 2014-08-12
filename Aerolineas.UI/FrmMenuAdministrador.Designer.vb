@@ -29,6 +29,9 @@ Partial Class FrmMenuAdministrador
         Me.ToolStripTextBox1 = New System.Windows.Forms.ToolStripTextBox()
         Me.ToolStripTextBox2 = New System.Windows.Forms.ToolStripTextBox()
         Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Bnt_PaisAdmin = New System.Windows.Forms.Button()
+        Me.Bnt_DestinoAdmin = New System.Windows.Forms.Button()
+        Me.Bnt_LineaAereaAdmin = New System.Windows.Forms.Button()
         Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -63,7 +66,7 @@ Partial Class FrmMenuAdministrador
         '
         Me.ToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripTextBox1, Me.ToolStripTextBox2})
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(116, 22)
         Me.ToolStripMenuItem1.Text = "Clientes"
         '
         'ToolStripTextBox1
@@ -81,14 +84,44 @@ Partial Class FrmMenuAdministrador
         'ToolStripMenuItem2
         '
         Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
-        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(152, 22)
+        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(116, 22)
         Me.ToolStripMenuItem2.Text = "Vuelos"
+        '
+        'Bnt_PaisAdmin
+        '
+        Me.Bnt_PaisAdmin.Location = New System.Drawing.Point(326, 180)
+        Me.Bnt_PaisAdmin.Name = "Bnt_PaisAdmin"
+        Me.Bnt_PaisAdmin.Size = New System.Drawing.Size(75, 23)
+        Me.Bnt_PaisAdmin.TabIndex = 4
+        Me.Bnt_PaisAdmin.Text = "Pais"
+        Me.Bnt_PaisAdmin.UseVisualStyleBackColor = True
+        '
+        'Bnt_DestinoAdmin
+        '
+        Me.Bnt_DestinoAdmin.Location = New System.Drawing.Point(49, 180)
+        Me.Bnt_DestinoAdmin.Name = "Bnt_DestinoAdmin"
+        Me.Bnt_DestinoAdmin.Size = New System.Drawing.Size(75, 23)
+        Me.Bnt_DestinoAdmin.TabIndex = 5
+        Me.Bnt_DestinoAdmin.Text = "Destinos"
+        Me.Bnt_DestinoAdmin.UseVisualStyleBackColor = True
+        '
+        'Bnt_LineaAereaAdmin
+        '
+        Me.Bnt_LineaAereaAdmin.Location = New System.Drawing.Point(49, 65)
+        Me.Bnt_LineaAereaAdmin.Name = "Bnt_LineaAereaAdmin"
+        Me.Bnt_LineaAereaAdmin.Size = New System.Drawing.Size(75, 23)
+        Me.Bnt_LineaAereaAdmin.TabIndex = 6
+        Me.Bnt_LineaAereaAdmin.Text = "Linea Aerea"
+        Me.Bnt_LineaAereaAdmin.UseVisualStyleBackColor = True
         '
         'FrmMenuAdministrador
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(441, 261)
+        Me.Controls.Add(Me.Bnt_LineaAereaAdmin)
+        Me.Controls.Add(Me.Bnt_DestinoAdmin)
+        Me.Controls.Add(Me.Bnt_PaisAdmin)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.Label1)
         Me.Name = "FrmMenuAdministrador"
@@ -106,4 +139,7 @@ Partial Class FrmMenuAdministrador
     Friend WithEvents ToolStripTextBox1 As System.Windows.Forms.ToolStripTextBox
     Friend WithEvents ToolStripTextBox2 As System.Windows.Forms.ToolStripTextBox
     Friend WithEvents ToolStripMenuItem2 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents Bnt_PaisAdmin As System.Windows.Forms.Button
+    Friend WithEvents Bnt_DestinoAdmin As System.Windows.Forms.Button
+    Friend WithEvents Bnt_LineaAereaAdmin As System.Windows.Forms.Button
 End Class

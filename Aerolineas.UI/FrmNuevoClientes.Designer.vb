@@ -41,11 +41,12 @@ Partial Class FrmNuevoClientes
         Me.Txt_PaisResidenciaCliente = New System.Windows.Forms.TextBox()
         Me.Lb_PaswordCliente = New System.Windows.Forms.Label()
         Me.Txt_PasswordCliente = New System.Windows.Forms.TextBox()
+        Me.BntCancelar = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'bnt_Add
         '
-        Me.bnt_Add.Location = New System.Drawing.Point(46, 457)
+        Me.bnt_Add.Location = New System.Drawing.Point(84, 457)
         Me.bnt_Add.Name = "bnt_Add"
         Me.bnt_Add.Size = New System.Drawing.Size(75, 23)
         Me.bnt_Add.TabIndex = 0
@@ -198,11 +199,21 @@ Partial Class FrmNuevoClientes
         Me.Txt_PasswordCliente.TabIndex = 12
         Me.Txt_PasswordCliente.UseSystemPasswordChar = True
         '
+        'BntCancelar
+        '
+        Me.BntCancelar.Location = New System.Drawing.Point(269, 457)
+        Me.BntCancelar.Name = "BntCancelar"
+        Me.BntCancelar.Size = New System.Drawing.Size(75, 23)
+        Me.BntCancelar.TabIndex = 19
+        Me.BntCancelar.Text = "Cancelar "
+        Me.BntCancelar.UseVisualStyleBackColor = True
+        '
         'FrmNuevoClientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(459, 492)
+        Me.Controls.Add(Me.BntCancelar)
         Me.Controls.Add(Me.Txt_PasswordCliente)
         Me.Controls.Add(Me.Lb_PaswordCliente)
         Me.Controls.Add(Me.Txt_PaisResidenciaCliente)
@@ -247,4 +258,5 @@ Partial Class FrmNuevoClientes
     Friend WithEvents Txt_PaisResidenciaCliente As System.Windows.Forms.TextBox
     Friend WithEvents Lb_PaswordCliente As System.Windows.Forms.Label
     Friend WithEvents Txt_PasswordCliente As System.Windows.Forms.TextBox
+    Friend WithEvents BntCancelar As System.Windows.Forms.Button
 End Class

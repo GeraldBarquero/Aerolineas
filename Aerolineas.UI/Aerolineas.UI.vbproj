@@ -69,7 +69,7 @@
   <PropertyGroup>
     <StartupObject>Aerolineas.UI.FrmLogin</StartupObject>
     <StartupObject>Aerolineas.UI.FrmNuevoClientes</StartupObject>
-    <StartupObject>Aerolineas.UI.FrmNuevoDestino</StartupObject>
+    <StartupObject>Aerolineas.UI.FrmMenuAdministrador</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>

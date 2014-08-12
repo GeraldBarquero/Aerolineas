@@ -70,4 +70,11 @@ Public Class FrmNuevaLineaAerea
     Private Sub FrmNuevaLineaAerea_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         datosIniciales()
     End Sub
+
+    Private Sub BntCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BntCancelar.Click
+        Me.Dispose()
+        Me.Close()
+        Dim FrmMenuAdmin As New FrmMenuAdministrador
+        FrmMenuAdmin.ShowDialog()
+    End Sub
 End Class

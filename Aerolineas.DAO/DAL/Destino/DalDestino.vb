@@ -21,20 +21,16 @@ Namespace DAL.Destino
 
         Public Function InsertarDestino(ByVal xObjDestino As Object, ByVal sql As String) As OBJETOS.ObjRespuesta
             Dim objRespuesta As New OBJETOS.ObjRespuesta
-
             Try
-
                 objRespuesta = _ejecutar.SQL_Ejecuta_SentenciaInsert_Update_Delete(xObjDestino, sql, _mensajeError)
-
             Catch ex As Exception
-
                 objRespuesta.ResponseCode = 0
                 objRespuesta.ResponseMessage = ex.ToString
                 objRespuesta.DsResponse = Nothing
-
             End Try
             Return objRespuesta
         End Function
+
 
         Public Function Select_Destino_All(ByVal xObjDestino As OBJETOS.ObjDestino) As OBJETOS.ObjRespuesta
             Dim objRespuesta As New OBJETOS.ObjRespuesta
