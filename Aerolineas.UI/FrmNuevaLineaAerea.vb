@@ -59,6 +59,9 @@ Public Class FrmNuevaLineaAerea
             _ds = Utilitarios.UTL.Utilitarios.Utilitarios.UnzipDataSet(objRespuesta.ByteResponseObject)
 
             Dgv_ListaLineasAereas.DataSource = _ds.Tables(0)
+            objRespuesta = _LineaAereaBll.Select_LineaAereas_All(objLineaAerea)
+            _ds = Utilitarios.UTL.Utilitarios.Utilitarios.UnzipDataSet(objRespuesta.ByteResponseObject)
+            LsBx_destinos.DataSource = _ds.Tables(0)
 
         Catch ex As Exception
         End Try

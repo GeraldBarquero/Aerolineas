@@ -8,7 +8,6 @@ Namespace DAL.LineaAerea
 
         Private _ejecutar As New Ejecutar.Ejecutar
         Private _mensajeError As String = ""
-
         Private _sql = ""
 
 #End Region

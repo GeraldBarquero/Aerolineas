@@ -26,12 +26,14 @@ Partial Class FrmNuevaLineaAerea
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Txt_NombreLineaAerea = New System.Windows.Forms.TextBox()
         Me.Dgv_ListaLineasAereas = New System.Windows.Forms.DataGridView()
+        Me.LsBx_destinos = New System.Windows.Forms.ListBox()
+        Me.Lb_Destinos = New System.Windows.Forms.Label()
         CType(Me.Dgv_ListaLineasAereas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Bnt_Add
         '
-        Me.Bnt_Add.Location = New System.Drawing.Point(50, 107)
+        Me.Bnt_Add.Location = New System.Drawing.Point(55, 211)
         Me.Bnt_Add.Name = "Bnt_Add"
         Me.Bnt_Add.Size = New System.Drawing.Size(75, 23)
         Me.Bnt_Add.TabIndex = 0
@@ -62,11 +64,30 @@ Partial Class FrmNuevaLineaAerea
         Me.Dgv_ListaLineasAereas.Size = New System.Drawing.Size(547, 236)
         Me.Dgv_ListaLineasAereas.TabIndex = 3
         '
+        'LsBx_destinos
+        '
+        Me.LsBx_destinos.FormattingEnabled = True
+        Me.LsBx_destinos.Location = New System.Drawing.Point(102, 83)
+        Me.LsBx_destinos.Name = "LsBx_destinos"
+        Me.LsBx_destinos.Size = New System.Drawing.Size(170, 95)
+        Me.LsBx_destinos.TabIndex = 4
+        '
+        'Lb_Destinos
+        '
+        Me.Lb_Destinos.AutoSize = True
+        Me.Lb_Destinos.Location = New System.Drawing.Point(15, 83)
+        Me.Lb_Destinos.Name = "Lb_Destinos"
+        Me.Lb_Destinos.Size = New System.Drawing.Size(51, 13)
+        Me.Lb_Destinos.TabIndex = 5
+        Me.Lb_Destinos.Text = "Destinos:"
+        '
         'FrmNuevaLineaAerea
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(886, 314)
+        Me.Controls.Add(Me.Lb_Destinos)
+        Me.Controls.Add(Me.LsBx_destinos)
         Me.Controls.Add(Me.Dgv_ListaLineasAereas)
         Me.Controls.Add(Me.Txt_NombreLineaAerea)
         Me.Controls.Add(Me.Label1)
@@ -82,4 +103,6 @@ Partial Class FrmNuevaLineaAerea
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Txt_NombreLineaAerea As System.Windows.Forms.TextBox
     Friend WithEvents Dgv_ListaLineasAereas As System.Windows.Forms.DataGridView
+    Friend WithEvents LsBx_destinos As System.Windows.Forms.ListBox
+    Friend WithEvents Lb_Destinos As System.Windows.Forms.Label
 End Class

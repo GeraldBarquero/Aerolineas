@@ -1,8 +1,4 @@
 C:\Users\roberto.valverde\Desktop\2 cuatrimestre 2014\Progra 2\Proyecto\Aerolineas\Aerolineas\Aerolineas.Utilitarios\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.Utilitarios\bin\Debug\Aerolineas.Utilitarios.dll
-C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.Utilitarios\bin\Debug\Aerolineas.Utilitarios.pdb
-C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.Utilitarios\obj\x86\Debug\Aerolineas.Utilitarios.dll
-C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.Utilitarios\obj\x86\Debug\Aerolineas.Utilitarios.pdb
 E:\GitHub\Aerolineas\Aerolineas.Utilitarios\bin\Debug\Aerolineas.Utilitarios.dll
 E:\GitHub\Aerolineas\Aerolineas.Utilitarios\bin\Debug\Aerolineas.Utilitarios.pdb
 E:\GitHub\Aerolineas\Aerolineas.Utilitarios\obj\x86\Debug\ResolveAssemblyReference.cache
@@ -12,3 +8,7 @@ D:\UIA\Git\Aerolineas\Aerolineas.Utilitarios\bin\Debug\Aerolineas.Utilitarios.dl
 D:\UIA\Git\Aerolineas\Aerolineas.Utilitarios\bin\Debug\Aerolineas.Utilitarios.pdb
 D:\UIA\Git\Aerolineas\Aerolineas.Utilitarios\obj\x86\Debug\Aerolineas.Utilitarios.dll
 D:\UIA\Git\Aerolineas\Aerolineas.Utilitarios\obj\x86\Debug\Aerolineas.Utilitarios.pdb
+C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.Utilitarios\bin\Debug\Aerolineas.Utilitarios.dll
+C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.Utilitarios\bin\Debug\Aerolineas.Utilitarios.pdb
+C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.Utilitarios\obj\x86\Debug\Aerolineas.Utilitarios.dll
+C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.Utilitarios\obj\x86\Debug\Aerolineas.Utilitarios.pdb
