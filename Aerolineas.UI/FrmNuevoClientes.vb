@@ -54,15 +54,60 @@ Public Class FrmNuevoClientes
         End Select
     End Sub
     Private Function VerificarCampos() As Boolean
-        If Len(Txt_NombreCliente.Text.Trim) = 0 Then MsgBox("Verifica el campo Nombre", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Ayuda") : Txt_NombreCliente.Focus() : Exit Function
-        If Len(Txt_IdentificacionCliente.Text.Trim) = 0 Then MsgBox("Verifica el campo Identificación", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Ayuda") : Txt_IdentificacionCliente.Focus() : Exit Function
-        If Len(Txt_PasswordCliente.Text.Trim) = 0 Then MsgBox("Verifica el campo Password", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Ayuda") : Txt_PasswordCliente.Focus() : Exit Function
-        If Len(Txt_PaisResidenciaCliente.Text.Trim) = 0 Then MsgBox("Verifica el campo Pais de Residencia", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Ayuda") : Txt_PaisResidenciaCliente.Focus() : Exit Function
-        If Len(Rtxt_DireccionCliente.Text.Trim) = 0 Then MsgBox("Verifica el campo Dirección", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Ayuda") : Rtxt_DireccionCliente.Focus() : Exit Function
-        If Len(Txt_EdadCliente.Text.Trim) = 0 Then MsgBox("Verifica el campo Edad", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Ayuda") : Txt_EdadCliente.Focus() : Exit Function
-        If Len(Txt_TelefonoCasaCliente.Text.Trim) = 0 Then MsgBox("Verifica el campo Teléfono de Casa", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Ayuda") : Txt_TelefonoCasaCliente.Focus() : Exit Function
-        If Len(Txt_TelefonoCelularCliente.Text.Trim) = 0 Then MsgBox("Verifica el campo Teléfono Celular", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Ayuda") : Txt_TelefonoCelularCliente.Focus() : Exit Function
-        If Len(Txt_EmailCliente.Text.Trim) = 0 Then MsgBox("Verifica el campo Email", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Ayuda") : Txt_EmailCliente.Focus() : Exit Function
+        If Len(Txt_NombreCliente.Text.Trim) = 0 Then
+            MsgBox("Verifica el campo Nombre.", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Ayuda")
+            Txt_NombreCliente.Focus()
+            Return False
+            Exit Function
+        End If
+        If Len(Txt_IdentificacionCliente.Text.Trim) = 0 Then
+            MsgBox("Verifica el campo Identificación.", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Ayuda")
+            Txt_IdentificacionCliente.Focus()
+            Return False
+            Exit Function
+        End If
+        If Len(Txt_PasswordCliente.Text.Trim) = 0 Then
+            MsgBox("Verifica el campo Password.", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Ayuda")
+            Txt_PasswordCliente.Focus()
+            Return False
+            Exit Function
+        End If
+        If Len(Txt_PaisResidenciaCliente.Text.Trim) = 0 Then
+            MsgBox("Verifica el campo Pais de Residencia.", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Ayuda")
+            Txt_PaisResidenciaCliente.Focus()
+            Return False
+            Exit Function
+        End If
+        If Len(Rtxt_DireccionCliente.Text.Trim) = 0 Then
+            MsgBox("Verifica el campo Dirección.", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Ayuda")
+            Rtxt_DireccionCliente.Focus()
+            Return False
+            Exit Function
+        End If
+        If Len(Txt_EdadCliente.Text.Trim) = 0 Then
+            MsgBox("Verifica el campo Edad.", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Ayuda") : Txt_EdadCliente.Focus()
+            Return False
+            Exit Function
+        ElseIf Txt_EdadCliente.Text.Trim > 150 Then
+            MsgBox("Verifica el campo Edad, no puede ser mayor a 150 años.", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Ayuda") : Txt_EdadCliente.Focus()
+            Return False
+            Exit Function
+        End If
+        If Len(Txt_TelefonoCasaCliente.Text.Trim) = 0 Then
+            MsgBox("Verifica el campo Teléfono de Casa.", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Ayuda") : Txt_TelefonoCasaCliente.Focus()
+            Return False
+            Exit Function
+        End If
+        If Len(Txt_TelefonoCelularCliente.Text.Trim) = 0 Then
+            MsgBox("Verifica el campo Teléfono Celular.", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Ayuda") : Txt_TelefonoCelularCliente.Focus()
+            Return False
+            Exit Function
+        End If
+        If Len(Txt_EmailCliente.Text.Trim) = 0 Then
+            MsgBox("Verifica el campo Email.", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Ayuda") : Txt_EmailCliente.Focus()
+            Return False
+            Exit Function
+        End If
         Return True
     End Function
 

@@ -40,6 +40,21 @@ Public Class FrmNuevoPais
 
     End Sub
 
+
+    Private Sub ValidarLetrasNumeros(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles Txt_Pais.KeyPress
+        e.KeyChar = Chr(SoloLetras(Asc(e.KeyChar)))
+    End Sub
+
+    Private Function VerificarCampos() As Boolean
+        If Len(Txt_Pais.Text.Trim) = 0 Then
+            MsgBox("Verifica el campo Nombre", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Ayuda")
+            Txt_Pais.Focus()
+            Return False
+            Exit Function
+        End If
+        Return True
+    End Function
+
     Private Sub BntCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BntCancelar.Click
         Me.Dispose()
         Me.Close()

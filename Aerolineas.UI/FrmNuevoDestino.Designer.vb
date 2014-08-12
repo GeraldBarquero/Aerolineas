@@ -31,6 +31,8 @@ Partial Class FrmNuevoDestino
         Me.Lb_Pais = New System.Windows.Forms.Label()
         Me.Cmb_Pais = New System.Windows.Forms.ComboBox()
         Me.BntCancelar = New System.Windows.Forms.Button()
+        Me.Txt_NombreAeropuerto = New System.Windows.Forms.TextBox()
+        Me.Lb_NombreAeropuerto = New System.Windows.Forms.Label()
         CType(Me.Dgv_ListaDestinos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -71,6 +73,7 @@ Partial Class FrmNuevoDestino
         'Txt_CodigoDestino
         '
         Me.Txt_CodigoDestino.Location = New System.Drawing.Point(128, 113)
+        Me.Txt_CodigoDestino.MaxLength = 3
         Me.Txt_CodigoDestino.Name = "Txt_CodigoDestino"
         Me.Txt_CodigoDestino.Size = New System.Drawing.Size(124, 20)
         Me.Txt_CodigoDestino.TabIndex = 4
@@ -109,11 +112,29 @@ Partial Class FrmNuevoDestino
         Me.BntCancelar.Text = "Cancelar "
         Me.BntCancelar.UseVisualStyleBackColor = True
         '
+        'Txt_NombreAeropuerto
+        '
+        Me.Txt_NombreAeropuerto.Location = New System.Drawing.Point(128, 33)
+        Me.Txt_NombreAeropuerto.Name = "Txt_NombreAeropuerto"
+        Me.Txt_NombreAeropuerto.Size = New System.Drawing.Size(124, 20)
+        Me.Txt_NombreAeropuerto.TabIndex = 10
+        '
+        'Lb_NombreAeropuerto
+        '
+        Me.Lb_NombreAeropuerto.AutoSize = True
+        Me.Lb_NombreAeropuerto.Location = New System.Drawing.Point(29, 36)
+        Me.Lb_NombreAeropuerto.Name = "Lb_NombreAeropuerto"
+        Me.Lb_NombreAeropuerto.Size = New System.Drawing.Size(102, 13)
+        Me.Lb_NombreAeropuerto.TabIndex = 9
+        Me.Lb_NombreAeropuerto.Text = "Nombre Aeropuerto:"
+        '
         'FrmNuevoDestino
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(736, 262)
+        Me.Controls.Add(Me.Txt_NombreAeropuerto)
+        Me.Controls.Add(Me.Lb_NombreAeropuerto)
         Me.Controls.Add(Me.BntCancelar)
         Me.Controls.Add(Me.Cmb_Pais)
         Me.Controls.Add(Me.Lb_Pais)
@@ -139,4 +160,6 @@ Partial Class FrmNuevoDestino
     Friend WithEvents Lb_Pais As System.Windows.Forms.Label
     Friend WithEvents Cmb_Pais As System.Windows.Forms.ComboBox
     Friend WithEvents BntCancelar As System.Windows.Forms.Button
+    Friend WithEvents Txt_NombreAeropuerto As System.Windows.Forms.TextBox
+    Friend WithEvents Lb_NombreAeropuerto As System.Windows.Forms.Label
 End Class

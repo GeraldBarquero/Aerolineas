@@ -32,6 +32,7 @@ Partial Class FrmMenuAdministrador
         Me.Bnt_PaisAdmin = New System.Windows.Forms.Button()
         Me.Bnt_DestinoAdmin = New System.Windows.Forms.Button()
         Me.Bnt_LineaAereaAdmin = New System.Windows.Forms.Button()
+        Me.Bt_Cliente = New System.Windows.Forms.Button()
         Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -114,11 +115,21 @@ Partial Class FrmMenuAdministrador
         Me.Bnt_LineaAereaAdmin.Text = "Linea Aerea"
         Me.Bnt_LineaAereaAdmin.UseVisualStyleBackColor = True
         '
+        'Bt_Cliente
+        '
+        Me.Bt_Cliente.Location = New System.Drawing.Point(326, 64)
+        Me.Bt_Cliente.Name = "Bt_Cliente"
+        Me.Bt_Cliente.Size = New System.Drawing.Size(75, 23)
+        Me.Bt_Cliente.TabIndex = 7
+        Me.Bt_Cliente.Text = "Cliente"
+        Me.Bt_Cliente.UseVisualStyleBackColor = True
+        '
         'FrmMenuAdministrador
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(441, 261)
+        Me.Controls.Add(Me.Bt_Cliente)
         Me.Controls.Add(Me.Bnt_LineaAereaAdmin)
         Me.Controls.Add(Me.Bnt_DestinoAdmin)
         Me.Controls.Add(Me.Bnt_PaisAdmin)
@@ -142,4 +153,5 @@ Partial Class FrmMenuAdministrador
     Friend WithEvents Bnt_PaisAdmin As System.Windows.Forms.Button
     Friend WithEvents Bnt_DestinoAdmin As System.Windows.Forms.Button
     Friend WithEvents Bnt_LineaAereaAdmin As System.Windows.Forms.Button
+    Friend WithEvents Bt_Cliente As System.Windows.Forms.Button
 End Class

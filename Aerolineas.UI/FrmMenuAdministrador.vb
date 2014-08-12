@@ -24,4 +24,10 @@
         Me.Hide()
         frmNuevoPais.ShowDialog()
     End Sub
+
+    Private Sub Bt_Cliente_Click(sender As System.Object, e As System.EventArgs) Handles Bt_Cliente.Click
+        Dim frmNuevoCliente As New FrmNuevoClientes
+        Me.Hide()
+        frmNuevoCliente.ShowDialog()
+    End Sub
 End Class
