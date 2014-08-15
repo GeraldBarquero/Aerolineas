@@ -13,18 +13,19 @@ Public Class FrmNuevoDestino
     Private objPais As New OBJETOS.ObjPais
     Private _PaisBll As New BLL.BllPais
     Private objRespuesta As New OBJETOS.ObjRespuesta
-    Private _dsDestinos As New DataSet
     Private _dsPaises As New DataSet
 
 
 
     Sub datosIniciales()
         Try
+            Dim _dsDestinos As New DataSet
             Dim objRespuesta As New OBJETOS.ObjRespuesta
-
+            _dsDestinos.Tables.Clear()
             objRespuesta = _DestinoBll.Select_Destino_All(objDestino)
             _dsDestinos = Utilitarios.UTL.Utilitarios.Utilitarios.UnzipDataSet(objRespuesta.ByteResponseObject)
             Dgv_ListaDestinos.DataSource = _dsDestinos.Tables(0)
+
             objRespuesta = _PaisBll.Select_Pais_All(objPais)
             _dsPaises = Utilitarios.UTL.Utilitarios.Utilitarios.UnzipDataSet(objRespuesta.ByteResponseObject)
             Cmb_Pais.ValueMember = _dsPaises.Tables(0).Columns("IdPais").ColumnName
@@ -50,6 +51,7 @@ Public Class FrmNuevoDestino
             MessageBox.Show("Se ha registrado correctamente el destino " & Txt_NombreDestino.Text & " en la base de datos.", "Exitoso")
             Txt_NombreDestino.Text = ""
             Txt_CodigoDestino.Text = ""
+            Txt_NombreAeropuerto.Text = ""
         Else
             MessageBox.Show("El destino  " & Txt_NombreDestino.Text & " no se registro correctamente en la base de datos", "Fallido")
         End If

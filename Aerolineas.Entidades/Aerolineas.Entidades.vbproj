@@ -65,6 +65,7 @@
     <Compile Include="OBJETOS\ObjCliente.vb" />
     <Compile Include="OBJETOS\ObjDestino.vb" />
     <Compile Include="OBJETOS\ObjLineaAerea.vb" />
+    <Compile Include="OBJETOS\ObjLineaAreaDestino.vb" />
     <Compile Include="OBJETOS\ObjPais.vb" />
     <Compile Include="OBJETOS\ObjRespuesta.vb" />
     <Compile Include="OBJETOS\ObjUsuario.vb" />

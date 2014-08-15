@@ -32,8 +32,6 @@ Partial Class FrmNuevoClientes
         Me.Lb_EmailCliente = New System.Windows.Forms.Label()
         Me.Txt_NombreCliente = New System.Windows.Forms.TextBox()
         Me.Txt_EdadCliente = New System.Windows.Forms.TextBox()
-        Me.Txt_TelefonoCasaCliente = New System.Windows.Forms.TextBox()
-        Me.Txt_TelefonoCelularCliente = New System.Windows.Forms.TextBox()
         Me.Txt_EmailCliente = New System.Windows.Forms.TextBox()
         Me.Txt_IdentificacionCliente = New System.Windows.Forms.TextBox()
         Me.Rtxt_DireccionCliente = New System.Windows.Forms.RichTextBox()
@@ -42,6 +40,8 @@ Partial Class FrmNuevoClientes
         Me.Lb_PaswordCliente = New System.Windows.Forms.Label()
         Me.Txt_PasswordCliente = New System.Windows.Forms.TextBox()
         Me.BntCancelar = New System.Windows.Forms.Button()
+        Me.Txt_TelefonoCasaCliente = New System.Windows.Forms.MaskedTextBox()
+        Me.Txt_TelefonoCelularCliente = New System.Windows.Forms.MaskedTextBox()
         Me.SuspendLayout()
         '
         'bnt_Add
@@ -130,20 +130,6 @@ Partial Class FrmNuevoClientes
         Me.Txt_EdadCliente.Size = New System.Drawing.Size(51, 20)
         Me.Txt_EdadCliente.TabIndex = 15
         '
-        'Txt_TelefonoCasaCliente
-        '
-        Me.Txt_TelefonoCasaCliente.Location = New System.Drawing.Point(118, 347)
-        Me.Txt_TelefonoCasaCliente.Name = "Txt_TelefonoCasaCliente"
-        Me.Txt_TelefonoCasaCliente.Size = New System.Drawing.Size(169, 20)
-        Me.Txt_TelefonoCasaCliente.TabIndex = 16
-        '
-        'Txt_TelefonoCelularCliente
-        '
-        Me.Txt_TelefonoCelularCliente.Location = New System.Drawing.Point(118, 381)
-        Me.Txt_TelefonoCelularCliente.Name = "Txt_TelefonoCelularCliente"
-        Me.Txt_TelefonoCelularCliente.Size = New System.Drawing.Size(169, 20)
-        Me.Txt_TelefonoCelularCliente.TabIndex = 17
-        '
         'Txt_EmailCliente
         '
         Me.Txt_EmailCliente.Location = New System.Drawing.Point(118, 418)
@@ -208,11 +194,29 @@ Partial Class FrmNuevoClientes
         Me.BntCancelar.Text = "Cancelar "
         Me.BntCancelar.UseVisualStyleBackColor = True
         '
+        'Txt_TelefonoCasaCliente
+        '
+        Me.Txt_TelefonoCasaCliente.Location = New System.Drawing.Point(118, 350)
+        Me.Txt_TelefonoCasaCliente.Mask = "(999) 0000-0000"
+        Me.Txt_TelefonoCasaCliente.Name = "Txt_TelefonoCasaCliente"
+        Me.Txt_TelefonoCasaCliente.Size = New System.Drawing.Size(100, 20)
+        Me.Txt_TelefonoCasaCliente.TabIndex = 20
+        '
+        'Txt_TelefonoCelularCliente
+        '
+        Me.Txt_TelefonoCelularCliente.Location = New System.Drawing.Point(118, 384)
+        Me.Txt_TelefonoCelularCliente.Mask = "(999) 0000-0000"
+        Me.Txt_TelefonoCelularCliente.Name = "Txt_TelefonoCelularCliente"
+        Me.Txt_TelefonoCelularCliente.Size = New System.Drawing.Size(100, 20)
+        Me.Txt_TelefonoCelularCliente.TabIndex = 21
+        '
         'FrmNuevoClientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(459, 492)
+        Me.Controls.Add(Me.Txt_TelefonoCelularCliente)
+        Me.Controls.Add(Me.Txt_TelefonoCasaCliente)
         Me.Controls.Add(Me.BntCancelar)
         Me.Controls.Add(Me.Txt_PasswordCliente)
         Me.Controls.Add(Me.Lb_PaswordCliente)
@@ -221,8 +225,6 @@ Partial Class FrmNuevoClientes
         Me.Controls.Add(Me.Rtxt_DireccionCliente)
         Me.Controls.Add(Me.Txt_IdentificacionCliente)
         Me.Controls.Add(Me.Txt_EmailCliente)
-        Me.Controls.Add(Me.Txt_TelefonoCelularCliente)
-        Me.Controls.Add(Me.Txt_TelefonoCasaCliente)
         Me.Controls.Add(Me.Txt_EdadCliente)
         Me.Controls.Add(Me.Txt_NombreCliente)
         Me.Controls.Add(Me.Lb_EmailCliente)
@@ -249,8 +251,6 @@ Partial Class FrmNuevoClientes
     Friend WithEvents Lb_EmailCliente As System.Windows.Forms.Label
     Friend WithEvents Txt_NombreCliente As System.Windows.Forms.TextBox
     Friend WithEvents Txt_EdadCliente As System.Windows.Forms.TextBox
-    Friend WithEvents Txt_TelefonoCasaCliente As System.Windows.Forms.TextBox
-    Friend WithEvents Txt_TelefonoCelularCliente As System.Windows.Forms.TextBox
     Friend WithEvents Txt_EmailCliente As System.Windows.Forms.TextBox
     Friend WithEvents Txt_IdentificacionCliente As System.Windows.Forms.TextBox
     Friend WithEvents Rtxt_DireccionCliente As System.Windows.Forms.RichTextBox
@@ -259,4 +259,6 @@ Partial Class FrmNuevoClientes
     Friend WithEvents Lb_PaswordCliente As System.Windows.Forms.Label
     Friend WithEvents Txt_PasswordCliente As System.Windows.Forms.TextBox
     Friend WithEvents BntCancelar As System.Windows.Forms.Button
+    Friend WithEvents Txt_TelefonoCasaCliente As System.Windows.Forms.MaskedTextBox
+    Friend WithEvents Txt_TelefonoCelularCliente As System.Windows.Forms.MaskedTextBox
 End Class

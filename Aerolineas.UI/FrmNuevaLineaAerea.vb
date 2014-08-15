@@ -11,31 +11,41 @@ Public Class FrmNuevaLineaAerea
 
 #Region "Variables"
 
-    '' Bnt_Add_Click
+    Public objRespuesta As New OBJETOS.ObjRespuesta
     Private objLineaAerea As New OBJETOS.ObjLineaAerea
     Private objDestino As New OBJETOS.ObjDestino
+    Private objLineaAreaDestino As New OBJETOS.ObjLineaAreaDestino
     Private _LineaAereaBll As New BLL.LineaAerea.BllLineaAerea
     Private _DestinosBll As New BLL.Destino.BllDestino
-    Public objRespuesta As New OBJETOS.ObjRespuesta
+    Private _LineaAreaDestinoBll As New BLL.LineaArea_Destino.BllLineaAerea_Destino
     Private _dsLineaAerea As New DataSet
     Private _dsDestinos As New DataSet
     Public modoPantalla As String = ""
-
+    Private idDestino As String
+    Private idLineaArea As Integer
 #End Region
 
     Private Sub Bnt_Add_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Bnt_Add.Click
         objLineaAerea.NombreLineaArea = Txt_NombreLineaAerea.Text
-        objDestino.idDestino = LsBx_destinos.SelectedItem
 
-        _LineaAereaBll.InsertarLineaAerea(objLineaAerea)
+        If LsBx_destinos.SelectedItems.Count > 0 Then
+            objRespuesta = _LineaAereaBll.InsertarLineaAerea(objLineaAerea)
+            objLineaAreaDestino.IdLineaAerea = objRespuesta._IdResultado
 
-        If objRespuesta.ResponseCode = 1 Then
+            For Each elemento In LsBx_destinos.SelectedItems
+                objLineaAreaDestino.IdDestino = Convert.ToInt32(elemento.Item(0))
+                objRespuesta = _LineaAreaDestinoBll.InsertarLineaAerea(objLineaAreaDestino)
+            Next elemento
 
-            MessageBox.Show("Se ha registrado correctamente la linea Aerea " & Txt_NombreLineaAerea.Text & " en la base de datos.", "Exitoso")
             Txt_NombreLineaAerea.Text = ""
 
+            If objRespuesta.ResponseCode = 1 Then
+                MessageBox.Show("Se ha registrado correctamente la linea Aerea " & Txt_NombreLineaAerea.Text & " en la base de datos.", "Exitoso")
+            Else
+                MessageBox.Show("La linea Aerea " & Txt_NombreLineaAerea.Text & " no se registro correctamente en la base de datos", "Fallido")
+            End If
         Else
-            MessageBox.Show("La linea Aerea " & Txt_NombreLineaAerea.Text & " no se registro correctamente en la base de datos", "Fallido")
+            MessageBox.Show("Debe Seleccionar al menos un Destino para la Aerolinea", "Fallido")
         End If
         CargarGridLineasAereas()
     End Sub

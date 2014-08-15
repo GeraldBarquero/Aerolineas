@@ -5,16 +5,14 @@ Namespace DAL.LineaAerea
 
     Public Class DalLineaAerea
 #Region "Variables"
-
         Private _ejecutar As New Ejecutar.Ejecutar
         Private _mensajeError As String = ""
         Private _sql = ""
-
 #End Region
 
 #Region "Funciones"
 
-        Public Function InsertarLineaAerea(ByVal xObjLineaAerea As Object, ByVal sql As String) As OBJETOS.ObjRespuesta
+        Public Function InsertarLineaAerea(ByVal xObjLineaAerea As OBJETOS.ObjLineaAerea, ByVal sql As String) As OBJETOS.ObjRespuesta
             Dim objRespuesta As New OBJETOS.ObjRespuesta
             Try
                 objRespuesta = _ejecutar.SQL_Ejecuta_SentenciaInsert_Update_Delete(xObjLineaAerea, sql, _mensajeError)

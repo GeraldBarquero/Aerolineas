@@ -8,18 +8,16 @@ Module ModValidaDatos
                 Exit Function
             Case Else
                 MessageBox.Show("Solo se admiten letras", "ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
         End Select
     End Function
 
     Public Function SoloNumeros(ByVal TECLAS As Integer) As Integer
         Select Case TECLAS
-            Case 48 To 57, 13, 3, 8, 22, 24, 44, 46, 127
+            Case 48 To 57, 13, 3, 8, 22, 24, 44 To 46, 127, 40, 41
                 SoloNumeros = TECLAS
                 Exit Function
             Case Else
                 MessageBox.Show("Solo se admiten Números", "ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
         End Select
     End Function
 End Module

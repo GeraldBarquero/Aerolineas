@@ -8,6 +8,7 @@ Namespace OBJETOS
         Private _mResponseMessage As String
         Private _mDsResponse As DataSet
         Private _mByteResponseObject As [Byte]()
+        Property _IdResultado As Integer
 
 #End Region
 

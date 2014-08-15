@@ -12,7 +12,6 @@ Namespace DAL.Ejecutar
         Private _conectar As New DAL.Coneccion.DalConeccion
         Private _correcto As Boolean
         Private res As Int32 = 0
-        Dim Datos As New DataSet()
         Dim objRespuesta As New OBJETOS.ObjRespuesta
 
 #End Region
@@ -46,7 +45,7 @@ Namespace DAL.Ejecutar
                 Next
                 Try
                     objRespuesta.ResponseCode = 1
-                    res = Convert.ToInt32(cmd.ExecuteScalar())
+                    objRespuesta._IdResultado = Convert.ToInt32(cmd.ExecuteScalar())
                     MensajeError = ""
                     _correcto = True
                     _conectar.DesconectaDb(MensajeError)
@@ -63,6 +62,7 @@ Namespace DAL.Ejecutar
             Dim n As Int32 = 0
             If Not _conectar.ConectaDb(MensajeError) Then
             Else
+                Dim Datos As New DataSet()
                 Dim cmd As New SqlCommand()
                 cmd.CommandType = CommandType.StoredProcedure
                 cmd.CommandText = SQL

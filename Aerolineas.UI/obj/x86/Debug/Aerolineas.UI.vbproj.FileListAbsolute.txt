@@ -71,3 +71,4 @@ C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.UI\obj\x
 C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.UI\obj\x86\Debug\Aerolineas.UI.pdb
 C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.UI\obj\x86\Debug\Aerolineas.UI.FrmNuevoPais.resources
 E:\GitHub\Aerolineas\Aerolineas.UI\obj\x86\Debug\Aerolineas.UI.FrmNuevoPais.resources
+C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.UI\obj\x86\Debug\Aerolineas.UI.FrmNuevoVuelo.resources
