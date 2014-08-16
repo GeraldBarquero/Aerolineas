@@ -42,13 +42,13 @@ Public Class FrmClienteLista
     End Sub
 
     Private Sub Bnt_NuevoCliente_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Bnt_NuevoCliente.Click
-        Dim frmNuevoCliente As New FrmNuevoClientes
+        Dim frmNuevoCliente As New FrmMenuClientes
         Me.Hide()
         frmNuevoCliente.ShowDialog()
     End Sub
 
     Private Sub Bnt_ModificarCliente_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Bnt_ModificarCliente.Click
-        Dim frmModificarCliente As New FrmNuevoClientes
+        Dim frmModificarCliente As New FrmMenuClientes
         frmModificarCliente.modoPantalla = "Modificar"
         _codigoCliente = Dgv_ClientesLista.SelectedRows(0).Cells(0).Value
         Me.Hide()

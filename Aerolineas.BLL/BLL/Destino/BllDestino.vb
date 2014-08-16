@@ -30,8 +30,41 @@ Namespace Destino
 
             End Try
             Return objRespuesta
+
+
         End Function
 
+        Public Function ActualizarDestino(ByVal xObjDestino As OBJETOS.ObjDestino) As OBJETOS.ObjRespuesta
+            Dim objRespuesta As New OBJETOS.ObjRespuesta
+            sql = "SpDestinoActualizar"
+            Try
+                objRespuesta = DestinoDao.InsertarDestino(xObjDestino, sql)
+            Catch ex As Exception
+                objRespuesta.ResponseCode = 0
+                objRespuesta.ResponseMessage = ex.ToString
+                objRespuesta.DsResponse = Nothing
+
+            End Try
+            Return objRespuesta
+
+
+        End Function
+
+        Public Function EliminarDestino(ByVal xObjDestino As OBJETOS.ObjDestino) As OBJETOS.ObjRespuesta
+            Dim objRespuesta As New OBJETOS.ObjRespuesta
+            sql = "SpDestinoEliminar"
+            Try
+                objRespuesta = DestinoDao.InsertarDestino(xObjDestino, sql)
+            Catch ex As Exception
+                objRespuesta.ResponseCode = 0
+                objRespuesta.ResponseMessage = ex.ToString
+                objRespuesta.DsResponse = Nothing
+
+            End Try
+            Return objRespuesta
+
+
+        End Function
 
         Public Function Select_Destino_All(ByVal xObjDestino As OBJETOS.ObjDestino) As OBJETOS.ObjRespuesta
             Dim objRespuesta As New OBJETOS.ObjRespuesta

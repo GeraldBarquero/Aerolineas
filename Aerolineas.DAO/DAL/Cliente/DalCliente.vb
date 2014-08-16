@@ -32,6 +32,30 @@ Namespace DAL.Cliente
             Return objRespuesta
         End Function
 
+        Public Function ActualizarCliente(ByVal xObjcliente As Object, ByVal sql As String) As OBJETOS.ObjRespuesta
+            Dim objRespuesta As New OBJETOS.ObjRespuesta
+            Try
+                objRespuesta = _ejecutar.SQL_Ejecuta_SentenciaInsert_Update_Delete(xObjcliente, sql, _mensajeError)
+            Catch ex As Exception
+                objRespuesta.ResponseCode = 0
+                objRespuesta.ResponseMessage = ex.ToString
+                objRespuesta.DsResponse = Nothing
+            End Try
+            Return objRespuesta
+        End Function
+
+        Public Function EliminarCliente(ByVal xObjcliente As Object, ByVal sql As String) As OBJETOS.ObjRespuesta
+            Dim objRespuesta As New OBJETOS.ObjRespuesta
+            Try
+                objRespuesta = _ejecutar.SQL_Ejecuta_SentenciaInsert_Update_Delete(xObjcliente, sql, _mensajeError)
+            Catch ex As Exception
+                objRespuesta.ResponseCode = 0
+                objRespuesta.ResponseMessage = ex.ToString
+                objRespuesta.DsResponse = Nothing
+            End Try
+            Return objRespuesta
+        End Function
+
 
         Public Function Select_Cliente_All(ByVal xObjCliente As OBJETOS.ObjCliente) As OBJETOS.ObjRespuesta
             Dim objRespuesta As New OBJETOS.ObjRespuesta

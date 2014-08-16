@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FrmNuevaLineaAerea
+Partial Class FrmMenuLineaAerea
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,24 +22,27 @@ Partial Class FrmNuevaLineaAerea
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Bnt_Add = New System.Windows.Forms.Button()
+        Me.Bnt_Acceptar = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Txt_NombreLineaAerea = New System.Windows.Forms.TextBox()
         Me.Dgv_ListaLineasAereas = New System.Windows.Forms.DataGridView()
         Me.Lb_Destinos = New System.Windows.Forms.Label()
-        Me.BntCancelar = New System.Windows.Forms.Button()
+        Me.Bnt_Cancelar = New System.Windows.Forms.Button()
         Me.LsBx_destinos = New System.Windows.Forms.ListBox()
+        Me.Bnt_EliminarLineaAerea = New System.Windows.Forms.Button()
+        Me.Bnt_ConsultarLineaAerea = New System.Windows.Forms.Button()
+        Me.Bnt_ModificarLineaAerea = New System.Windows.Forms.Button()
         CType(Me.Dgv_ListaLineasAereas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Bnt_Add
+        'Bnt_Acceptar
         '
-        Me.Bnt_Add.Location = New System.Drawing.Point(55, 211)
-        Me.Bnt_Add.Name = "Bnt_Add"
-        Me.Bnt_Add.Size = New System.Drawing.Size(75, 23)
-        Me.Bnt_Add.TabIndex = 0
-        Me.Bnt_Add.Text = "Aceptar"
-        Me.Bnt_Add.UseVisualStyleBackColor = True
+        Me.Bnt_Acceptar.Location = New System.Drawing.Point(55, 199)
+        Me.Bnt_Acceptar.Name = "Bnt_Acceptar"
+        Me.Bnt_Acceptar.Size = New System.Drawing.Size(75, 23)
+        Me.Bnt_Acceptar.TabIndex = 0
+        Me.Bnt_Acceptar.Text = "Insertar"
+        Me.Bnt_Acceptar.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -62,7 +65,7 @@ Partial Class FrmNuevaLineaAerea
         Me.Dgv_ListaLineasAereas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Dgv_ListaLineasAereas.Location = New System.Drawing.Point(314, 42)
         Me.Dgv_ListaLineasAereas.Name = "Dgv_ListaLineasAereas"
-        Me.Dgv_ListaLineasAereas.Size = New System.Drawing.Size(547, 236)
+        Me.Dgv_ListaLineasAereas.Size = New System.Drawing.Size(249, 136)
         Me.Dgv_ListaLineasAereas.TabIndex = 3
         '
         'Lb_Destinos
@@ -74,14 +77,14 @@ Partial Class FrmNuevaLineaAerea
         Me.Lb_Destinos.TabIndex = 5
         Me.Lb_Destinos.Text = "Destinos:"
         '
-        'BntCancelar
+        'Bnt_Cancelar
         '
-        Me.BntCancelar.Location = New System.Drawing.Point(197, 211)
-        Me.BntCancelar.Name = "BntCancelar"
-        Me.BntCancelar.Size = New System.Drawing.Size(75, 23)
-        Me.BntCancelar.TabIndex = 6
-        Me.BntCancelar.Text = "Cancelar "
-        Me.BntCancelar.UseVisualStyleBackColor = True
+        Me.Bnt_Cancelar.Location = New System.Drawing.Point(197, 199)
+        Me.Bnt_Cancelar.Name = "Bnt_Cancelar"
+        Me.Bnt_Cancelar.Size = New System.Drawing.Size(75, 23)
+        Me.Bnt_Cancelar.TabIndex = 6
+        Me.Bnt_Cancelar.Text = "Cancelar "
+        Me.Bnt_Cancelar.UseVisualStyleBackColor = True
         '
         'LsBx_destinos
         '
@@ -93,30 +96,63 @@ Partial Class FrmNuevaLineaAerea
         Me.LsBx_destinos.Sorted = True
         Me.LsBx_destinos.TabIndex = 8
         '
-        'FrmNuevaLineaAerea
+        'Bnt_EliminarLineaAerea
+        '
+        Me.Bnt_EliminarLineaAerea.Location = New System.Drawing.Point(55, 238)
+        Me.Bnt_EliminarLineaAerea.Name = "Bnt_EliminarLineaAerea"
+        Me.Bnt_EliminarLineaAerea.Size = New System.Drawing.Size(75, 23)
+        Me.Bnt_EliminarLineaAerea.TabIndex = 9
+        Me.Bnt_EliminarLineaAerea.Text = "Eliminar"
+        Me.Bnt_EliminarLineaAerea.UseVisualStyleBackColor = True
+        '
+        'Bnt_ConsultarLineaAerea
+        '
+        Me.Bnt_ConsultarLineaAerea.Location = New System.Drawing.Point(197, 238)
+        Me.Bnt_ConsultarLineaAerea.Name = "Bnt_ConsultarLineaAerea"
+        Me.Bnt_ConsultarLineaAerea.Size = New System.Drawing.Size(75, 23)
+        Me.Bnt_ConsultarLineaAerea.TabIndex = 10
+        Me.Bnt_ConsultarLineaAerea.Text = "Consultar"
+        Me.Bnt_ConsultarLineaAerea.UseVisualStyleBackColor = True
+        '
+        'Bnt_ModificarLineaAerea
+        '
+        Me.Bnt_ModificarLineaAerea.Location = New System.Drawing.Point(130, 280)
+        Me.Bnt_ModificarLineaAerea.Name = "Bnt_ModificarLineaAerea"
+        Me.Bnt_ModificarLineaAerea.Size = New System.Drawing.Size(75, 23)
+        Me.Bnt_ModificarLineaAerea.TabIndex = 11
+        Me.Bnt_ModificarLineaAerea.Text = "Modificar"
+        Me.Bnt_ModificarLineaAerea.UseVisualStyleBackColor = True
+        '
+        'FrmMenuLineaAerea
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(886, 314)
+        Me.ClientSize = New System.Drawing.Size(590, 314)
+        Me.Controls.Add(Me.Bnt_ModificarLineaAerea)
+        Me.Controls.Add(Me.Bnt_ConsultarLineaAerea)
+        Me.Controls.Add(Me.Bnt_EliminarLineaAerea)
         Me.Controls.Add(Me.LsBx_destinos)
-        Me.Controls.Add(Me.BntCancelar)
+        Me.Controls.Add(Me.Bnt_Cancelar)
         Me.Controls.Add(Me.Lb_Destinos)
         Me.Controls.Add(Me.Dgv_ListaLineasAereas)
         Me.Controls.Add(Me.Txt_NombreLineaAerea)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Bnt_Add)
-        Me.Name = "FrmNuevaLineaAerea"
+        Me.Controls.Add(Me.Bnt_Acceptar)
+        Me.Name = "FrmMenuLineaAerea"
         Me.Text = "FrmNuevaLineaAerea"
         CType(Me.Dgv_ListaLineasAereas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Bnt_Add As System.Windows.Forms.Button
+    Friend WithEvents Bnt_Acceptar As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Txt_NombreLineaAerea As System.Windows.Forms.TextBox
     Friend WithEvents Dgv_ListaLineasAereas As System.Windows.Forms.DataGridView
     Friend WithEvents Lb_Destinos As System.Windows.Forms.Label
-    Friend WithEvents BntCancelar As System.Windows.Forms.Button
+    Friend WithEvents Bnt_Cancelar As System.Windows.Forms.Button
     Friend WithEvents LsBx_destinos As System.Windows.Forms.ListBox
+    Friend WithEvents Bnt_EliminarLineaAerea As System.Windows.Forms.Button
+    Friend WithEvents Bnt_ConsultarLineaAerea As System.Windows.Forms.Button
+    Friend WithEvents Bnt_ModificarLineaAerea As System.Windows.Forms.Button
 End Class

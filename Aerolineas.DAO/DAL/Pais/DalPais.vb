@@ -21,6 +21,31 @@ Namespace DAL.Pais
             Return objRespuesta
         End Function
 
+        Public Function ActualizarPais(ByVal xObjPais As Object, ByVal sql As String) As OBJETOS.ObjRespuesta
+            Dim objRespuesta As New OBJETOS.ObjRespuesta
+            Try
+                objRespuesta = _ejecutar.SQL_Ejecuta_SentenciaInsert_Update_Delete(xObjPais, sql, _mensajeError)
+            Catch ex As Exception
+                objRespuesta.ResponseCode = 0
+                objRespuesta.ResponseMessage = ex.ToString
+                objRespuesta.DsResponse = Nothing
+            End Try
+            Return objRespuesta
+        End Function
+
+
+        Public Function EliminarPais(ByVal xObjPais As Object, ByVal sql As String) As OBJETOS.ObjRespuesta
+            Dim objRespuesta As New OBJETOS.ObjRespuesta
+            Try
+                objRespuesta = _ejecutar.SQL_Ejecuta_SentenciaInsert_Update_Delete(xObjPais, sql, _mensajeError)
+            Catch ex As Exception
+                objRespuesta.ResponseCode = 0
+                objRespuesta.ResponseMessage = ex.ToString
+                objRespuesta.DsResponse = Nothing
+            End Try
+            Return objRespuesta
+        End Function
+
 
         Public Function Select_Pais_All(ByVal xObjPais As OBJETOS.ObjPais) As OBJETOS.ObjRespuesta
             Dim objRespuesta As New OBJETOS.ObjRespuesta
@@ -34,6 +59,9 @@ Namespace DAL.Pais
             End Try
             Return objRespuesta
         End Function
+
+        
+
 #End Region
 
     End Class

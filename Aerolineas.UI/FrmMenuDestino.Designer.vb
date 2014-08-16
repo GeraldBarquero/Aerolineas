@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FrmNuevoDestino
+Partial Class FrmMenuDestino
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,7 +22,7 @@ Partial Class FrmNuevoDestino
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Bnt_add = New System.Windows.Forms.Button()
+        Me.Bnt_Acceptar = New System.Windows.Forms.Button()
         Me.Lb_NombreDestino = New System.Windows.Forms.Label()
         Me.Txt_NombreDestino = New System.Windows.Forms.TextBox()
         Me.Lb_CodigoDestino = New System.Windows.Forms.Label()
@@ -33,17 +33,20 @@ Partial Class FrmNuevoDestino
         Me.BntCancelar = New System.Windows.Forms.Button()
         Me.Txt_NombreAeropuerto = New System.Windows.Forms.TextBox()
         Me.Lb_NombreAeropuerto = New System.Windows.Forms.Label()
+        Me.Bnt_EliminarDestino = New System.Windows.Forms.Button()
+        Me.Bnt_ConsultarDestino = New System.Windows.Forms.Button()
+        Me.Bnt_ModificarDestino = New System.Windows.Forms.Button()
         CType(Me.Dgv_ListaDestinos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Bnt_add
+        'Bnt_Acceptar
         '
-        Me.Bnt_add.Location = New System.Drawing.Point(40, 217)
-        Me.Bnt_add.Name = "Bnt_add"
-        Me.Bnt_add.Size = New System.Drawing.Size(75, 23)
-        Me.Bnt_add.TabIndex = 0
-        Me.Bnt_add.Text = "Insertar"
-        Me.Bnt_add.UseVisualStyleBackColor = True
+        Me.Bnt_Acceptar.Location = New System.Drawing.Point(40, 217)
+        Me.Bnt_Acceptar.Name = "Bnt_Acceptar"
+        Me.Bnt_Acceptar.Size = New System.Drawing.Size(75, 23)
+        Me.Bnt_Acceptar.TabIndex = 0
+        Me.Bnt_Acceptar.Text = "Insertar"
+        Me.Bnt_Acceptar.UseVisualStyleBackColor = True
         '
         'Lb_NombreDestino
         '
@@ -128,11 +131,41 @@ Partial Class FrmNuevoDestino
         Me.Lb_NombreAeropuerto.TabIndex = 9
         Me.Lb_NombreAeropuerto.Text = "Nombre Aeropuerto:"
         '
-        'FrmNuevoDestino
+        'Bnt_EliminarDestino
+        '
+        Me.Bnt_EliminarDestino.Location = New System.Drawing.Point(40, 275)
+        Me.Bnt_EliminarDestino.Name = "Bnt_EliminarDestino"
+        Me.Bnt_EliminarDestino.Size = New System.Drawing.Size(75, 23)
+        Me.Bnt_EliminarDestino.TabIndex = 11
+        Me.Bnt_EliminarDestino.Text = "Eliminar"
+        Me.Bnt_EliminarDestino.UseVisualStyleBackColor = True
+        '
+        'Bnt_ConsultarDestino
+        '
+        Me.Bnt_ConsultarDestino.Location = New System.Drawing.Point(162, 275)
+        Me.Bnt_ConsultarDestino.Name = "Bnt_ConsultarDestino"
+        Me.Bnt_ConsultarDestino.Size = New System.Drawing.Size(75, 23)
+        Me.Bnt_ConsultarDestino.TabIndex = 12
+        Me.Bnt_ConsultarDestino.Text = "Consultar"
+        Me.Bnt_ConsultarDestino.UseVisualStyleBackColor = True
+        '
+        'Bnt_ModificarDestino
+        '
+        Me.Bnt_ModificarDestino.Location = New System.Drawing.Point(110, 321)
+        Me.Bnt_ModificarDestino.Name = "Bnt_ModificarDestino"
+        Me.Bnt_ModificarDestino.Size = New System.Drawing.Size(75, 23)
+        Me.Bnt_ModificarDestino.TabIndex = 13
+        Me.Bnt_ModificarDestino.Text = "Modificar"
+        Me.Bnt_ModificarDestino.UseVisualStyleBackColor = True
+        '
+        'FrmMenuDestino
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(736, 262)
+        Me.ClientSize = New System.Drawing.Size(736, 356)
+        Me.Controls.Add(Me.Bnt_ModificarDestino)
+        Me.Controls.Add(Me.Bnt_ConsultarDestino)
+        Me.Controls.Add(Me.Bnt_EliminarDestino)
         Me.Controls.Add(Me.Txt_NombreAeropuerto)
         Me.Controls.Add(Me.Lb_NombreAeropuerto)
         Me.Controls.Add(Me.BntCancelar)
@@ -143,15 +176,15 @@ Partial Class FrmNuevoDestino
         Me.Controls.Add(Me.Lb_CodigoDestino)
         Me.Controls.Add(Me.Txt_NombreDestino)
         Me.Controls.Add(Me.Lb_NombreDestino)
-        Me.Controls.Add(Me.Bnt_add)
-        Me.Name = "FrmNuevoDestino"
+        Me.Controls.Add(Me.Bnt_Acceptar)
+        Me.Name = "FrmMenuDestino"
         Me.Text = "FrmNuevoDestino"
         CType(Me.Dgv_ListaDestinos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Bnt_add As System.Windows.Forms.Button
+    Friend WithEvents Bnt_Acceptar As System.Windows.Forms.Button
     Friend WithEvents Lb_NombreDestino As System.Windows.Forms.Label
     Friend WithEvents Txt_NombreDestino As System.Windows.Forms.TextBox
     Friend WithEvents Lb_CodigoDestino As System.Windows.Forms.Label
@@ -162,4 +195,7 @@ Partial Class FrmNuevoDestino
     Friend WithEvents BntCancelar As System.Windows.Forms.Button
     Friend WithEvents Txt_NombreAeropuerto As System.Windows.Forms.TextBox
     Friend WithEvents Lb_NombreAeropuerto As System.Windows.Forms.Label
+    Friend WithEvents Bnt_EliminarDestino As System.Windows.Forms.Button
+    Friend WithEvents Bnt_ConsultarDestino As System.Windows.Forms.Button
+    Friend WithEvents Bnt_ModificarDestino As System.Windows.Forms.Button
 End Class

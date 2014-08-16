@@ -15,7 +15,7 @@ Public Class FrmLogin
             Dim resultado As Boolean
             Dim tipoUsuario As String
             Dim frmAdminstracion As New FrmMenuAdministrador
-            Dim frmClientes As New FrmMenuClientes
+            Dim frmClientes As New FrmMenuPClientes
             objUsuario.Username = Txt_Username.Text
             objUsuario.Password = Txt_Password.Text
             resultado = _usuarioBll.ConsultarUsuario(objUsuario)
@@ -43,7 +43,7 @@ Public Class FrmLogin
     End Sub
 
     Private Sub LinkLabel1_LinkClicked(sender As System.Object, e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
-        Dim FormCliente As New FrmNuevoClientes
+        Dim FormCliente As New FrmMenuClientes
         Me.Hide()
         FormCliente.ShowDialog()
     End Sub

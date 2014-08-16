@@ -29,6 +29,36 @@ Namespace LineaAerea
 
         End Function
 
+        Public Function ActualizarLineaAerea(ByVal xObjLineaAerea As Object) As OBJETOS.ObjRespuesta
+            Dim objRespuesta As New OBJETOS.ObjRespuesta
+            sql = "SpLineaAereaActualizar"
+            Try
+                objRespuesta = LineaAereaDao.ActualizarLineaAerea(xObjLineaAerea, sql)
+            Catch ex As Exception
+                objRespuesta.ResponseCode = 0
+                objRespuesta.ResponseMessage = ex.ToString
+                objRespuesta.DsResponse = Nothing
+            End Try
+            Return objRespuesta
+
+
+        End Function
+
+        Public Function EliminarLineaAerea(ByVal xObjLineaAerea As Object) As OBJETOS.ObjRespuesta
+            Dim objRespuesta As New OBJETOS.ObjRespuesta
+            sql = "SpLineaAereaEliminar"
+            Try
+                objRespuesta = LineaAereaDao.EliminarLineaAerea(xObjLineaAerea, sql)
+            Catch ex As Exception
+                objRespuesta.ResponseCode = 0
+                objRespuesta.ResponseMessage = ex.ToString
+                objRespuesta.DsResponse = Nothing
+            End Try
+            Return objRespuesta
+
+
+        End Function
+
 
 
         Public Function Select_LineaAereas_All(ByVal xObjLineaAerea As OBJETOS.ObjLineaAerea) As OBJETOS.ObjRespuesta

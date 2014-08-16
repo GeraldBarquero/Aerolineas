@@ -69,7 +69,7 @@
   <PropertyGroup>
     <StartupObject>Aerolineas.UI.FrmLogin</StartupObject>
     <StartupObject>Aerolineas.UI.FrmNuevoClientes</StartupObject>
-    <StartupObject>Aerolineas.UI.FrmMenuAdministrador</StartupObject>
+    <StartupObject>Aerolineas.UI.FrmClienteLista</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
@@ -115,10 +115,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmNuevoVuelo.Designer.vb">
-      <DependentUpon>FrmNuevoVuelo.vb</DependentUpon>
+    <Compile Include="FrmMenuVuelo.Designer.vb">
+      <DependentUpon>FrmMenuVuelo.vb</DependentUpon>
     </Compile>
-    <Compile Include="FrmNuevoVuelo.vb">
+    <Compile Include="FrmMenuVuelo.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmLoginUsuario.Designer.vb">
@@ -133,28 +133,28 @@
     <Compile Include="FrmMenuAdministrador.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmMenuPClientes.Designer.vb">
+      <DependentUpon>FrmMenuPClientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMenuPClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMenuLineaAerea.Designer.vb">
+      <DependentUpon>FrmMenuLineaAerea.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMenuLineaAerea.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmMenuClientes.Designer.vb">
       <DependentUpon>FrmMenuClientes.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmMenuClientes.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmNuevaLineaAerea.Designer.vb">
-      <DependentUpon>FrmNuevaLineaAerea.vb</DependentUpon>
+    <Compile Include="FrmMenuDestino.Designer.vb">
+      <DependentUpon>FrmMenuDestino.vb</DependentUpon>
     </Compile>
-    <Compile Include="FrmNuevaLineaAerea.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmNuevoClientes.Designer.vb">
-      <DependentUpon>FrmNuevoClientes.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FrmNuevoClientes.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmNuevoDestino.Designer.vb">
-      <DependentUpon>FrmNuevoDestino.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FrmNuevoDestino.vb">
+    <Compile Include="FrmMenuDestino.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmClienteLista.Designer.vb">
@@ -163,10 +163,10 @@
     <Compile Include="FrmClienteLista.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmNuevoPais.Designer.vb">
-      <DependentUpon>FrmNuevoPais.vb</DependentUpon>
+    <Compile Include="FrmMenuPais.Designer.vb">
+      <DependentUpon>FrmMenuPais.vb</DependentUpon>
     </Compile>
-    <Compile Include="FrmNuevoPais.vb">
+    <Compile Include="FrmMenuPais.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ModValidaDatos.vb" />
@@ -195,26 +195,26 @@
     <EmbeddedResource Include="FrmMenuAdministrador.resx">
       <DependentUpon>FrmMenuAdministrador.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmMenuPClientes.resx">
+      <DependentUpon>FrmMenuPClientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMenuLineaAerea.resx">
+      <DependentUpon>FrmMenuLineaAerea.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMenuClientes.resx">
       <DependentUpon>FrmMenuClientes.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmNuevaLineaAerea.resx">
-      <DependentUpon>FrmNuevaLineaAerea.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmNuevoClientes.resx">
-      <DependentUpon>FrmNuevoClientes.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmNuevoDestino.resx">
-      <DependentUpon>FrmNuevoDestino.vb</DependentUpon>
+    <EmbeddedResource Include="FrmMenuDestino.resx">
+      <DependentUpon>FrmMenuDestino.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmClienteLista.resx">
       <DependentUpon>FrmClienteLista.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmNuevoPais.resx">
-      <DependentUpon>FrmNuevoPais.vb</DependentUpon>
+    <EmbeddedResource Include="FrmMenuPais.resx">
+      <DependentUpon>FrmMenuPais.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmNuevoVuelo.resx">
-      <DependentUpon>FrmNuevoVuelo.vb</DependentUpon>
+    <EmbeddedResource Include="FrmMenuVuelo.resx">
+      <DependentUpon>FrmMenuVuelo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <CustomToolNamespace>My.Resources</CustomToolNamespace>

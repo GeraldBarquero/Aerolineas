@@ -5,17 +5,17 @@ Namespace OBJETOS
     Public Class ObjDestino
 
         Property idDestino As Integer
+        Property NombreDestino As String
+        Property CodigoDestino As String
+        Property NombreAeropuerto As String
         Property idPais As Integer
-        Property nombreDestino As String
-        Property codigoDestino As String
-        Property nombreAeropuerto As String
 
         Sub New()
             idDestino = Integer.MinValue
-            idPais = Integer.MinValue
-            nombreDestino = String.Empty
+            NombreDestino = String.Empty
             codigoDestino = String.Empty
-            nombreAeropuerto = String.Empty
+            idPais = Integer.MinValue
+            NombreAeropuerto = String.Empty
         End Sub
 
 

@@ -8,7 +8,7 @@ Public Class BllPais
     Dim sql As String = ""
 #End Region
 
-#Region "Procedimientos"
+#Region "Functions"
     Public Function InsertarPais(ByVal xObjPais As OBJETOS.ObjPais) As OBJETOS.ObjRespuesta
         Dim objRespuesta As New OBJETOS.ObjRespuesta
         sql = "SpPaisInsertar"
@@ -22,6 +22,32 @@ Public Class BllPais
         Return objRespuesta
     End Function
 
+    Public Function ActualizarPais(ByVal xObjPais As OBJETOS.ObjPais) As OBJETOS.ObjRespuesta
+        Dim objRespuesta As New OBJETOS.ObjRespuesta
+        sql = "SpPaisActualizar"
+        Try
+            objRespuesta = PaisDao.ActualizarPais(xObjPais, sql)
+        Catch ex As Exception
+            objRespuesta.ResponseCode = 0
+            objRespuesta.ResponseMessage = ex.ToString
+            objRespuesta.DsResponse = Nothing
+        End Try
+        Return objRespuesta
+    End Function
+
+
+    Public Function EliminarPais(ByVal xObjPais As OBJETOS.ObjPais) As OBJETOS.ObjRespuesta
+        Dim objRespuesta As New OBJETOS.ObjRespuesta
+        sql = "SpPaisEliminar"
+        Try
+            objRespuesta = PaisDao.EliminarPais(xObjPais, sql)
+        Catch ex As Exception
+            objRespuesta.ResponseCode = 0
+            objRespuesta.ResponseMessage = ex.ToString
+            objRespuesta.DsResponse = Nothing
+        End Try
+        Return objRespuesta
+    End Function
 
     Public Function Select_Pais_All(ByVal xObjPais As OBJETOS.ObjPais) As OBJETOS.ObjRespuesta
         Dim objRespuesta As New OBJETOS.ObjRespuesta

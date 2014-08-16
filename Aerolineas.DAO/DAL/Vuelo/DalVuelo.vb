@@ -1,10 +1,16 @@
 ﻿Imports Aerolineas.Entidades
+Namespace DAL.Vuelo
 
-Public Class DalVuelo
+
+
+    Public Class DalVuelo
 #Region "Variables"
 #End Region
 
 #Region "Funciones"
 #End Region
 
-End Class
+    End Class
+End Namespace
+
+

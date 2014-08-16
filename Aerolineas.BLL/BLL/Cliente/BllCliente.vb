@@ -28,6 +28,34 @@ Namespace Clientes
             Return objRespuesta
         End Function
 
+        Public Function ActualizarCliente(ByVal xObjCliente As OBJETOS.ObjCliente) As OBJETOS.ObjRespuesta
+            Dim objRespuesta As New OBJETOS.ObjRespuesta
+            sql = "SpClienteActualizar"
+            Try
+                objRespuesta = ClienteDao.ActualizarCliente(xObjCliente, sql)
+            Catch ex As Exception
+                objRespuesta.ResponseCode = 0
+                objRespuesta.ResponseMessage = ex.ToString
+                objRespuesta.DsResponse = Nothing
+
+            End Try
+            Return objRespuesta
+        End Function
+
+        Public Function EliminarCliente(ByVal xObjCliente As OBJETOS.ObjCliente) As OBJETOS.ObjRespuesta
+            Dim objRespuesta As New OBJETOS.ObjRespuesta
+            sql = "SpClienteEliminar"
+            Try
+                objRespuesta = ClienteDao.EliminarCliente(xObjCliente, sql)
+            Catch ex As Exception
+                objRespuesta.ResponseCode = 0
+                objRespuesta.ResponseMessage = ex.ToString
+                objRespuesta.DsResponse = Nothing
+
+            End Try
+            Return objRespuesta
+        End Function
+
 
         Public Function Select_Cliente_All(ByVal xObjCliente As OBJETOS.ObjCliente) As OBJETOS.ObjRespuesta
             Dim objRespuesta As New OBJETOS.ObjRespuesta

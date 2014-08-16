@@ -24,11 +24,35 @@ Namespace DAL.LineaAerea
             Return objRespuesta
         End Function
 
+        Public Function ActualizarLineaAerea(ByVal xObjLineaAerea As OBJETOS.ObjLineaAerea, ByVal sql As String) As OBJETOS.ObjRespuesta
+            Dim objRespuesta As New OBJETOS.ObjRespuesta
+            Try
+                objRespuesta = _ejecutar.SQL_Ejecuta_SentenciaInsert_Update_Delete(xObjLineaAerea, sql, _mensajeError)
+            Catch ex As Exception
+                objRespuesta.ResponseCode = 0
+                objRespuesta.ResponseMessage = ex.ToString
+                objRespuesta.DsResponse = Nothing
+            End Try
+            Return objRespuesta
+        End Function
+
+        Public Function EliminarLineaAerea(ByVal xObjLineaAerea As OBJETOS.ObjLineaAerea, ByVal sql As String) As OBJETOS.ObjRespuesta
+            Dim objRespuesta As New OBJETOS.ObjRespuesta
+            Try
+                objRespuesta = _ejecutar.SQL_Ejecuta_SentenciaInsert_Update_Delete(xObjLineaAerea, sql, _mensajeError)
+            Catch ex As Exception
+                objRespuesta.ResponseCode = 0
+                objRespuesta.ResponseMessage = ex.ToString
+                objRespuesta.DsResponse = Nothing
+            End Try
+            Return objRespuesta
+        End Function
+
 
         Public Function Select_LineaAereas_All(ByVal xObjLineaAerea As OBJETOS.ObjLineaAerea) As OBJETOS.ObjRespuesta
             Dim objRespuesta As New OBJETOS.ObjRespuesta
             Try
-                _sql = "SpLineaAereaListar"
+                _sql = "SpLineaAereaObtener"
                 objRespuesta = _ejecutar.SQL_Ejecuta_Sentencia(xObjLineaAerea, _sql, _mensajeError)
             Catch ex As Exception
                 objRespuesta.ResponseCode = 0

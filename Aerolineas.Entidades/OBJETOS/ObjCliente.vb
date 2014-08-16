@@ -2,28 +2,28 @@
 
     Public Class ObjCliente
 
-        Property idCliente As Integer
+        Property IdCliente As Integer
         Property NombreCliente As String
-        Property identification As String
+        Property Identification As String
         Property PaisResidencia As String
-        Property direccionExacta As String
+        Property DireccionExacta As String
         Property Edad As Integer
-        Property telefonoCasa As String
-        Property telefonoCelular As String
-        Property email As String
-        Property password As String
+        Property TelefonoCasa As String
+        Property TelefonoCelular As String
+        Property Email As String
+        Property Password As String
 
         Sub New()
-            idCliente = Integer.MinValue
+            IdCliente = Integer.MinValue
             NombreCliente = String.Empty
-            identification = String.Empty
+            Identification = String.Empty
             PaisResidencia = String.Empty
-            direccionExacta = String.Empty
+            DireccionExacta = String.Empty
             Edad = Integer.MinValue
-            telefonoCasa = String.Empty
-            telefonoCelular = String.Empty
-            email = String.Empty
-            password = String.Empty
+            TelefonoCasa = String.Empty
+            TelefonoCelular = String.Empty
+            Email = String.Empty
+            Password = String.Empty
 
         End Sub
 

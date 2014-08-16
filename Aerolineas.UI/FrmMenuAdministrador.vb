@@ -1,11 +1,11 @@
 ﻿Public Class FrmMenuAdministrador
 
 #Region "Variables"
-    Dim frmNuevoLineaAerea As New FrmNuevaLineaAerea
-    Dim frmNuevoDestino As New FrmNuevoDestino
-    Dim frmNuevoPais As New FrmNuevoPais
-    Dim frmNuevoCliente As New FrmNuevoClientes
-    Dim frmNuevoVuelo As New FrmNuevoVuelo
+    Dim frmNuevoLineaAerea As New FrmMenuLineaAerea
+    Dim frmNuevoDestino As New FrmMenuDestino
+    Dim frmNuevoPais As New FrmMenuPais
+    Dim frmNuevoCliente As New FrmMenuClientes
+    Dim frmNuevoVuelo As New FrmMenuVuelo
 #End Region
 
     Private Sub Bnt_LineaAereaAdmin_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Bnt_LineaAereaAdmin.Click
