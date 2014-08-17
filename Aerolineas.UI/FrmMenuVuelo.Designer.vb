@@ -38,11 +38,11 @@ Partial Class FrmMenuVuelo
         Me.Nud_CantidadPasajeros = New System.Windows.Forms.NumericUpDown()
         Me.Btn_Aceptar = New System.Windows.Forms.Button()
         Me.Btn_Cancelar = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Dgv_Vuelos = New System.Windows.Forms.DataGridView()
         Me.Dtp_HoraSalida = New System.Windows.Forms.DateTimePicker()
         Me.Dtp_HoraLlegada = New System.Windows.Forms.DateTimePicker()
         CType(Me.Nud_CantidadPasajeros, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Dgv_Vuelos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Lb_NumeroVuelo
@@ -183,13 +183,13 @@ Partial Class FrmMenuVuelo
         Me.Btn_Cancelar.Text = "Cancelar"
         Me.Btn_Cancelar.UseVisualStyleBackColor = True
         '
-        'DataGridView1
+        'Dgv_Vuelos
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(302, 35)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(560, 255)
-        Me.DataGridView1.TabIndex = 19
+        Me.Dgv_Vuelos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.Dgv_Vuelos.Location = New System.Drawing.Point(302, 35)
+        Me.Dgv_Vuelos.Name = "Dgv_Vuelos"
+        Me.Dgv_Vuelos.Size = New System.Drawing.Size(560, 255)
+        Me.Dgv_Vuelos.TabIndex = 19
         '
         'Dtp_HoraSalida
         '
@@ -217,14 +217,14 @@ Partial Class FrmMenuVuelo
         Me.Dtp_HoraLlegada.TabIndex = 23
         Me.Dtp_HoraLlegada.Value = New Date(2014, 8, 13, 0, 0, 0, 0)
         '
-        'FrmNuevoVuelo
+        'FrmMenuVuelo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(874, 370)
         Me.Controls.Add(Me.Dtp_HoraLlegada)
         Me.Controls.Add(Me.Dtp_HoraSalida)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.Dgv_Vuelos)
         Me.Controls.Add(Me.Btn_Cancelar)
         Me.Controls.Add(Me.Btn_Aceptar)
         Me.Controls.Add(Me.Nud_CantidadPasajeros)
@@ -241,10 +241,10 @@ Partial Class FrmMenuVuelo
         Me.Controls.Add(Me.Lb_DestinoSalida)
         Me.Controls.Add(Me.Lb_DestinoLlegada)
         Me.Controls.Add(Me.Lb_NumeroVuelo)
-        Me.Name = "FrmNuevoVuelo"
+        Me.Name = "FrmMenuVuelo"
         Me.Text = "FrmNuevoVuelo"
         CType(Me.Nud_CantidadPasajeros, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Dgv_Vuelos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -265,7 +265,7 @@ Partial Class FrmMenuVuelo
     Friend WithEvents Nud_CantidadPasajeros As System.Windows.Forms.NumericUpDown
     Friend WithEvents Btn_Aceptar As System.Windows.Forms.Button
     Friend WithEvents Btn_Cancelar As System.Windows.Forms.Button
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents Dgv_Vuelos As System.Windows.Forms.DataGridView
     Friend WithEvents Dtp_HoraSalida As System.Windows.Forms.DateTimePicker
     Friend WithEvents Dtp_HoraLlegada As System.Windows.Forms.DateTimePicker
 End Class

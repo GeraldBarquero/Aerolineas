@@ -10,7 +10,6 @@ Namespace DAL.Ejecutar
         Private _conectar As New DAL.Coneccion.DalConeccion
         Private _correcto As Boolean
         Private res As Int32 = 0
-        Dim Datos As New DataSet()
         Dim objRespuesta As New OBJETOS.ObjRespuesta
         Public Function SQL_Ejecuta_SentenciaInsert_Update_Delete(ByVal Obj As Object, ByVal SQL As String, ByRef MensajeError As String) As OBJETOS.ObjRespuesta
             Dim n As Int32 = 0
@@ -37,8 +36,7 @@ Namespace DAL.Ejecutar
                     End Select
                 Next
                 Try
-
-                    res = Convert.ToInt32(cmd.ExecuteScalar())
+                    objRespuesta._IdResultado = Convert.ToInt32(cmd.ExecuteScalar())
                     MensajeError = ""
                     _correcto = True
                     _conectar.DesconectaDb(MensajeError)
@@ -55,6 +53,7 @@ Namespace DAL.Ejecutar
             Dim n As Int32 = 0
             If Not _conectar.ConectaDb(MensajeError) Then
             Else
+                Dim Datos As New DataSet()
                 Dim cmd As New SqlCommand()
                 cmd.CommandType = CommandType.StoredProcedure
                 cmd.CommandText = SQL

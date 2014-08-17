@@ -22,8 +22,18 @@ Namespace LineaArea_Destino
                 objRespuesta.DsResponse = Nothing
             End Try
             Return objRespuesta
+        End Function
 
-
+        Public Function Obtener_LineaAerea_Destinos(ByVal xObjLineaAereaDestino As OBJETOS.ObjLineaAereaDestino) As OBJETOS.ObjRespuesta
+            Dim objRespuesta As New OBJETOS.ObjRespuesta
+            Try
+                objRespuesta = LineaAereaDestinoDao.Obtener_LineaAerea_Destinos(xObjLineaAereaDestino)
+            Catch ex As Exception
+                objRespuesta.ResponseCode = 0
+                objRespuesta.ResponseMessage = ex.ToString
+                objRespuesta.DsResponse = Nothing
+            End Try
+            Return objRespuesta
         End Function
 #End Region
     End Class

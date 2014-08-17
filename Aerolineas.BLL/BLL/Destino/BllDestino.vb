@@ -38,7 +38,7 @@ Namespace Destino
             Dim objRespuesta As New OBJETOS.ObjRespuesta
             sql = "SpDestinoActualizar"
             Try
-                objRespuesta = DestinoDao.InsertarDestino(xObjDestino, sql)
+                objRespuesta = DestinoDao.actualizarDestino(xObjDestino, sql)
             Catch ex As Exception
                 objRespuesta.ResponseCode = 0
                 objRespuesta.ResponseMessage = ex.ToString
@@ -54,7 +54,7 @@ Namespace Destino
             Dim objRespuesta As New OBJETOS.ObjRespuesta
             sql = "SpDestinoEliminar"
             Try
-                objRespuesta = DestinoDao.InsertarDestino(xObjDestino, sql)
+                objRespuesta = DestinoDao.EliminarDestino(xObjDestino, sql)
             Catch ex As Exception
                 objRespuesta.ResponseCode = 0
                 objRespuesta.ResponseMessage = ex.ToString

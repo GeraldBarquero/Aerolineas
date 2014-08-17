@@ -62,7 +62,7 @@ Namespace DAL.Destino
         Public Function Select_Destino_All(ByVal xObjDestino As OBJETOS.ObjDestino) As OBJETOS.ObjRespuesta
             Dim objRespuesta As New OBJETOS.ObjRespuesta
             Try
-                _sql = "SpDestinoObtener"
+                _sql = "SpDestinoListar"
                 objRespuesta = _ejecutar.SQL_Ejecuta_Sentencia(xObjDestino, _sql, _mensajeError)
             Catch ex As Exception
                 objRespuesta.ResponseCode = 0

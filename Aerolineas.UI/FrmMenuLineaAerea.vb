@@ -14,7 +14,7 @@ Public Class FrmMenuLineaAerea
     Public objRespuesta As New OBJETOS.ObjRespuesta
     Private objLineaAerea As New OBJETOS.ObjLineaAerea
     Private objDestino As New OBJETOS.ObjDestino
-    Private objLineaAreaDestino As New OBJETOS.ObjLineaAreaDestino
+    Private objLineaAreaDestino As New OBJETOS.ObjLineaAereaDestino
     Private _LineaAereaBll As New BLL.LineaAerea.BllLineaAerea
     Private _DestinosBll As New BLL.Destino.BllDestino
     Private _LineaAreaDestinoBll As New BLL.LineaArea_Destino.BllLineaAerea_Destino

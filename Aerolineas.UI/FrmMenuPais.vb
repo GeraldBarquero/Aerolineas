@@ -14,7 +14,6 @@ Public Class FrmMenuPais
     Private _ds As New DataSet
     Public modoPantalla As String = ""
     Public _codigoPais As Integer = 0
-    ''Public MensajeConfirmacion = ""
 
 #End Region
 
@@ -35,12 +34,12 @@ Public Class FrmMenuPais
         If modoPantalla = "Eliminar" Then
 
             Bt_Aceptar.Text = "Aceptar"
-            '' Lb_MensajeConfimaicion.Capture = "¿Seguro que decia eliminar un Pais?"
-            ''Lb_MensajeConfimaicion = MensajeConfirmacion
+            Lb_MensajeConfimaicion.Text = "¿Seguro que decia eliminar un Pais?"
             Txt_Pais.Text = False
             Bnt_ConsultarPais.Hide()
             Bnt_ModificarPais.Hide()
             Bnt_EliminarPais.Hide()
+            Dgv_ListaPais.Hide()
             cargarDatos()
         ElseIf modoPantalla = "Actualizar" Then
             Bt_Aceptar.Text = "Aceptar"

@@ -52,7 +52,7 @@ Namespace DAL.LineaAerea
         Public Function Select_LineaAereas_All(ByVal xObjLineaAerea As OBJETOS.ObjLineaAerea) As OBJETOS.ObjRespuesta
             Dim objRespuesta As New OBJETOS.ObjRespuesta
             Try
-                _sql = "SpLineaAereaObtener"
+                _sql = "SpLineaAereaListar"
                 objRespuesta = _ejecutar.SQL_Ejecuta_Sentencia(xObjLineaAerea, _sql, _mensajeError)
             Catch ex As Exception
                 objRespuesta.ResponseCode = 0

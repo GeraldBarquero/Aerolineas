@@ -38,16 +38,11 @@ C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.UI\obj\x
 C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.UI\obj\x86\Debug\Aerolineas.UI.FrmLogin.resources
 C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.UI\obj\x86\Debug\Aerolineas.UI.FrmMenuAdministrador.resources
 C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.UI\obj\x86\Debug\Aerolineas.UI.FrmMenuClientes.resources
-C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.UI\obj\x86\Debug\Aerolineas.UI.FrmNuevaLineaAerea.resources
-C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.UI\obj\x86\Debug\Aerolineas.UI.FrmNuevoClientes.resources
-C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.UI\obj\x86\Debug\Aerolineas.UI.FrmNuevoDestino.resources
 C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.UI\obj\x86\Debug\Aerolineas.UI.FrmClienteLista.resources
 C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.UI\obj\x86\Debug\Aerolineas.UI.Resources.resources
 C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.UI\obj\x86\Debug\Aerolineas.UI.vbproj.GenerateResource.Cache
 C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.UI\obj\x86\Debug\Aerolineas.UI.exe
 C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.UI\obj\x86\Debug\Aerolineas.UI.pdb
-C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.UI\obj\x86\Debug\Aerolineas.UI.FrmNuevoPais.resources
-C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.UI\obj\x86\Debug\Aerolineas.UI.FrmNuevoVuelo.resources
 E:\GitHub\Aerolineas\Aerolineas.UI\bin\Debug\Aerolineas.UI.exe
 E:\GitHub\Aerolineas\Aerolineas.UI\bin\Debug\Aerolineas.UI.pdb
 E:\GitHub\Aerolineas\Aerolineas.UI\bin\Debug\Aerolineas.BLL.dll
@@ -75,3 +70,8 @@ E:\GitHub\Aerolineas\Aerolineas.UI\obj\x86\Debug\GenerateResource.read.858.tlog
 E:\GitHub\Aerolineas\Aerolineas.UI\obj\x86\Debug\GenerateResource.read.1226.tlog
 E:\GitHub\Aerolineas\Aerolineas.UI\obj\x86\Debug\Aerolineas.UI.FrmMenuLineaAerea.resources
 E:\GitHub\Aerolineas\Aerolineas.UI\obj\x86\Debug\Aerolineas.UI.FrmMenuPClientes.resources
+C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.UI\obj\x86\Debug\Aerolineas.UI.FrmMenuPClientes.resources
+C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.UI\obj\x86\Debug\Aerolineas.UI.FrmMenuLineaAerea.resources
+C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.UI\obj\x86\Debug\Aerolineas.UI.FrmMenuDestino.resources
+C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.UI\obj\x86\Debug\Aerolineas.UI.FrmMenuPais.resources
+C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.UI\obj\x86\Debug\Aerolineas.UI.FrmMenuVuelo.resources
