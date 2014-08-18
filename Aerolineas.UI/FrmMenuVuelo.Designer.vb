@@ -185,10 +185,17 @@ Partial Class FrmMenuVuelo
         '
         'Dgv_Vuelos
         '
+        Me.Dgv_Vuelos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.Dgv_Vuelos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.Dgv_Vuelos.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.Dgv_Vuelos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Dgv_Vuelos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.Dgv_Vuelos.Location = New System.Drawing.Point(302, 35)
+        Me.Dgv_Vuelos.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Dgv_Vuelos.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Dgv_Vuelos.GridColor = System.Drawing.SystemColors.Control
+        Me.Dgv_Vuelos.Location = New System.Drawing.Point(314, 0)
         Me.Dgv_Vuelos.Name = "Dgv_Vuelos"
-        Me.Dgv_Vuelos.Size = New System.Drawing.Size(560, 255)
+        Me.Dgv_Vuelos.Size = New System.Drawing.Size(560, 370)
         Me.Dgv_Vuelos.TabIndex = 19
         '
         'Dtp_HoraSalida
@@ -221,6 +228,8 @@ Partial Class FrmMenuVuelo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSize = True
+        Me.CancelButton = Me.Btn_Cancelar
         Me.ClientSize = New System.Drawing.Size(874, 370)
         Me.Controls.Add(Me.Dtp_HoraLlegada)
         Me.Controls.Add(Me.Dtp_HoraSalida)
@@ -241,6 +250,7 @@ Partial Class FrmMenuVuelo
         Me.Controls.Add(Me.Lb_DestinoSalida)
         Me.Controls.Add(Me.Lb_DestinoLlegada)
         Me.Controls.Add(Me.Lb_NumeroVuelo)
+        Me.HelpButton = True
         Me.Name = "FrmMenuVuelo"
         Me.Text = "FrmNuevoVuelo"
         CType(Me.Nud_CantidadPasajeros, System.ComponentModel.ISupportInitialize).EndInit()

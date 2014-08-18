@@ -23,7 +23,6 @@ Public Class FrmMenuDestino
 
     Sub datosIniciales()
         Try
-            ''_dsDestinos.Tables.Clear()
             objRespuesta = _DestinoBll.Select_Destino_All(objDestino)
             _dsDestinos = Utilitarios.UTL.Utilitarios.Utilitarios.UnzipDataSet(objRespuesta.ByteResponseObject)
             Dgv_ListaDestinos.DataSource = _dsDestinos.Tables(0)
@@ -185,8 +184,9 @@ Public Class FrmMenuDestino
                 frmMenuDestino._IdDestino = Dgv_ListaDestinos.SelectedRows(0).Cells(0).Value
                 Me.Hide()
                 frmMenuDestino.ShowDialog()
+            Else
+                MessageBox.Show("Debe seleccionar un Destino para poder Eliminarlo de la Base de datos ")
             End If
-            MessageBox.Show("Debe selecciona un Destino para poder Eliminarlo de la Base de datos ")
         Catch ex As Exception
 
         End Try
@@ -201,8 +201,9 @@ Public Class FrmMenuDestino
                 frmMenuDestino._IdDestino = Dgv_ListaDestinos.SelectedRows(0).Cells(0).Value
                 Me.Hide()
                 frmMenuDestino.ShowDialog()
+            Else
+                MessageBox.Show("Debe seleccionar un Destino para poder Modificarlo de la Base de datos ")
             End If
-            MessageBox.Show("Debe selecciona un Destino para poder Modificarlo de la Base de datos ")
         Catch ex As Exception
 
         End Try
@@ -235,7 +236,7 @@ Public Class FrmMenuDestino
                     Txt_NombreAeropuerto = row("NombreAeropuerto")
                 Next
             Else
-                MessageBox.Show("la consulta o produjo resultados, sin resultados")
+                MessageBox.Show("la consulta no produjo resultados, sin resultados")
             End If
         Catch ex As Exception
 

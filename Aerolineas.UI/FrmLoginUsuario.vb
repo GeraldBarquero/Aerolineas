@@ -25,9 +25,11 @@ Public Class FrmLogin
                 If tipoUsuario = "A" Then
                     Me.Hide()
                     frmAdminstracion.ShowDialog()
+                    Me.Show()
                 ElseIf tipoUsuario = "C" Then
                     Me.Hide()
                     frmClientes.ShowDialog()
+                    Me.Show()
                 End If
             Else
                 MessageBox.Show("Datos incorrectos", "Fallido")

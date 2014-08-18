@@ -69,7 +69,7 @@
   <PropertyGroup>
     <StartupObject>Aerolineas.UI.FrmLogin</StartupObject>
     <StartupObject>Aerolineas.UI.FrmNuevoClientes</StartupObject>
-    <StartupObject>Aerolineas.UI.FrmMenuAdministrador</StartupObject>
+    <StartupObject>Aerolineas.UI.FrmMenuPClientes</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
@@ -115,6 +115,18 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmBusquedaVuelos.Designer.vb">
+      <DependentUpon>FrmBusquedaVuelos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBusquedaVuelos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMenuReportes.Designer.vb">
+      <DependentUpon>FrmMenuReportes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMenuReportes.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmMenuVuelo.Designer.vb">
       <DependentUpon>FrmMenuVuelo.vb</DependentUpon>
     </Compile>
@@ -212,6 +224,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMenuPais.resx">
       <DependentUpon>FrmMenuPais.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMenuReportes.resx">
+      <DependentUpon>FrmMenuReportes.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMenuVuelo.resx">
       <DependentUpon>FrmMenuVuelo.vb</DependentUpon>

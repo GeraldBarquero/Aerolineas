@@ -1,11 +1,8 @@
-﻿
-Imports Aerolineas.Entidades
+﻿Imports Aerolineas.Entidades
 Imports Aerolineas.BLL
 Imports Aerolineas.Utilitarios
 Imports System.Windows.Forms
 Imports System.Data
-
-
 
 Public Class FrmMenuLineaAerea
 
