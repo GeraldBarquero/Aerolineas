@@ -18,7 +18,6 @@ Public Class FrmMenuLineaAerea
     Private _dsLineaAerea As New DataSet
     Private _dsDestinos As New DataSet
     Public modoPantalla As String = ""
-    ''Private idDestino As String
     Private _idLineaArea As Integer = 0
 #End Region
 

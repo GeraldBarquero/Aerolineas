@@ -62,6 +62,7 @@ Public Class FrmMenuVuelo
         objVuelo.idAerolinea = Cmb_Aerolinea.SelectedValue
         objVuelo.llegada = Cmb_DestinoLlegada.SelectedValue
         objVuelo.salida = Cmb_DestinoSalida.SelectedValue
+        objVuelo.fechaVuelo = Dtp_FechaVuelo.Text
         objVuelo.horaLlegada = Dtp_HoraLlegada.Text
         objVuelo.horaSalida = Dtp_HoraSalida.Text
         objVuelo.numeroVuelo = Txt_NumeroVuelo.Text

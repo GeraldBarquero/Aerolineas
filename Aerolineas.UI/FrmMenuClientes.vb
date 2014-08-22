@@ -17,7 +17,15 @@ Public Class FrmMenuClientes
 
 #End Region
     Private Sub FrmClientes_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
+        datosIniciales()
+    End Sub
+    Sub datosIniciales()
+        Try
+            objRespuesta = _clienteBll.Select_Cliente_All(objCliente)
+            _dsCliente = Utilitarios.UTL.Utilitarios.Utilitarios.UnzipDataSet(objRespuesta.ByteResponseObject)
+            Dgv_ListaClientes.DataSource = _dsCliente.Tables(0)
+        Catch ex As Exception
+        End Try
     End Sub
 
     Private Sub bnt_Add_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles bnt_Aceptar.Click
@@ -31,7 +39,7 @@ Public Class FrmMenuClientes
             objCliente.Email = Txt_EmailCliente.Text
             objCliente.PaisResidencia = Txt_PaisResidenciaCliente.Text
             objCliente.Password = Txt_PasswordCliente.Text
-            _clienteBll.InsertarCliente(objCliente)
+            objRespuesta = _clienteBll.InsertarCliente(objCliente)
             If objRespuesta.ResponseCode = 1 Then
                 MessageBox.Show("Se ha registrado correctamente el usuario " & Txt_NombreCliente.Text & " en la base de datos.", "Exitoso")
                 Txt_NombreCliente.Text = ""
@@ -41,6 +49,9 @@ Public Class FrmMenuClientes
                 Txt_TelefonoCasaCliente.Text = ""
                 Txt_TelefonoCelularCliente.Text = ""
                 Txt_EmailCliente.Text = ""
+                Txt_PasswordCliente.Text = ""
+                Txt_PaisResidenciaCliente.Text = ""
+                datosIniciales()
             Else
                 MessageBox.Show("El usuario " & Txt_NombreCliente.Text & " no se registro correctamente en la base de datos", "Fallido")
             End If
@@ -134,6 +145,7 @@ Public Class FrmMenuClientes
             MessageBox.Show("Debe selecciona un Cliente para podereliminarlo de la Base de datos ")
         Catch ex As Exception
         End Try
+        datosIniciales()
     End Sub
 
     Private Sub Bnt_ModificarCliente_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Bnt_ConsultarCliente.Click
@@ -148,6 +160,7 @@ Public Class FrmMenuClientes
             MessageBox.Show("Debe selecciona un Cliente para podereliminarlo de la Base de datos ")
         Catch ex As Exception
         End Try
+        datosIniciales()
     End Sub
 
     Private Sub Bnt_ConsultarCliente_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Bnt_ModifcarCliente.Click

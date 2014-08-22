@@ -70,6 +70,32 @@ Namespace Clientes
             Return objRespuesta
         End Function
 
+        Public Function Consultar_Cliente(ByVal xObjCliente As OBJETOS.ObjCliente) As OBJETOS.ObjRespuesta
+            Dim objRespuesta As New OBJETOS.ObjRespuesta
+            Try
+
+                objRespuesta = ClienteDao.Consultar_Cliente(xObjCliente)
+            Catch ex As Exception
+                objRespuesta.ResponseCode = 0
+                objRespuesta.ResponseMessage = ex.ToString
+                objRespuesta.DsResponse = Nothing
+            End Try
+            Return objRespuesta
+        End Function
+
+        Public Function InsertarClienteEnVuelo(ByVal xObjCliente As OBJETOS.ObjCliente) As OBJETOS.ObjRespuesta
+            Dim objRespuesta As New OBJETOS.ObjRespuesta
+            sql = "SpClienteActualizarVuelo"
+            Try
+                objRespuesta = ClienteDao.InsertarClienteEnVuelo(xObjCliente, sql)
+            Catch ex As Exception
+                objRespuesta.ResponseCode = 0
+                objRespuesta.ResponseMessage = ex.ToString
+                objRespuesta.DsResponse = Nothing
+
+            End Try
+            Return objRespuesta
+        End Function
 #End Region
 
 

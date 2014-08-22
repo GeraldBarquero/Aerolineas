@@ -57,6 +57,19 @@ Namespace DAL.Vuelo
             End Try
             Return objRespuesta
         End Function
+
+        Public Function Consultar_Vuelo(ByVal xObjConsultarVuelo As OBJETOS.ObjConsultarVuelo) As OBJETOS.ObjRespuesta
+            Dim objRespuesta As New OBJETOS.ObjRespuesta
+            Try
+                _sql = "SpConsultarVuelo"
+                objRespuesta = _ejecutar.SQL_Ejecuta_Sentencia(xObjConsultarVuelo, _sql, _mensajeError)
+            Catch ex As Exception
+                objRespuesta.ResponseCode = 0
+                objRespuesta.ResponseMessage = ex.ToString
+                objRespuesta.DsResponse = Nothing
+            End Try
+            Return objRespuesta
+        End Function
 #End Region
 
     End Class

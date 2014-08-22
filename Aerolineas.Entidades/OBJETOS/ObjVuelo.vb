@@ -5,6 +5,7 @@
         Property llegada As Integer
         Property idAerolinea As Integer
         Property numeroVuelo As Integer
+        Property fechaVuelo As DateTime
         Property horaSalida As String
         Property horaLlegada As String
         Property precio As String
@@ -16,6 +17,7 @@
             salida = Integer.MinValue
             llegada = Integer.MinValue
             idAerolinea = Integer.MinValue
+            fechaVuelo = DateTime.MinValue
             numeroVuelo = Integer.MinValue
             horaLlegada = String.Empty
             horaSalida = String.Empty

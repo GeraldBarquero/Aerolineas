@@ -21,7 +21,7 @@ Namespace DAL.Usuario
 
             Try
                 _conectar.ConectaDb(_mensajeError)
-                _sql = "SpUsuarioObtener"
+                _sql = "SpUsuarioListar"
                 Dim cmd As New SqlCommand(_sql, _conectar.Cone)
                 cmd.CommandType = CommandType.StoredProcedure
                 cmd.Parameters.AddWithValue("@Username", xObjUsuario.Username)

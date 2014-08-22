@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="OBJETOS\ObjCliente.vb" />
+    <Compile Include="OBJETOS\ObjConsultarVuelo.vb" />
     <Compile Include="OBJETOS\ObjDestino.vb" />
     <Compile Include="OBJETOS\ObjLineaAerea.vb" />
     <Compile Include="OBJETOS\ObjLineaAereaDestino.vb" />

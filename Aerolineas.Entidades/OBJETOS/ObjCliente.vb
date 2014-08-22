@@ -3,6 +3,7 @@
     Public Class ObjCliente
 
         Property IdCliente As Integer
+        Property IdVuelo As Integer
         Property NombreCliente As String
         Property Identification As String
         Property PaisResidencia As String
@@ -15,6 +16,7 @@
 
         Sub New()
             IdCliente = Integer.MinValue
+            IdVuelo = Integer.MinValue
             NombreCliente = String.Empty
             Identification = String.Empty
             PaisResidencia = String.Empty

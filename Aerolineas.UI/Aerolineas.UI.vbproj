@@ -201,6 +201,9 @@
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FrmBusquedaVuelos.resx">
+      <DependentUpon>FrmBusquedaVuelos.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLoginUsuario.resx">
       <DependentUpon>FrmLoginUsuario.vb</DependentUpon>
     </EmbeddedResource>
