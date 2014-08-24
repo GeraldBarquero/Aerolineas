@@ -22,7 +22,7 @@ Partial Class FrmMenuClientes
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.bnt_Aceptar = New System.Windows.Forms.Button()
+        Me.Bnt_Aceptar = New System.Windows.Forms.Button()
         Me.Lb_NombreCliente = New System.Windows.Forms.Label()
         Me.Lb_IdentificacionCiente = New System.Windows.Forms.Label()
         Me.Lb_DireccionCliente = New System.Windows.Forms.Label()
@@ -44,19 +44,18 @@ Partial Class FrmMenuClientes
         Me.Txt_TelefonoCelularCliente = New System.Windows.Forms.MaskedTextBox()
         Me.Dgv_ListaClientes = New System.Windows.Forms.DataGridView()
         Me.Bnt_EliminarCliente = New System.Windows.Forms.Button()
-        Me.Bnt_ConsultarCliente = New System.Windows.Forms.Button()
         Me.Bnt_ModifcarCliente = New System.Windows.Forms.Button()
         CType(Me.Dgv_ListaClientes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'bnt_Aceptar
+        'Bnt_Aceptar
         '
-        Me.bnt_Aceptar.Location = New System.Drawing.Point(84, 457)
-        Me.bnt_Aceptar.Name = "bnt_Aceptar"
-        Me.bnt_Aceptar.Size = New System.Drawing.Size(75, 23)
-        Me.bnt_Aceptar.TabIndex = 0
-        Me.bnt_Aceptar.Text = "Insertar"
-        Me.bnt_Aceptar.UseVisualStyleBackColor = True
+        Me.Bnt_Aceptar.Location = New System.Drawing.Point(84, 457)
+        Me.Bnt_Aceptar.Name = "Bnt_Aceptar"
+        Me.Bnt_Aceptar.Size = New System.Drawing.Size(75, 23)
+        Me.Bnt_Aceptar.TabIndex = 0
+        Me.Bnt_Aceptar.Text = "Insertar"
+        Me.Bnt_Aceptar.UseVisualStyleBackColor = True
         '
         'Lb_NombreCliente
         '
@@ -225,25 +224,16 @@ Partial Class FrmMenuClientes
         '
         'Bnt_EliminarCliente
         '
-        Me.Bnt_EliminarCliente.Location = New System.Drawing.Point(84, 511)
+        Me.Bnt_EliminarCliente.Location = New System.Drawing.Point(84, 495)
         Me.Bnt_EliminarCliente.Name = "Bnt_EliminarCliente"
         Me.Bnt_EliminarCliente.Size = New System.Drawing.Size(75, 23)
         Me.Bnt_EliminarCliente.TabIndex = 23
         Me.Bnt_EliminarCliente.Text = "Eliminar"
         Me.Bnt_EliminarCliente.UseVisualStyleBackColor = True
         '
-        'Bnt_ConsultarCliente
-        '
-        Me.Bnt_ConsultarCliente.Location = New System.Drawing.Point(278, 511)
-        Me.Bnt_ConsultarCliente.Name = "Bnt_ConsultarCliente"
-        Me.Bnt_ConsultarCliente.Size = New System.Drawing.Size(75, 23)
-        Me.Bnt_ConsultarCliente.TabIndex = 24
-        Me.Bnt_ConsultarCliente.Text = "Consultar"
-        Me.Bnt_ConsultarCliente.UseVisualStyleBackColor = True
-        '
         'Bnt_ModifcarCliente
         '
-        Me.Bnt_ModifcarCliente.Location = New System.Drawing.Point(176, 563)
+        Me.Bnt_ModifcarCliente.Location = New System.Drawing.Point(269, 495)
         Me.Bnt_ModifcarCliente.Name = "Bnt_ModifcarCliente"
         Me.Bnt_ModifcarCliente.Size = New System.Drawing.Size(75, 23)
         Me.Bnt_ModifcarCliente.TabIndex = 25
@@ -254,9 +244,8 @@ Partial Class FrmMenuClientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1238, 598)
+        Me.ClientSize = New System.Drawing.Size(1238, 540)
         Me.Controls.Add(Me.Bnt_ModifcarCliente)
-        Me.Controls.Add(Me.Bnt_ConsultarCliente)
         Me.Controls.Add(Me.Bnt_EliminarCliente)
         Me.Controls.Add(Me.Dgv_ListaClientes)
         Me.Controls.Add(Me.Txt_TelefonoCelularCliente)
@@ -278,7 +267,7 @@ Partial Class FrmMenuClientes
         Me.Controls.Add(Me.Lb_DireccionCliente)
         Me.Controls.Add(Me.Lb_IdentificacionCiente)
         Me.Controls.Add(Me.Lb_NombreCliente)
-        Me.Controls.Add(Me.bnt_Aceptar)
+        Me.Controls.Add(Me.Bnt_Aceptar)
         Me.Name = "FrmMenuClientes"
         Me.Text = "FrmClientes"
         CType(Me.Dgv_ListaClientes, System.ComponentModel.ISupportInitialize).EndInit()
@@ -286,7 +275,7 @@ Partial Class FrmMenuClientes
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents bnt_Aceptar As System.Windows.Forms.Button
+    Friend WithEvents Bnt_Aceptar As System.Windows.Forms.Button
     Friend WithEvents Lb_NombreCliente As System.Windows.Forms.Label
     Friend WithEvents Lb_IdentificacionCiente As System.Windows.Forms.Label
     Friend WithEvents Lb_DireccionCliente As System.Windows.Forms.Label
@@ -308,6 +297,5 @@ Partial Class FrmMenuClientes
     Friend WithEvents Txt_TelefonoCelularCliente As System.Windows.Forms.MaskedTextBox
     Friend WithEvents Dgv_ListaClientes As System.Windows.Forms.DataGridView
     Friend WithEvents Bnt_EliminarCliente As System.Windows.Forms.Button
-    Friend WithEvents Bnt_ConsultarCliente As System.Windows.Forms.Button
     Friend WithEvents Bnt_ModifcarCliente As System.Windows.Forms.Button
 End Class

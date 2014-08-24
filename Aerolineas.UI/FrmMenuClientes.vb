@@ -18,6 +18,28 @@ Public Class FrmMenuClientes
 #End Region
     Private Sub FrmClientes_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         datosIniciales()
+        If modoPantalla = "Eliminar" Then
+            Bnt_Aceptar.Text = "Aceptar"
+            Txt_NombreCliente.Enabled = False
+            Txt_IdentificacionCliente.Enabled = False
+            Rtxt_DireccionCliente.Enabled = False
+            Txt_EdadCliente.Enabled = False
+            Txt_TelefonoCasaCliente.Enabled = False
+            Txt_TelefonoCelularCliente.Enabled = False
+            Txt_EmailCliente.Enabled = False
+            Txt_PasswordCliente.Enabled = False
+            Txt_PaisResidenciaCliente.Enabled = False
+            Bnt_ModifcarCliente.Hide()
+            Bnt_EliminarCliente.Hide()
+            cargarDatos()
+        ElseIf modoPantalla = "Actualizar" Then
+            Bnt_Aceptar.Text = "Aceptar"
+            Bnt_ModifcarCliente.Hide()
+            Bnt_EliminarCliente.Hide()
+            cargarDatos()
+        Else
+            Bnt_Aceptar.Text = "Insertar"
+        End If
     End Sub
     Sub datosIniciales()
         Try
@@ -28,7 +50,7 @@ Public Class FrmMenuClientes
         End Try
     End Sub
 
-    Private Sub bnt_Add_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles bnt_Aceptar.Click
+    Private Sub Bnt_Add_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Bnt_Aceptar.Click
         If VerificarCampos() = True Then
             objCliente.NombreCliente = Txt_NombreCliente.Text
             objCliente.Identification = Txt_IdentificacionCliente.Text
@@ -134,36 +156,60 @@ Public Class FrmMenuClientes
 
 
     Private Sub Bnt_EliminarCliente_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Bnt_EliminarCliente.Click
-        Dim frmMenuCliente As New FrmMenuClientes
+        Dim frmCliente As New FrmMenuClientes
         Try
             If Dgv_ListaClientes.SelectedRows.Count > 0 Then
-                frmMenuCliente.modoPantalla = "Eliminar"
-                frmMenuCliente._CodigoCliente = Dgv_ListaClientes.SelectedRows(0).Cells(0).Value
+                frmCliente.modoPantalla = "Eliminar"
+                frmCliente._CodigoCliente = Dgv_ListaClientes.SelectedRows(0).Cells(0).Value
                 Me.Hide()
-                frmMenuCliente.ShowDialog()
+                frmCliente.ShowDialog()
+            Else
+                MessageBox.Show("Debe seleccionar un Cliente para poder eliminarlo de la Base de datos ")
             End If
-            MessageBox.Show("Debe selecciona un Cliente para podereliminarlo de la Base de datos ")
         Catch ex As Exception
         End Try
         datosIniciales()
     End Sub
 
-    Private Sub Bnt_ModificarCliente_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Bnt_ConsultarCliente.Click
-        Dim frmMenuCliente As New FrmMenuClientes
+    Private Sub Bnt_ModificarCliente_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Bnt_ModifcarCliente.Click
+        Dim frmCliente As New FrmMenuClientes
         Try
             If Dgv_ListaClientes.SelectedRows.Count > 0 Then
-                frmMenuCliente.modoPantalla = "Actualizar"
-                frmMenuCliente._CodigoCliente = Dgv_ListaClientes.SelectedRows(0).Cells(0).Value
+                frmCliente.modoPantalla = "Actualizar"
+                frmCliente._CodigoCliente = Dgv_ListaClientes.SelectedRows(0).Cells(0).Value
                 Me.Hide()
-                frmMenuCliente.ShowDialog()
+                frmCliente.ShowDialog()
+            Else
+                MessageBox.Show("Debe seleccionar un Cliente para poder modificarlo")
             End If
-            MessageBox.Show("Debe selecciona un Cliente para podereliminarlo de la Base de datos ")
         Catch ex As Exception
         End Try
         datosIniciales()
     End Sub
 
-    Private Sub Bnt_ConsultarCliente_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Bnt_ModifcarCliente.Click
-
+    Sub cargarDatos()
+        objCliente.IdCliente = _CodigoCliente
+        Dim objRespuesta As New OBJETOS.ObjRespuesta
+        objRespuesta = _clienteBll.Consultar_Cliente(objCliente)
+        _dsCliente = Nothing
+        _dsCliente = Utilitarios.UTL.Utilitarios.Utilitarios.UnzipDataSet(objRespuesta.ByteResponseObject)
+        Try
+            If _dsCliente.Tables(0).Rows.Count > 0 Then
+                For Each row In _dsCliente.Tables(0).Rows
+                    Txt_NombreCliente.Text = row("NombreCliente")
+                    Txt_IdentificacionCliente.Text = row("Identification")
+                    Rtxt_DireccionCliente.Text = row("DireccionExacta")
+                    Txt_EdadCliente.Text = row("Edad")
+                    Txt_TelefonoCasaCliente.Text = row("TelefonoCasa")
+                    Txt_TelefonoCelularCliente.Text = row("TelefonoCelular")
+                    Txt_EmailCliente.Text = row("Email")
+                    Txt_PasswordCliente.Text = row("Password")
+                    Txt_PaisResidenciaCliente.Text = row("PaisResidencia")
+                Next
+            Else
+                MessageBox.Show("la consulta no produjo resultados, sin resultados")
+            End If
+        Catch ex As Exception
+        End Try
     End Sub
 End Class

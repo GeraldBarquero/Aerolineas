@@ -30,7 +30,6 @@ Partial Class FrmMenuLineaAerea
         Me.Bnt_Cancelar = New System.Windows.Forms.Button()
         Me.LsBx_destinos = New System.Windows.Forms.ListBox()
         Me.Bnt_EliminarLineaAerea = New System.Windows.Forms.Button()
-        Me.Bnt_ConsultarLineaAerea = New System.Windows.Forms.Button()
         Me.Bnt_ModificarLineaAerea = New System.Windows.Forms.Button()
         CType(Me.Dgv_ListaLineasAereas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -66,7 +65,7 @@ Partial Class FrmMenuLineaAerea
         Me.Dgv_ListaLineasAereas.Dock = System.Windows.Forms.DockStyle.Right
         Me.Dgv_ListaLineasAereas.Location = New System.Drawing.Point(308, 0)
         Me.Dgv_ListaLineasAereas.Name = "Dgv_ListaLineasAereas"
-        Me.Dgv_ListaLineasAereas.Size = New System.Drawing.Size(388, 314)
+        Me.Dgv_ListaLineasAereas.Size = New System.Drawing.Size(388, 269)
         Me.Dgv_ListaLineasAereas.TabIndex = 3
         '
         'Lb_Destinos
@@ -106,18 +105,9 @@ Partial Class FrmMenuLineaAerea
         Me.Bnt_EliminarLineaAerea.Text = "Eliminar"
         Me.Bnt_EliminarLineaAerea.UseVisualStyleBackColor = True
         '
-        'Bnt_ConsultarLineaAerea
-        '
-        Me.Bnt_ConsultarLineaAerea.Location = New System.Drawing.Point(197, 238)
-        Me.Bnt_ConsultarLineaAerea.Name = "Bnt_ConsultarLineaAerea"
-        Me.Bnt_ConsultarLineaAerea.Size = New System.Drawing.Size(75, 23)
-        Me.Bnt_ConsultarLineaAerea.TabIndex = 10
-        Me.Bnt_ConsultarLineaAerea.Text = "Consultar"
-        Me.Bnt_ConsultarLineaAerea.UseVisualStyleBackColor = True
-        '
         'Bnt_ModificarLineaAerea
         '
-        Me.Bnt_ModificarLineaAerea.Location = New System.Drawing.Point(130, 280)
+        Me.Bnt_ModificarLineaAerea.Location = New System.Drawing.Point(197, 238)
         Me.Bnt_ModificarLineaAerea.Name = "Bnt_ModificarLineaAerea"
         Me.Bnt_ModificarLineaAerea.Size = New System.Drawing.Size(75, 23)
         Me.Bnt_ModificarLineaAerea.TabIndex = 11
@@ -128,9 +118,8 @@ Partial Class FrmMenuLineaAerea
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(696, 314)
+        Me.ClientSize = New System.Drawing.Size(696, 269)
         Me.Controls.Add(Me.Bnt_ModificarLineaAerea)
-        Me.Controls.Add(Me.Bnt_ConsultarLineaAerea)
         Me.Controls.Add(Me.Bnt_EliminarLineaAerea)
         Me.Controls.Add(Me.LsBx_destinos)
         Me.Controls.Add(Me.Bnt_Cancelar)
@@ -154,6 +143,5 @@ Partial Class FrmMenuLineaAerea
     Friend WithEvents Bnt_Cancelar As System.Windows.Forms.Button
     Friend WithEvents LsBx_destinos As System.Windows.Forms.ListBox
     Friend WithEvents Bnt_EliminarLineaAerea As System.Windows.Forms.Button
-    Friend WithEvents Bnt_ConsultarLineaAerea As System.Windows.Forms.Button
     Friend WithEvents Bnt_ModificarLineaAerea As System.Windows.Forms.Button
 End Class

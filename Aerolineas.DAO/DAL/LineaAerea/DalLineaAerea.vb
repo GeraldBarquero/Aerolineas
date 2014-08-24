@@ -62,12 +62,20 @@ Namespace DAL.LineaAerea
             Return objRespuesta
         End Function
 
+        Public Function Obtener_LineaAereas(ByVal xObjLineaAerea As OBJETOS.ObjLineaAerea) As OBJETOS.ObjRespuesta
+            Dim objRespuesta As New OBJETOS.ObjRespuesta
+            Try
+                _sql = "SpLineaAereaObtener"
+                objRespuesta = _ejecutar.SQL_Ejecuta_Sentencia(xObjLineaAerea, _sql, _mensajeError)
+            Catch ex As Exception
+                objRespuesta.ResponseCode = 0
+                objRespuesta.ResponseMessage = ex.ToString
+                objRespuesta.DsResponse = Nothing
+            End Try
+            Return objRespuesta
+        End Function
 
 
 #End Region
-
-
-
-
     End Class
 End Namespace

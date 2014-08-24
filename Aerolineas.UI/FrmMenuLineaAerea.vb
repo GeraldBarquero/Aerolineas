@@ -26,7 +26,6 @@ Public Class FrmMenuLineaAerea
         If modoPantalla = "Eliminar" Then
             objLineaAerea.NombreLineaAerea = Txt_NombreLineaAerea.Text
             objRespuesta = _LineaAereaBll.EliminarLineaAerea(objLineaAerea)
-
             If objRespuesta.ResponseCode = 1 Then
                 MessageBox.Show("Se ha Eliminado correctamente la Linea Aerea " & Txt_NombreLineaAerea.Text & " en la base de datos.", "Exitoso")
                 Me.Close()
@@ -36,7 +35,6 @@ Public Class FrmMenuLineaAerea
             Else
                 MessageBox.Show("La Aerolinea Aerea  " & Txt_NombreLineaAerea.Text & " no se Eliminado correctamente en la base de datos", "Fallido")
             End If
-
         ElseIf modoPantalla = "Actualizar" Then
             objLineaAerea.NombreLineaAerea = Txt_NombreLineaAerea.Text
             objRespuesta = _LineaAereaBll.ActualizarLineaAerea(objLineaAerea)
@@ -49,85 +47,57 @@ Public Class FrmMenuLineaAerea
             Else
                 MessageBox.Show("la Linea Aerea " & Txt_NombreLineaAerea.Text & " no se Modificado correctamente en la base de datos", "Fallido")
             End If
-
-        ElseIf modoPantalla = "Consultar" Then
-
         Else
-
             objLineaAerea.NombreLineaAerea = Txt_NombreLineaAerea.Text
-
             If LsBx_destinos.SelectedItems.Count > 0 Then
                 objRespuesta = _LineaAereaBll.InsertarLineaAerea(objLineaAerea)
                 objLineaAreaDestino.IdLineaAerea = objRespuesta._IdResultado
-
                 For Each elemento In LsBx_destinos.SelectedItems
                     objLineaAreaDestino.IdDestino = Convert.ToInt32(elemento.Item(0))
                     objRespuesta = _LineaAreaDestinoBll.InsertarLineaAerea(objLineaAreaDestino)
                 Next elemento
-
                 Txt_NombreLineaAerea.Text = ""
-
                 If objRespuesta.ResponseCode = 1 Then
                     MessageBox.Show("Se ha registrado correctamente la linea Aerea " & Txt_NombreLineaAerea.Text & " en la base de datos.", "Exitoso")
                 Else
                     MessageBox.Show("La linea Aerea " & Txt_NombreLineaAerea.Text & " no se registro correctamente en la base de datos", "Fallido")
                 End If
             End If
-
         End If
-
-       
-
     End Sub
 
 
     Sub datosIniciales()
         Try
-
             objRespuesta = _LineaAereaBll.Select_LineaAereas_All(objLineaAerea)
             _dsLineaAerea = Utilitarios.UTL.Utilitarios.Utilitarios.UnzipDataSet(objRespuesta.ByteResponseObject)
             Dgv_ListaLineasAereas.DataSource = _dsLineaAerea.Tables(0)
-
             objRespuesta = _DestinosBll.Select_Destino_All(objDestino)
             _dsDestinos = Utilitarios.UTL.Utilitarios.Utilitarios.UnzipDataSet(objRespuesta.ByteResponseObject)
             LsBx_destinos.ValueMember = _dsDestinos.Tables(0).Columns("IdDestino").ColumnName
             LsBx_destinos.DisplayMember = _dsDestinos.Tables(0).Columns("CodigoDestino").ColumnName
             LsBx_destinos.DataSource = _dsDestinos.Tables("Datos")
-
         Catch ex As Exception
         End Try
     End Sub
 
     Private Sub FrmNuevaLineaAerea_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         datosIniciales()
-
         If modoPantalla = "Eliminar" Then
             Bnt_Acceptar.Text = "Aceptar"
-            Txt_NombreLineaAerea.Text = False
-            Bnt_ConsultarLineaAerea.Hide()
+            Txt_NombreLineaAerea.Enabled = False
             Bnt_ModificarLineaAerea.Hide()
             Bnt_EliminarLineaAerea.Hide()
             cargarDatos()
-
         ElseIf modoPantalla = "Actualizar" Then
             Bnt_Acceptar.Text = "Aceptar"
-            Txt_NombreLineaAerea.Text = False
-            Bnt_ConsultarLineaAerea.Hide()
+            Txt_NombreLineaAerea.Enabled = False
             Bnt_ModificarLineaAerea.Hide()
             Bnt_EliminarLineaAerea.Hide()
             cargarDatos()
-
-            'ElseIf modoPantalla = "Actualizar" Then
-            '    Bnt_Acceptar.Text = "Aceptar"
-            '    Txt_NombreLineaAerea.Text = False
-            '    Bnt_ConsultarLineaAerea.Hide()
-            '    Bnt_ModificarLineaAerea.Hide()
-            '    Bnt_EliminarLineaAerea.Hide()
-            '    cargarDatos()
         Else
             Bnt_Acceptar.Text = "Insertar"
         End If
-
     End Sub
     Private Sub ValidarLetrasNumeros(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles Txt_NombreLineaAerea.KeyPress
         e.KeyChar = Chr(SoloLetras(Asc(e.KeyChar)))
@@ -158,9 +128,11 @@ Public Class FrmMenuLineaAerea
                 frmMenuLineaAerea._idLineaArea = Dgv_ListaLineasAereas.SelectedRows(0).Cells(0).Value
                 Me.Hide()
                 frmMenuLineaAerea.ShowDialog()
+            Else
+                MessageBox.Show("Debe seleccionar una Linea Aerea para poder eliminarla de la Base de datos ")
             End If
-        Catch ex As Exception
 
+        Catch ex As Exception
         End Try
     End Sub
 
@@ -172,30 +144,17 @@ Public Class FrmMenuLineaAerea
                 frmMenuLineaAerea._idLineaArea = Dgv_ListaLineasAereas.SelectedRows(0).Cells(0).Value
                 Me.Hide()
                 frmMenuLineaAerea.ShowDialog()
+            Else
+                MessageBox.Show("Debe seleccionar una Linea Aerea para poder modificarla")
             End If
         Catch ex As Exception
-
         End Try
     End Sub
-
-    Private Sub Bnt_ConsultarLineaAerea_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Bnt_ConsultarLineaAerea.Click
-        Dim frmMenuLineaAerea As New FrmMenuLineaAerea
-        Try
-            FrmMenuLineaAerea.modoPantalla = "Consultar"
-            Me.Hide()
-            frmMenuLineaAerea.ShowDialog()
-            Me.Dispose()
-        Catch ex As Exception
-
-        End Try
-    End Sub
-
-
 
     Sub cargarDatos()
         objLineaAerea.idLineaAerea = _idLineaArea
         Dim objRespuesta As New OBJETOS.ObjRespuesta
-        objRespuesta = _LineaAereaBll.Select_LineaAereas_All(objLineaAerea)
+        objRespuesta = _LineaAereaBll.Obtener_LineaAereas(objLineaAerea)
         _dsLineaAerea = Nothing
         _dsLineaAerea = Utilitarios.UTL.Utilitarios.Utilitarios.UnzipDataSet(objRespuesta.ByteResponseObject)
         Try
@@ -204,12 +163,9 @@ Public Class FrmMenuLineaAerea
                     Txt_NombreLineaAerea.Text = row("NombreLineaAerea")
                 Next
             Else
-                MessageBox.Show("la consulta o produjo resultados, sin resultados")
+                MessageBox.Show("la consulta no produjo resultados, sin resultados")
             End If
         Catch ex As Exception
-
-
         End Try
     End Sub
-
 End Class
