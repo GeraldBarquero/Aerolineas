@@ -62,7 +62,7 @@ Namespace DAL.Usuario
         Public Function SelectUsuario_All(ByVal xObjUsuario As OBJETOS.ObjUsuario) As OBJETOS.ObjRespuesta
             Dim objRespuesta As New OBJETOS.ObjRespuesta
             Try
-                _sql = "SpUsuarioListar"
+                _sql = "SpUsuarioObtener"
                 objRespuesta = _ejecutar.SQL_Ejecuta_Sentencia(xObjUsuario, _sql, _mensajeError)
             Catch ex As Exception
                 objRespuesta.ResponseCode = 0

@@ -115,10 +115,8 @@ Public Class FrmMenuLineaAerea
     End Function
 
     Private Sub BntCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Bnt_Cancelar.Click
-        Me.Dispose()
+        Txt_NombreLineaAerea.Text = ""
         Me.Close()
-        Dim FrmMenuLineaAerea As New FrmMenuLineaAerea
-        FrmMenuLineaAerea.ShowDialog()
     End Sub
 
 

@@ -17,6 +17,7 @@ Public Class FrmMenuDestino
     Private objPais As New OBJETOS.ObjPais
     Private _PaisBll As New BLL.BllPais
     Public _IdDestino As Integer = 0
+    Public _IdPais As Integer = 0
     Dim _dsDestinos As New DataSet
 
 #End Region
@@ -170,10 +171,10 @@ Public Class FrmMenuDestino
     End Function
 
     Private Sub BntCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BntCancelar.Click
-        Me.Dispose()
+        Txt_NombreDestino.Text = ""
+        Txt_CodigoDestino.Text = ""
+        Txt_NombreAeropuerto.Text = ""
         Me.Close()
-        Dim FrmMenuDestino As New FrmMenuDestino
-        FrmMenuDestino.ShowDialog()
     End Sub
 
 
@@ -200,6 +201,8 @@ Public Class FrmMenuDestino
             If Dgv_ListaDestinos.SelectedRows.Count > 0 Then
                 frmMenuDestino.modoPantalla = "Actualizar"
                 frmMenuDestino._IdDestino = Dgv_ListaDestinos.SelectedRows(0).Cells(0).Value
+                Dim CodigoPais As Integer = Dgv_ListaDestinos.SelectedRows(0).Cells(4).Value
+                frmMenuDestino._IdPais = CodigoPais
                 Me.Hide()
                 frmMenuDestino.ShowDialog()
             Else
@@ -235,6 +238,7 @@ Public Class FrmMenuDestino
                     Txt_NombreDestino.Text = row("NombreDestino")
                     Txt_CodigoDestino.Text = row("CodigoDestino")
                     Txt_NombreAeropuerto.Text = row("NombreAeropuerto")
+                    Cmb_Pais.SelectedValue = row("IdPais")
                 Next
             Else
                 MessageBox.Show("la consulta no produjo resultados, sin resultados")

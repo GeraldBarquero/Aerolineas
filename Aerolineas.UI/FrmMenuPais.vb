@@ -32,7 +32,6 @@ Public Class FrmMenuPais
     Private Sub FrmNuevoPais_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         datosIniciales()
         If modoPantalla = "Eliminar" Then
-
             Bt_Aceptar.Text = "Aceptar"
             Lb_MensajeConfimaicion.Text = "¿Seguro que que desea eliminar el Pais?"
             Txt_Pais.Enabled = False
@@ -48,14 +47,8 @@ Public Class FrmMenuPais
             Bnt_ModificarPais.Hide()
             Bnt_EliminarPais.Hide()
             cargarDatos()
-            'ElseIf modoPantalla = "Modificar" Then
-            '    Bt_Aceptar.Text = "Aceptar"
-            '    Bnt_ConsultarPais.Hide()
-            '    Bnt_ModificarPais.Hide()
-            '    Bnt_EliminarPais.Hide()
         Else
             Bt_Aceptar.Text = "Insertar"
-
         End If
 
     End Sub
@@ -89,20 +82,6 @@ Public Class FrmMenuPais
             Else
                 MessageBox.Show("El país  " & Txt_Pais.Text & " no se Modificado correctamente en la base de datos", "Fallido")
             End If
-
-
-        ElseIf modoPantalla = "Consultar" Then
-            'objPais.nombrePais = Txt_Pais.Text
-            '''objRespuesta = _PaisBll.Pais(objPais)
-            'If objRespuesta.ResponseCode = 1 Then
-            '    MessageBox.Show("Se ha Consultar correctamente el país " & Txt_Pais.Text & " en la base de datos.", "Exitoso")
-            '    Me.Close()
-            '    Me.Dispose()
-            '    Dim frmMenuPais As New FrmNuevoPais
-            '    frmMenuPais.ShowDialog()
-            'Else
-            '    MessageBox.Show("El país  " & Txt_Pais.Text & " no se Modificado correctamente en la base de datos", "Fallido")
-            'End If
         Else
             objPais.nombrePais = Txt_Pais.Text
             objRespuesta = _PaisBll.InsertarPais(objPais)
@@ -111,7 +90,7 @@ Public Class FrmMenuPais
                 Me.Close()
                 Me.Dispose()
                 Dim frmMenuPais As New FrmMenuPais
-                FrmMenuPais.ShowDialog()
+                frmMenuPais.ShowDialog()
             Else
                 MessageBox.Show("El país  " & Txt_Pais.Text & " no se registro correctamente en la base de datos", "Fallido")
             End If
@@ -134,10 +113,8 @@ Public Class FrmMenuPais
     End Function
 
     Private Sub BntCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BntCancelar.Click
-        Me.Dispose()
+        Txt_Pais.Text = ""
         Me.Close()
-        Dim FrmMenuPais As New FrmMenuPais
-        FrmMenuPais.ShowDialog()
     End Sub
 
     Private Sub Bnt_EliminarPais_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Bnt_EliminarPais.Click
@@ -163,8 +140,9 @@ Public Class FrmMenuPais
                 frmMenuPais._codigoPais = Dgv_ListaPais.SelectedRows(0).Cells(0).Value
                 Me.Hide()
                 frmMenuPais.ShowDialog()
+            Else
+                MessageBox.Show("Debe selecciona un pais para poder 'Modificarlos de la Base de datos ")
             End If
-            MessageBox.Show("Debe selecciona un pais para poder 'Modificarlos de la Base de datos ")
         Catch ex As Exception
 
         End Try

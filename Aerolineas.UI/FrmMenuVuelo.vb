@@ -47,6 +47,7 @@ Public Class FrmMenuVuelo
             Dgv_Vuelos.Hide()
             CargarVuelos()
         ElseIf modoPantalla = "Actualizar" Then
+            Btn_Aceptar.Text = "Aceptar"
             Lb_Confirmacion.Text = "¿Seguro que que desea Actualizar el Vuelo?"
             Bnt_Consultar.Hide()
             Bnt_ModificarVuelo.Hide()
@@ -73,7 +74,7 @@ Public Class FrmMenuVuelo
             _dsVuelo = Utilitarios.UTL.Utilitarios.Utilitarios.UnzipDataSet(objRespuesta.ByteResponseObject)
             Dgv_Vuelos.DataSource = _dsVuelo.Tables(0)
 
-            objRespuesta = _LineaAereaBll.Select_LineaAereas_All(objLineaAerea)
+            objRespuesta = _LineaAereaBll.Select_LineaAereas_x_Vuelo(objLineaAerea)
             _dsLineaAerea = Utilitarios.UTL.Utilitarios.Utilitarios.UnzipDataSet(objRespuesta.ByteResponseObject)
             Cmb_Aerolinea.ValueMember = _dsLineaAerea.Tables(0).Columns("IdLineaAerea").ColumnName
             Cmb_Aerolinea.DisplayMember = _dsLineaAerea.Tables(0).Columns("NombreLineaAerea").ColumnName
@@ -176,9 +177,8 @@ Public Class FrmMenuVuelo
             Else
                 MessageBox.Show("El Vuelo  " & Txt_NumeroVuelo.Text & " no se registro correctamente en la base de datos", "Fallido")
             End If
-            '' datosIniciales()
-
         End If
+        datosIniciales()
 
 
     End Sub
@@ -220,8 +220,9 @@ Public Class FrmMenuVuelo
                 frmMenuVuelo._codigoVuelo = Dgv_Vuelos.SelectedRows(0).Cells(0).Value
                 Me.Hide()
                 frmMenuVuelo.ShowDialog()
+            Else
+                MessageBox.Show("Debe selecciona un vuelo para poder actualizarlo en la Base de datos ")
             End If
-            MessageBox.Show("Debe selecciona un vuelo para poder actualizarlo en la Base de datos ")
         Catch ex As Exception
 
         End Try
@@ -230,16 +231,16 @@ Public Class FrmMenuVuelo
     Sub CargarVuelos()
         objVuelo.idVuelo = _codigoVuelo
         Dim objRespuesta As New OBJETOS.ObjRespuesta
-        objRespuesta = _VueloBll.Select_Vuelo_All(objVuelo)
+        objRespuesta = _VueloBll.Obtener_Vuelo(objVuelo)
         _dsVuelo = Nothing
-        _dsVuelo = Nothing
+        _dsVuelo = Utilitarios.UTL.Utilitarios.Utilitarios.UnzipDataSet(objRespuesta.ByteResponseObject)
         Try
             If _dsVuelo.Tables(0).Rows.Count > 0 Then
                 For Each row In _dsVuelo.Tables(0).Rows
                     Txt_NumeroVuelo.Text = row("numeroVuelo")
-                    Cmb_Aerolinea.Text = row("idAerolinea")
-                    Cmb_DestinoSalida.Text = row("salida")
-                    Cmb_DestinoLlegada.Text = row("llegada")
+                    Cmb_Aerolinea.SelectedValue = row("idAerolinea")
+                    Cmb_DestinoSalida.SelectedValue = row("salida")
+                    Cmb_DestinoLlegada.SelectedValue = row("llegada")
                     Dtp_FechaVuelo.Text = row("fechaVuelo")
                     Dtp_HoraSalida.Text = row("horaSalida")
                     Dtp_HoraLlegada.Text = row("horaLlegada")

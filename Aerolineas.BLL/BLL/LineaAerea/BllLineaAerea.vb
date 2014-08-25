@@ -68,6 +68,18 @@ Namespace LineaAerea
             End Try
             Return objRespuesta
         End Function
+        Public Function Select_LineaAereas_x_Vuelo(ByVal xObjLineaAerea As OBJETOS.ObjLineaAerea) As OBJETOS.ObjRespuesta
+            Dim objRespuesta As New OBJETOS.ObjRespuesta
+            Try
+
+                objRespuesta = LineaAereaDao.Select_LineaAereas_x_Vuelo(xObjLineaAerea)
+            Catch ex As Exception
+                objRespuesta.ResponseCode = 0
+                objRespuesta.ResponseMessage = ex.ToString
+                objRespuesta.DsResponse = Nothing
+            End Try
+            Return objRespuesta
+        End Function
         Public Function Obtener_LineaAereas(ByVal xObjLineaAerea As OBJETOS.ObjLineaAerea) As OBJETOS.ObjRespuesta
             Dim objRespuesta As New OBJETOS.ObjRespuesta
             Try

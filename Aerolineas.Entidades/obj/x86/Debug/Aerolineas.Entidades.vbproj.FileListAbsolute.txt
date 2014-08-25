@@ -3,12 +3,12 @@ D:\UIA\Git\Aerolineas\Aerolineas.Entidades\bin\Debug\Aerolineas.Entidades.dll
 D:\UIA\Git\Aerolineas\Aerolineas.Entidades\bin\Debug\Aerolineas.Entidades.pdb
 D:\UIA\Git\Aerolineas\Aerolineas.Entidades\obj\x86\Debug\Aerolineas.Entidades.dll
 D:\UIA\Git\Aerolineas\Aerolineas.Entidades\obj\x86\Debug\Aerolineas.Entidades.pdb
-C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.Entidades\bin\Debug\Aerolineas.Entidades.dll
-C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.Entidades\bin\Debug\Aerolineas.Entidades.pdb
-C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.Entidades\obj\x86\Debug\Aerolineas.Entidades.dll
-C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.Entidades\obj\x86\Debug\Aerolineas.Entidades.pdb
 E:\GitHub\Aerolineas\Aerolineas.Entidades\bin\Debug\Aerolineas.Entidades.dll
 E:\GitHub\Aerolineas\Aerolineas.Entidades\bin\Debug\Aerolineas.Entidades.pdb
 E:\GitHub\Aerolineas\Aerolineas.Entidades\obj\x86\Debug\ResolveAssemblyReference.cache
 E:\GitHub\Aerolineas\Aerolineas.Entidades\obj\x86\Debug\Aerolineas.Entidades.dll
 E:\GitHub\Aerolineas\Aerolineas.Entidades\obj\x86\Debug\Aerolineas.Entidades.pdb
+C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.Entidades\bin\Debug\Aerolineas.Entidades.dll
+C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.Entidades\bin\Debug\Aerolineas.Entidades.pdb
+C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.Entidades\obj\x86\Debug\Aerolineas.Entidades.dll
+C:\Users\gbarquero\Desktop\Datos\Archivos\UIA\Git\Aerolineas\Aerolineas.Entidades\obj\x86\Debug\Aerolineas.Entidades.pdb

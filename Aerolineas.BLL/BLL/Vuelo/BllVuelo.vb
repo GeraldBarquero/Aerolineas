@@ -12,7 +12,6 @@ Public Class BllVuelo
     Public Function Select_Vuelo_All(ByVal xObjVuelo As OBJETOS.ObjVuelo) As OBJETOS.ObjRespuesta
         Dim objRespuesta As New OBJETOS.ObjRespuesta
         Try
-
             objRespuesta = VueloDao.Select_Vuelo_All(xObjVuelo)
         Catch ex As Exception
             objRespuesta.ResponseCode = 0
@@ -73,6 +72,18 @@ Public Class BllVuelo
         Try
 
             objRespuesta = VueloDao.Consultar_Vuelo(xObjConsultarVuelo)
+        Catch ex As Exception
+            objRespuesta.ResponseCode = 0
+            objRespuesta.ResponseMessage = ex.ToString
+            objRespuesta.DsResponse = Nothing
+        End Try
+        Return objRespuesta
+    End Function
+
+    Public Function Obtener_Vuelo(ByVal xObjVuelo As OBJETOS.ObjVuelo) As OBJETOS.ObjRespuesta
+        Dim objRespuesta As New OBJETOS.ObjRespuesta
+        Try
+            objRespuesta = VueloDao.Obtener_Vuelo(xObjVuelo)
         Catch ex As Exception
             objRespuesta.ResponseCode = 0
             objRespuesta.ResponseMessage = ex.ToString

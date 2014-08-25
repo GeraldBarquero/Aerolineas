@@ -62,11 +62,13 @@ Partial Class FrmMenuLineaAerea
         '
         'Dgv_ListaLineasAereas
         '
+        Me.Dgv_ListaLineasAereas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.Dgv_ListaLineasAereas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
         Me.Dgv_ListaLineasAereas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Dgv_ListaLineasAereas.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Dgv_ListaLineasAereas.Location = New System.Drawing.Point(308, 0)
+        Me.Dgv_ListaLineasAereas.Location = New System.Drawing.Point(299, 0)
         Me.Dgv_ListaLineasAereas.Name = "Dgv_ListaLineasAereas"
-        Me.Dgv_ListaLineasAereas.Size = New System.Drawing.Size(388, 269)
+        Me.Dgv_ListaLineasAereas.Size = New System.Drawing.Size(447, 269)
         Me.Dgv_ListaLineasAereas.TabIndex = 3
         '
         'Lb_Destinos
@@ -127,7 +129,7 @@ Partial Class FrmMenuLineaAerea
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(696, 269)
+        Me.ClientSize = New System.Drawing.Size(746, 269)
         Me.Controls.Add(Me.Lb_MensajeConfirmacion)
         Me.Controls.Add(Me.Bnt_ModificarLineaAerea)
         Me.Controls.Add(Me.Bnt_EliminarLineaAerea)

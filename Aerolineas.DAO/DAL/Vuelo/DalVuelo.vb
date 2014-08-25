@@ -70,6 +70,19 @@ Namespace DAL.Vuelo
             End Try
             Return objRespuesta
         End Function
+
+        Public Function Obtener_Vuelo(ByVal xObjVuelo As OBJETOS.ObjVuelo) As OBJETOS.ObjRespuesta
+            Dim objRespuesta As New OBJETOS.ObjRespuesta
+            Try
+                _sql = "SpVueloObtener"
+                objRespuesta = _ejecutar.SQL_Ejecuta_Sentencia(xObjVuelo, _sql, _mensajeError)
+            Catch ex As Exception
+                objRespuesta.ResponseCode = 0
+                objRespuesta.ResponseMessage = ex.ToString
+                objRespuesta.DsResponse = Nothing
+            End Try
+            Return objRespuesta
+        End Function
 #End Region
 
     End Class

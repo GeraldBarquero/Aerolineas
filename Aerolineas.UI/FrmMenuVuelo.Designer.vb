@@ -42,7 +42,7 @@ Partial Class FrmMenuVuelo
         Me.Dtp_HoraSalida = New System.Windows.Forms.DateTimePicker()
         Me.Dtp_HoraLlegada = New System.Windows.Forms.DateTimePicker()
         Me.Dtp_FechaVuelo = New System.Windows.Forms.DateTimePicker()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Lb_FechaVuelo = New System.Windows.Forms.Label()
         Me.Bnt_EliminarVuelo = New System.Windows.Forms.Button()
         Me.Bnt_ModificarVuelo = New System.Windows.Forms.Button()
         Me.Bnt_Consultar = New System.Windows.Forms.Button()
@@ -194,17 +194,17 @@ Partial Class FrmMenuVuelo
         '
         'Dgv_Vuelos
         '
-        Me.Dgv_Vuelos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
-        Me.Dgv_Vuelos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.Dgv_Vuelos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.Dgv_Vuelos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedHeaders
         Me.Dgv_Vuelos.BackgroundColor = System.Drawing.SystemColors.Control
         Me.Dgv_Vuelos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Dgv_Vuelos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Dgv_Vuelos.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Dgv_Vuelos.Dock = System.Windows.Forms.DockStyle.Right
         Me.Dgv_Vuelos.GridColor = System.Drawing.SystemColors.Control
-        Me.Dgv_Vuelos.Location = New System.Drawing.Point(314, 0)
+        Me.Dgv_Vuelos.Location = New System.Drawing.Point(317, 0)
         Me.Dgv_Vuelos.Name = "Dgv_Vuelos"
-        Me.Dgv_Vuelos.Size = New System.Drawing.Size(560, 510)
+        Me.Dgv_Vuelos.Size = New System.Drawing.Size(708, 510)
         Me.Dgv_Vuelos.TabIndex = 19
         '
         'Dtp_HoraSalida
@@ -245,14 +245,14 @@ Partial Class FrmMenuVuelo
         Me.Dtp_FechaVuelo.TabIndex = 25
         Me.Dtp_FechaVuelo.Value = New Date(2014, 8, 13, 0, 0, 0, 0)
         '
-        'Label1
+        'Lb_FechaVuelo
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(28, 210)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(80, 13)
-        Me.Label1.TabIndex = 24
-        Me.Label1.Text = "Hora de Salida:"
+        Me.Lb_FechaVuelo.AutoSize = True
+        Me.Lb_FechaVuelo.Location = New System.Drawing.Point(28, 210)
+        Me.Lb_FechaVuelo.Name = "Lb_FechaVuelo"
+        Me.Lb_FechaVuelo.Size = New System.Drawing.Size(87, 13)
+        Me.Lb_FechaVuelo.TabIndex = 24
+        Me.Lb_FechaVuelo.Text = "Fecha del Vuelo:"
         '
         'Bnt_EliminarVuelo
         '
@@ -295,13 +295,13 @@ Partial Class FrmMenuVuelo
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
         Me.CancelButton = Me.Btn_Cancelar
-        Me.ClientSize = New System.Drawing.Size(874, 510)
+        Me.ClientSize = New System.Drawing.Size(1025, 510)
         Me.Controls.Add(Me.Lb_Confirmacion)
         Me.Controls.Add(Me.Bnt_Consultar)
         Me.Controls.Add(Me.Bnt_ModificarVuelo)
         Me.Controls.Add(Me.Bnt_EliminarVuelo)
         Me.Controls.Add(Me.Dtp_FechaVuelo)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.Lb_FechaVuelo)
         Me.Controls.Add(Me.Dtp_HoraLlegada)
         Me.Controls.Add(Me.Dtp_HoraSalida)
         Me.Controls.Add(Me.Dgv_Vuelos)
@@ -350,7 +350,7 @@ Partial Class FrmMenuVuelo
     Friend WithEvents Dtp_HoraSalida As System.Windows.Forms.DateTimePicker
     Friend WithEvents Dtp_HoraLlegada As System.Windows.Forms.DateTimePicker
     Friend WithEvents Dtp_FechaVuelo As System.Windows.Forms.DateTimePicker
-    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Lb_FechaVuelo As System.Windows.Forms.Label
     Friend WithEvents Bnt_EliminarVuelo As System.Windows.Forms.Button
     Friend WithEvents Bnt_ModificarVuelo As System.Windows.Forms.Button
     Friend WithEvents Bnt_Consultar As System.Windows.Forms.Button

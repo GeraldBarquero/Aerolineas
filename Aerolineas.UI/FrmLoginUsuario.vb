@@ -48,5 +48,6 @@ Public Class FrmLogin
         Dim FormCliente As New FrmMenuClientes
         Me.Hide()
         FormCliente.ShowDialog()
+        Me.Show()
     End Sub
 End Class

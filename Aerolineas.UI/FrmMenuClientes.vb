@@ -50,44 +50,9 @@ Public Class FrmMenuClientes
         End Try
     End Sub
 
-    'Private Sub Bnt_Add_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Bnt_Aceptar.Click
-
-    '        If VerificarCampos() = True Then
-    '            objCliente.NombreCliente = Txt_NombreCliente.Text
-    '            objCliente.Identification = Txt_IdentificacionCliente.Text
-    '            objCliente.DireccionExacta = Rtxt_DireccionCliente.Text
-    '            objCliente.Edad = Txt_EdadCliente.Text
-    '            objCliente.TelefonoCasa = Txt_TelefonoCasaCliente.Text
-    '            objCliente.TelefonoCelular = Txt_TelefonoCelularCliente.Text
-    '            objCliente.Email = Txt_EmailCliente.Text
-    '            objCliente.PaisResidencia = Txt_PaisResidenciaCliente.Text
-    '            objCliente.Password = Txt_PasswordCliente.Text
-    '            objRespuesta = _clienteBll.InsertarCliente(objCliente)
-    '            If objRespuesta.ResponseCode = 1 Then
-    '                MessageBox.Show("Se ha registrado correctamente el usuario " & Txt_NombreCliente.Text & " en la base de datos.", "Exitoso")
-    '                Txt_NombreCliente.Text = ""
-    '                Txt_IdentificacionCliente.Text = ""
-    '                Rtxt_DireccionCliente.Text = ""
-    '                Txt_EdadCliente.Text = ""
-    '                Txt_TelefonoCasaCliente.Text = ""
-    '                Txt_TelefonoCelularCliente.Text = ""
-    '                Txt_EmailCliente.Text = ""
-    '                Txt_PasswordCliente.Text = ""
-    '                Txt_PaisResidenciaCliente.Text = ""
-    '                datosIniciales()
-    '            Else
-    '                MessageBox.Show("El usuario " & Txt_NombreCliente.Text & " no se registro correctamente en la base de datos", "Fallido")
-    '            End If
-    '        Else
-    '            Exit Sub
-    '        End If
-    'End Sub
-
     Private Sub Bnt_Add_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Bnt_Aceptar.Click
 
         If modoPantalla = "Eliminar" Then
-
-        ElseIf VerificarCampos() = True Then
             objCliente.NombreCliente = Txt_NombreCliente.Text
             objCliente.Identification = Txt_IdentificacionCliente.Text
             objCliente.DireccionExacta = Rtxt_DireccionCliente.Text
@@ -97,25 +62,67 @@ Public Class FrmMenuClientes
             objCliente.Email = Txt_EmailCliente.Text
             objCliente.PaisResidencia = Txt_PaisResidenciaCliente.Text
             objCliente.Password = Txt_PasswordCliente.Text
-            objRespuesta = _clienteBll.InsertarCliente(objCliente)
+            objRespuesta = _clienteBll.EliminarCliente(objCliente)
             If objRespuesta.ResponseCode = 1 Then
-                MessageBox.Show("Se ha registrado correctamente el usuario " & Txt_NombreCliente.Text & " en la base de datos.", "Exitoso")
-                Txt_NombreCliente.Text = ""
-                Txt_IdentificacionCliente.Text = ""
-                Rtxt_DireccionCliente.Text = ""
-                Txt_EdadCliente.Text = ""
-                Txt_TelefonoCasaCliente.Text = ""
-                Txt_TelefonoCelularCliente.Text = ""
-                Txt_EmailCliente.Text = ""
-                Txt_PasswordCliente.Text = ""
-                Txt_PaisResidenciaCliente.Text = ""
-                datosIniciales()
+                MessageBox.Show("Se ha Eliminado correctamente el cliente " & Txt_NombreCliente.Text & " en la base de datos.", "Exitoso")
+                Me.Close()
+                Me.Dispose()
+                Dim frmMenuCliente As New FrmMenuClientes
+                frmMenuCliente.ShowDialog()
             Else
-                MessageBox.Show("El usuario " & Txt_NombreCliente.Text & " no se registro correctamente en la base de datos", "Fallido")
+                MessageBox.Show("El cliente  " & Txt_NombreCliente.Text & " no se Eliminado correctamente en la base de datos", "Fallido")
+            End If
+        ElseIf modoPantalla = "Actualizar" Then
+            objCliente.NombreCliente = Txt_NombreCliente.Text
+            objCliente.Identification = Txt_IdentificacionCliente.Text
+            objCliente.DireccionExacta = Rtxt_DireccionCliente.Text
+            objCliente.Edad = Txt_EdadCliente.Text
+            objCliente.TelefonoCasa = Txt_TelefonoCasaCliente.Text
+            objCliente.TelefonoCelular = Txt_TelefonoCelularCliente.Text
+            objCliente.Email = Txt_EmailCliente.Text
+            objCliente.PaisResidencia = Txt_PaisResidenciaCliente.Text
+            objCliente.Password = Txt_PasswordCliente.Text
+            objRespuesta = _clienteBll.ActualizarCliente(objCliente)
+            If objRespuesta.ResponseCode = 1 Then
+                MessageBox.Show("Se ha Modificado correctamente el cliente " & Txt_NombreCliente.Text & " en la base de datos.", "Exitoso")
+                Me.Close()
+                Me.Dispose()
+                Dim frmMenuCliente As New FrmMenuClientes
+                frmMenuCliente.ShowDialog()
+            Else
+                MessageBox.Show("El cliente  " & Txt_NombreCliente.Text & " no se Modificado correctamente en la base de datos", "Fallido")
             End If
         Else
-            Exit Sub
+            If VerificarCampos() = True Then
+                objCliente.NombreCliente = Txt_NombreCliente.Text
+                objCliente.Identification = Txt_IdentificacionCliente.Text
+                objCliente.DireccionExacta = Rtxt_DireccionCliente.Text
+                objCliente.Edad = Txt_EdadCliente.Text
+                objCliente.TelefonoCasa = Txt_TelefonoCasaCliente.Text
+                objCliente.TelefonoCelular = Txt_TelefonoCelularCliente.Text
+                objCliente.Email = Txt_EmailCliente.Text
+                objCliente.PaisResidencia = Txt_PaisResidenciaCliente.Text
+                objCliente.Password = Txt_PasswordCliente.Text
+                objRespuesta = _clienteBll.InsertarCliente(objCliente)
+                If objRespuesta.ResponseCode = 1 Then
+                    MessageBox.Show("Se ha registrado correctamente el usuario " & Txt_NombreCliente.Text & " en la base de datos.", "Exitoso")
+                    Txt_NombreCliente.Text = ""
+                    Txt_IdentificacionCliente.Text = ""
+                    Rtxt_DireccionCliente.Text = ""
+                    Txt_EdadCliente.Text = ""
+                    Txt_TelefonoCasaCliente.Text = ""
+                    Txt_TelefonoCelularCliente.Text = ""
+                    Txt_EmailCliente.Text = ""
+                    Txt_PasswordCliente.Text = ""
+                    Txt_PaisResidenciaCliente.Text = ""
+                Else
+                    MessageBox.Show("El usuario " & Txt_NombreCliente.Text & " no se registro correctamente en la base de datos", "Fallido")
+                End If
+            Else
+                Exit Sub
+            End If
         End If
+        datosIniciales()
     End Sub
     Private Sub ValidarLetrasNumeros(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles Txt_EdadCliente.KeyPress, Txt_IdentificacionCliente.KeyPress, Txt_NombreCliente.KeyPress, Txt_PaisResidenciaCliente.KeyPress, Txt_TelefonoCasaCliente.KeyPress, Txt_TelefonoCelularCliente.KeyPress
         Select Case sender.name
@@ -184,10 +191,16 @@ Public Class FrmMenuClientes
     End Function
 
     Private Sub BntCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BntCancelar.Click
-        Me.Dispose()
+        Txt_NombreCliente.Text = ""
+        Txt_IdentificacionCliente.Text = ""
+        Rtxt_DireccionCliente.Text = ""
+        Txt_EdadCliente.Text = ""
+        Txt_TelefonoCasaCliente.Text = ""
+        Txt_TelefonoCelularCliente.Text = ""
+        Txt_EmailCliente.Text = ""
+        Txt_PasswordCliente.Text = ""
+        Txt_PaisResidenciaCliente.Text = ""
         Me.Close()
-        Dim FrmMenuAdmin As New FrmMenuAdministrador
-        FrmMenuAdmin.ShowDialog()
     End Sub
 
 
