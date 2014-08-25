@@ -35,11 +35,11 @@ Public Class FrmMenuDestino
 
             If modoPantalla = "Eliminar" Then
                 Bnt_Acceptar.Text = "Aceptar"
-
-                Txt_NombreAeropuerto.Text = False
-                Txt_NombreDestino.Text = False
-                Txt_CodigoDestino.Text = False
-                Cmb_Pais.SelectedValue = False
+                Lb_MensajeConfirmacion.Text = "¿Seguro que que desea eliminar el Destino?"
+                Txt_NombreAeropuerto.Enabled = False
+                Txt_NombreDestino.Enabled = False
+                Txt_CodigoDestino.Enabled = False
+                Cmb_Pais.Enabled = False
 
                 Bnt_ConsultarDestino.Hide()
                 Bnt_ModificarDestino.Hide()
@@ -48,6 +48,7 @@ Public Class FrmMenuDestino
 
             ElseIf modoPantalla = "Actualizar" Then
                 Bnt_Acceptar.Text = "Aceptar"
+                Lb_MensajeConfirmacion.Text = "¿Seguro que que desea Actualizar el Destino?"
                 Bnt_ConsultarDestino.Hide()
                 Bnt_ModificarDestino.Hide()
                 Bnt_EliminarDestino.Hide()
@@ -232,8 +233,8 @@ Public Class FrmMenuDestino
             If _dsDestinos.Tables(0).Rows.Count > 0 Then
                 For Each row In _dsDestinos.Tables(0).Rows
                     Txt_NombreDestino.Text = row("NombreDestino")
-                    Txt_CodigoDestino = row("CodigoDestino")
-                    Txt_NombreAeropuerto = row("NombreAeropuerto")
+                    Txt_CodigoDestino.Text = row("CodigoDestino")
+                    Txt_NombreAeropuerto.Text = row("NombreAeropuerto")
                 Next
             Else
                 MessageBox.Show("la consulta no produjo resultados, sin resultados")
@@ -241,5 +242,41 @@ Public Class FrmMenuDestino
         Catch ex As Exception
 
         End Try
+    End Sub
+
+    Private Sub Lb_Pais_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Lb_Pais.Click
+
+    End Sub
+
+    Private Sub Txt_CodigoDestino_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Txt_CodigoDestino.TextChanged
+
+    End Sub
+
+    Private Sub Lb_CodigoDestino_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Lb_CodigoDestino.Click
+
+    End Sub
+
+    Private Sub Lb_NombreDestino_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Lb_NombreDestino.Click
+
+    End Sub
+
+    Private Sub Txt_NombreDestino_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Txt_NombreDestino.TextChanged
+
+    End Sub
+
+    Private Sub Dgv_ListaDestinos_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles Dgv_ListaDestinos.CellContentClick
+
+    End Sub
+
+    Private Sub Txt_NombreAeropuerto_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Txt_NombreAeropuerto.TextChanged
+
+    End Sub
+
+    Private Sub Lb_NombreAeropuerto_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Lb_NombreAeropuerto.Click
+
+    End Sub
+
+    Private Sub Cmb_Pais_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cmb_Pais.SelectedIndexChanged
+
     End Sub
 End Class

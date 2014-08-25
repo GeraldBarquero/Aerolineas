@@ -34,14 +34,15 @@ Public Class FrmMenuPais
         If modoPantalla = "Eliminar" Then
 
             Bt_Aceptar.Text = "Aceptar"
-            Lb_MensajeConfimaicion.Text = "¿Seguro que decia eliminar un Pais?"
-            Txt_Pais.Text = False
+            Lb_MensajeConfimaicion.Text = "¿Seguro que que desea eliminar el Pais?"
+            Txt_Pais.Enabled = False
             Bnt_ConsultarPais.Hide()
             Bnt_ModificarPais.Hide()
             Bnt_EliminarPais.Hide()
             Dgv_ListaPais.Hide()
             cargarDatos()
         ElseIf modoPantalla = "Actualizar" Then
+            Lb_MensajeConfimaicion.Text = "¿Seguro que que desea Actualizar el Pais?"
             Bt_Aceptar.Text = "Aceptar"
             Bnt_ConsultarPais.Hide()
             Bnt_ModificarPais.Hide()

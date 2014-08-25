@@ -50,8 +50,44 @@ Public Class FrmMenuClientes
         End Try
     End Sub
 
+    'Private Sub Bnt_Add_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Bnt_Aceptar.Click
+
+    '        If VerificarCampos() = True Then
+    '            objCliente.NombreCliente = Txt_NombreCliente.Text
+    '            objCliente.Identification = Txt_IdentificacionCliente.Text
+    '            objCliente.DireccionExacta = Rtxt_DireccionCliente.Text
+    '            objCliente.Edad = Txt_EdadCliente.Text
+    '            objCliente.TelefonoCasa = Txt_TelefonoCasaCliente.Text
+    '            objCliente.TelefonoCelular = Txt_TelefonoCelularCliente.Text
+    '            objCliente.Email = Txt_EmailCliente.Text
+    '            objCliente.PaisResidencia = Txt_PaisResidenciaCliente.Text
+    '            objCliente.Password = Txt_PasswordCliente.Text
+    '            objRespuesta = _clienteBll.InsertarCliente(objCliente)
+    '            If objRespuesta.ResponseCode = 1 Then
+    '                MessageBox.Show("Se ha registrado correctamente el usuario " & Txt_NombreCliente.Text & " en la base de datos.", "Exitoso")
+    '                Txt_NombreCliente.Text = ""
+    '                Txt_IdentificacionCliente.Text = ""
+    '                Rtxt_DireccionCliente.Text = ""
+    '                Txt_EdadCliente.Text = ""
+    '                Txt_TelefonoCasaCliente.Text = ""
+    '                Txt_TelefonoCelularCliente.Text = ""
+    '                Txt_EmailCliente.Text = ""
+    '                Txt_PasswordCliente.Text = ""
+    '                Txt_PaisResidenciaCliente.Text = ""
+    '                datosIniciales()
+    '            Else
+    '                MessageBox.Show("El usuario " & Txt_NombreCliente.Text & " no se registro correctamente en la base de datos", "Fallido")
+    '            End If
+    '        Else
+    '            Exit Sub
+    '        End If
+    'End Sub
+
     Private Sub Bnt_Add_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Bnt_Aceptar.Click
-        If VerificarCampos() = True Then
+
+        If modoPantalla = "Eliminar" Then
+
+        ElseIf VerificarCampos() = True Then
             objCliente.NombreCliente = Txt_NombreCliente.Text
             objCliente.Identification = Txt_IdentificacionCliente.Text
             objCliente.DireccionExacta = Rtxt_DireccionCliente.Text
@@ -203,8 +239,9 @@ Public Class FrmMenuClientes
                     Txt_TelefonoCasaCliente.Text = row("TelefonoCasa")
                     Txt_TelefonoCelularCliente.Text = row("TelefonoCelular")
                     Txt_EmailCliente.Text = row("Email")
-                    Txt_PasswordCliente.Text = row("Password")
                     Txt_PaisResidenciaCliente.Text = row("PaisResidencia")
+                    Txt_PasswordCliente.Text = row("Password")
+
                 Next
             Else
                 MessageBox.Show("la consulta no produjo resultados, sin resultados")
@@ -212,4 +249,5 @@ Public Class FrmMenuClientes
         Catch ex As Exception
         End Try
     End Sub
+
 End Class

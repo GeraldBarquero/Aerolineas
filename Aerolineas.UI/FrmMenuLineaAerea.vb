@@ -85,13 +85,15 @@ Public Class FrmMenuLineaAerea
         datosIniciales()
         If modoPantalla = "Eliminar" Then
             Bnt_Acceptar.Text = "Aceptar"
+            Lb_MensajeConfirmacion.Text = "¿Seguro que que desea eliminar La linea Aerea?"
             Txt_NombreLineaAerea.Enabled = False
+            LsBx_destinos.Enabled = False
             Bnt_ModificarLineaAerea.Hide()
             Bnt_EliminarLineaAerea.Hide()
             cargarDatos()
         ElseIf modoPantalla = "Actualizar" Then
+            Lb_MensajeConfirmacion.Text = "¿Seguro que que desea Actualizar La linea Aerea?"
             Bnt_Acceptar.Text = "Aceptar"
-            Txt_NombreLineaAerea.Enabled = False
             Bnt_ModificarLineaAerea.Hide()
             Bnt_EliminarLineaAerea.Hide()
             cargarDatos()

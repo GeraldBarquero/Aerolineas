@@ -36,12 +36,13 @@ Partial Class FrmMenuDestino
         Me.Bnt_EliminarDestino = New System.Windows.Forms.Button()
         Me.Bnt_ConsultarDestino = New System.Windows.Forms.Button()
         Me.Bnt_ModificarDestino = New System.Windows.Forms.Button()
+        Me.Lb_MensajeConfirmacion = New System.Windows.Forms.Label()
         CType(Me.Dgv_ListaDestinos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Bnt_Acceptar
         '
-        Me.Bnt_Acceptar.Location = New System.Drawing.Point(40, 217)
+        Me.Bnt_Acceptar.Location = New System.Drawing.Point(37, 247)
         Me.Bnt_Acceptar.Name = "Bnt_Acceptar"
         Me.Bnt_Acceptar.Size = New System.Drawing.Size(75, 23)
         Me.Bnt_Acceptar.TabIndex = 0
@@ -51,7 +52,7 @@ Partial Class FrmMenuDestino
         'Lb_NombreDestino
         '
         Me.Lb_NombreDestino.AutoSize = True
-        Me.Lb_NombreDestino.Location = New System.Drawing.Point(29, 73)
+        Me.Lb_NombreDestino.Location = New System.Drawing.Point(26, 103)
         Me.Lb_NombreDestino.Name = "Lb_NombreDestino"
         Me.Lb_NombreDestino.Size = New System.Drawing.Size(86, 13)
         Me.Lb_NombreDestino.TabIndex = 1
@@ -59,7 +60,7 @@ Partial Class FrmMenuDestino
         '
         'Txt_NombreDestino
         '
-        Me.Txt_NombreDestino.Location = New System.Drawing.Point(128, 70)
+        Me.Txt_NombreDestino.Location = New System.Drawing.Point(125, 100)
         Me.Txt_NombreDestino.Name = "Txt_NombreDestino"
         Me.Txt_NombreDestino.Size = New System.Drawing.Size(124, 20)
         Me.Txt_NombreDestino.TabIndex = 2
@@ -67,7 +68,7 @@ Partial Class FrmMenuDestino
         'Lb_CodigoDestino
         '
         Me.Lb_CodigoDestino.AutoSize = True
-        Me.Lb_CodigoDestino.Location = New System.Drawing.Point(29, 116)
+        Me.Lb_CodigoDestino.Location = New System.Drawing.Point(26, 146)
         Me.Lb_CodigoDestino.Name = "Lb_CodigoDestino"
         Me.Lb_CodigoDestino.Size = New System.Drawing.Size(82, 13)
         Me.Lb_CodigoDestino.TabIndex = 3
@@ -75,7 +76,7 @@ Partial Class FrmMenuDestino
         '
         'Txt_CodigoDestino
         '
-        Me.Txt_CodigoDestino.Location = New System.Drawing.Point(128, 113)
+        Me.Txt_CodigoDestino.Location = New System.Drawing.Point(125, 143)
         Me.Txt_CodigoDestino.MaxLength = 3
         Me.Txt_CodigoDestino.Name = "Txt_CodigoDestino"
         Me.Txt_CodigoDestino.Size = New System.Drawing.Size(124, 20)
@@ -84,7 +85,7 @@ Partial Class FrmMenuDestino
         'Dgv_ListaDestinos
         '
         Me.Dgv_ListaDestinos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.Dgv_ListaDestinos.Location = New System.Drawing.Point(275, 26)
+        Me.Dgv_ListaDestinos.Location = New System.Drawing.Point(272, 56)
         Me.Dgv_ListaDestinos.Name = "Dgv_ListaDestinos"
         Me.Dgv_ListaDestinos.Size = New System.Drawing.Size(434, 187)
         Me.Dgv_ListaDestinos.TabIndex = 5
@@ -92,7 +93,7 @@ Partial Class FrmMenuDestino
         'Lb_Pais
         '
         Me.Lb_Pais.AutoSize = True
-        Me.Lb_Pais.Location = New System.Drawing.Point(29, 158)
+        Me.Lb_Pais.Location = New System.Drawing.Point(26, 188)
         Me.Lb_Pais.Name = "Lb_Pais"
         Me.Lb_Pais.Size = New System.Drawing.Size(32, 13)
         Me.Lb_Pais.TabIndex = 6
@@ -101,14 +102,14 @@ Partial Class FrmMenuDestino
         'Cmb_Pais
         '
         Me.Cmb_Pais.FormattingEnabled = True
-        Me.Cmb_Pais.Location = New System.Drawing.Point(128, 155)
+        Me.Cmb_Pais.Location = New System.Drawing.Point(125, 185)
         Me.Cmb_Pais.Name = "Cmb_Pais"
         Me.Cmb_Pais.Size = New System.Drawing.Size(121, 21)
         Me.Cmb_Pais.TabIndex = 7
         '
         'BntCancelar
         '
-        Me.BntCancelar.Location = New System.Drawing.Point(162, 217)
+        Me.BntCancelar.Location = New System.Drawing.Point(159, 247)
         Me.BntCancelar.Name = "BntCancelar"
         Me.BntCancelar.Size = New System.Drawing.Size(75, 23)
         Me.BntCancelar.TabIndex = 8
@@ -117,7 +118,7 @@ Partial Class FrmMenuDestino
         '
         'Txt_NombreAeropuerto
         '
-        Me.Txt_NombreAeropuerto.Location = New System.Drawing.Point(128, 33)
+        Me.Txt_NombreAeropuerto.Location = New System.Drawing.Point(125, 63)
         Me.Txt_NombreAeropuerto.Name = "Txt_NombreAeropuerto"
         Me.Txt_NombreAeropuerto.Size = New System.Drawing.Size(124, 20)
         Me.Txt_NombreAeropuerto.TabIndex = 10
@@ -125,7 +126,7 @@ Partial Class FrmMenuDestino
         'Lb_NombreAeropuerto
         '
         Me.Lb_NombreAeropuerto.AutoSize = True
-        Me.Lb_NombreAeropuerto.Location = New System.Drawing.Point(29, 36)
+        Me.Lb_NombreAeropuerto.Location = New System.Drawing.Point(26, 66)
         Me.Lb_NombreAeropuerto.Name = "Lb_NombreAeropuerto"
         Me.Lb_NombreAeropuerto.Size = New System.Drawing.Size(102, 13)
         Me.Lb_NombreAeropuerto.TabIndex = 9
@@ -133,7 +134,7 @@ Partial Class FrmMenuDestino
         '
         'Bnt_EliminarDestino
         '
-        Me.Bnt_EliminarDestino.Location = New System.Drawing.Point(40, 275)
+        Me.Bnt_EliminarDestino.Location = New System.Drawing.Point(37, 305)
         Me.Bnt_EliminarDestino.Name = "Bnt_EliminarDestino"
         Me.Bnt_EliminarDestino.Size = New System.Drawing.Size(75, 23)
         Me.Bnt_EliminarDestino.TabIndex = 11
@@ -142,7 +143,7 @@ Partial Class FrmMenuDestino
         '
         'Bnt_ConsultarDestino
         '
-        Me.Bnt_ConsultarDestino.Location = New System.Drawing.Point(162, 275)
+        Me.Bnt_ConsultarDestino.Location = New System.Drawing.Point(159, 305)
         Me.Bnt_ConsultarDestino.Name = "Bnt_ConsultarDestino"
         Me.Bnt_ConsultarDestino.Size = New System.Drawing.Size(75, 23)
         Me.Bnt_ConsultarDestino.TabIndex = 12
@@ -151,18 +152,27 @@ Partial Class FrmMenuDestino
         '
         'Bnt_ModificarDestino
         '
-        Me.Bnt_ModificarDestino.Location = New System.Drawing.Point(110, 321)
+        Me.Bnt_ModificarDestino.Location = New System.Drawing.Point(107, 351)
         Me.Bnt_ModificarDestino.Name = "Bnt_ModificarDestino"
         Me.Bnt_ModificarDestino.Size = New System.Drawing.Size(75, 23)
         Me.Bnt_ModificarDestino.TabIndex = 13
         Me.Bnt_ModificarDestino.Text = "Modificar"
         Me.Bnt_ModificarDestino.UseVisualStyleBackColor = True
         '
+        'Lb_MensajeConfirmacion
+        '
+        Me.Lb_MensajeConfirmacion.AutoSize = True
+        Me.Lb_MensajeConfirmacion.Location = New System.Drawing.Point(19, 24)
+        Me.Lb_MensajeConfirmacion.Name = "Lb_MensajeConfirmacion"
+        Me.Lb_MensajeConfirmacion.Size = New System.Drawing.Size(0, 13)
+        Me.Lb_MensajeConfirmacion.TabIndex = 14
+        '
         'FrmMenuDestino
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(736, 356)
+        Me.ClientSize = New System.Drawing.Size(736, 379)
+        Me.Controls.Add(Me.Lb_MensajeConfirmacion)
         Me.Controls.Add(Me.Bnt_ModificarDestino)
         Me.Controls.Add(Me.Bnt_ConsultarDestino)
         Me.Controls.Add(Me.Bnt_EliminarDestino)
@@ -198,4 +208,5 @@ Partial Class FrmMenuDestino
     Friend WithEvents Bnt_EliminarDestino As System.Windows.Forms.Button
     Friend WithEvents Bnt_ConsultarDestino As System.Windows.Forms.Button
     Friend WithEvents Bnt_ModificarDestino As System.Windows.Forms.Button
+    Friend WithEvents Lb_MensajeConfirmacion As System.Windows.Forms.Label
 End Class

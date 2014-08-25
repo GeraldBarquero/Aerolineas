@@ -43,6 +43,10 @@ Partial Class FrmMenuVuelo
         Me.Dtp_HoraLlegada = New System.Windows.Forms.DateTimePicker()
         Me.Dtp_FechaVuelo = New System.Windows.Forms.DateTimePicker()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Bnt_EliminarVuelo = New System.Windows.Forms.Button()
+        Me.Bnt_ModificarVuelo = New System.Windows.Forms.Button()
+        Me.Bnt_Consultar = New System.Windows.Forms.Button()
+        Me.Lb_Confirmacion = New System.Windows.Forms.Label()
         CType(Me.Nud_CantidadPasajeros, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Dgv_Vuelos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -50,7 +54,7 @@ Partial Class FrmMenuVuelo
         'Lb_NumeroVuelo
         '
         Me.Lb_NumeroVuelo.AutoSize = True
-        Me.Lb_NumeroVuelo.Location = New System.Drawing.Point(25, 13)
+        Me.Lb_NumeroVuelo.Location = New System.Drawing.Point(28, 69)
         Me.Lb_NumeroVuelo.Name = "Lb_NumeroVuelo"
         Me.Lb_NumeroVuelo.Size = New System.Drawing.Size(92, 13)
         Me.Lb_NumeroVuelo.TabIndex = 0
@@ -59,7 +63,7 @@ Partial Class FrmMenuVuelo
         'Lb_DestinoLlegada
         '
         Me.Lb_DestinoLlegada.AutoSize = True
-        Me.Lb_DestinoLlegada.Location = New System.Drawing.Point(25, 87)
+        Me.Lb_DestinoLlegada.Location = New System.Drawing.Point(28, 143)
         Me.Lb_DestinoLlegada.Name = "Lb_DestinoLlegada"
         Me.Lb_DestinoLlegada.Size = New System.Drawing.Size(102, 13)
         Me.Lb_DestinoLlegada.TabIndex = 1
@@ -68,7 +72,7 @@ Partial Class FrmMenuVuelo
         'Lb_DestinoSalida
         '
         Me.Lb_DestinoSalida.AutoSize = True
-        Me.Lb_DestinoSalida.Location = New System.Drawing.Point(25, 124)
+        Me.Lb_DestinoSalida.Location = New System.Drawing.Point(28, 180)
         Me.Lb_DestinoSalida.Name = "Lb_DestinoSalida"
         Me.Lb_DestinoSalida.Size = New System.Drawing.Size(93, 13)
         Me.Lb_DestinoSalida.TabIndex = 2
@@ -77,7 +81,7 @@ Partial Class FrmMenuVuelo
         'Lb_Aerolinea
         '
         Me.Lb_Aerolinea.AutoSize = True
-        Me.Lb_Aerolinea.Location = New System.Drawing.Point(25, 50)
+        Me.Lb_Aerolinea.Location = New System.Drawing.Point(28, 106)
         Me.Lb_Aerolinea.Name = "Lb_Aerolinea"
         Me.Lb_Aerolinea.Size = New System.Drawing.Size(54, 13)
         Me.Lb_Aerolinea.TabIndex = 3
@@ -86,7 +90,7 @@ Partial Class FrmMenuVuelo
         'Lb_HoraSalida
         '
         Me.Lb_HoraSalida.AutoSize = True
-        Me.Lb_HoraSalida.Location = New System.Drawing.Point(25, 188)
+        Me.Lb_HoraSalida.Location = New System.Drawing.Point(28, 244)
         Me.Lb_HoraSalida.Name = "Lb_HoraSalida"
         Me.Lb_HoraSalida.Size = New System.Drawing.Size(80, 13)
         Me.Lb_HoraSalida.TabIndex = 4
@@ -95,7 +99,7 @@ Partial Class FrmMenuVuelo
         'Lb_HoraLlegada
         '
         Me.Lb_HoraLlegada.AutoSize = True
-        Me.Lb_HoraLlegada.Location = New System.Drawing.Point(25, 225)
+        Me.Lb_HoraLlegada.Location = New System.Drawing.Point(28, 281)
         Me.Lb_HoraLlegada.Name = "Lb_HoraLlegada"
         Me.Lb_HoraLlegada.Size = New System.Drawing.Size(89, 13)
         Me.Lb_HoraLlegada.TabIndex = 5
@@ -104,7 +108,7 @@ Partial Class FrmMenuVuelo
         'Lb_Precio
         '
         Me.Lb_Precio.AutoSize = True
-        Me.Lb_Precio.Location = New System.Drawing.Point(25, 262)
+        Me.Lb_Precio.Location = New System.Drawing.Point(28, 318)
         Me.Lb_Precio.Name = "Lb_Precio"
         Me.Lb_Precio.Size = New System.Drawing.Size(40, 13)
         Me.Lb_Precio.TabIndex = 6
@@ -113,7 +117,7 @@ Partial Class FrmMenuVuelo
         'Lb_CantidadPasajeros
         '
         Me.Lb_CantidadPasajeros.AutoSize = True
-        Me.Lb_CantidadPasajeros.Location = New System.Drawing.Point(25, 299)
+        Me.Lb_CantidadPasajeros.Location = New System.Drawing.Point(28, 355)
         Me.Lb_CantidadPasajeros.Name = "Lb_CantidadPasajeros"
         Me.Lb_CantidadPasajeros.Size = New System.Drawing.Size(101, 13)
         Me.Lb_CantidadPasajeros.TabIndex = 7
@@ -121,7 +125,7 @@ Partial Class FrmMenuVuelo
         '
         'Txt_NumeroVuelo
         '
-        Me.Txt_NumeroVuelo.Location = New System.Drawing.Point(127, 10)
+        Me.Txt_NumeroVuelo.Location = New System.Drawing.Point(130, 66)
         Me.Txt_NumeroVuelo.Name = "Txt_NumeroVuelo"
         Me.Txt_NumeroVuelo.Size = New System.Drawing.Size(121, 20)
         Me.Txt_NumeroVuelo.TabIndex = 9
@@ -129,7 +133,7 @@ Partial Class FrmMenuVuelo
         'Cmb_DestinoLlegada
         '
         Me.Cmb_DestinoLlegada.FormattingEnabled = True
-        Me.Cmb_DestinoLlegada.Location = New System.Drawing.Point(127, 84)
+        Me.Cmb_DestinoLlegada.Location = New System.Drawing.Point(130, 140)
         Me.Cmb_DestinoLlegada.Name = "Cmb_DestinoLlegada"
         Me.Cmb_DestinoLlegada.Size = New System.Drawing.Size(121, 21)
         Me.Cmb_DestinoLlegada.TabIndex = 10
@@ -137,7 +141,7 @@ Partial Class FrmMenuVuelo
         'Cmb_DestinoSalida
         '
         Me.Cmb_DestinoSalida.FormattingEnabled = True
-        Me.Cmb_DestinoSalida.Location = New System.Drawing.Point(127, 121)
+        Me.Cmb_DestinoSalida.Location = New System.Drawing.Point(130, 177)
         Me.Cmb_DestinoSalida.Name = "Cmb_DestinoSalida"
         Me.Cmb_DestinoSalida.Size = New System.Drawing.Size(121, 21)
         Me.Cmb_DestinoSalida.TabIndex = 11
@@ -145,7 +149,7 @@ Partial Class FrmMenuVuelo
         'Cmb_Aerolinea
         '
         Me.Cmb_Aerolinea.FormattingEnabled = True
-        Me.Cmb_Aerolinea.Location = New System.Drawing.Point(127, 47)
+        Me.Cmb_Aerolinea.Location = New System.Drawing.Point(130, 103)
         Me.Cmb_Aerolinea.Name = "Cmb_Aerolinea"
         Me.Cmb_Aerolinea.Size = New System.Drawing.Size(121, 21)
         Me.Cmb_Aerolinea.TabIndex = 12
@@ -153,7 +157,7 @@ Partial Class FrmMenuVuelo
         'Txt_Precio
         '
         Me.Txt_Precio.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals
-        Me.Txt_Precio.Location = New System.Drawing.Point(127, 259)
+        Me.Txt_Precio.Location = New System.Drawing.Point(130, 315)
         Me.Txt_Precio.Mask = "$0000"
         Me.Txt_Precio.Name = "Txt_Precio"
         Me.Txt_Precio.Size = New System.Drawing.Size(121, 20)
@@ -162,7 +166,7 @@ Partial Class FrmMenuVuelo
         '
         'Nud_CantidadPasajeros
         '
-        Me.Nud_CantidadPasajeros.Location = New System.Drawing.Point(127, 297)
+        Me.Nud_CantidadPasajeros.Location = New System.Drawing.Point(130, 353)
         Me.Nud_CantidadPasajeros.Maximum = New Decimal(New Integer() {150, 0, 0, 0})
         Me.Nud_CantidadPasajeros.Name = "Nud_CantidadPasajeros"
         Me.Nud_CantidadPasajeros.Size = New System.Drawing.Size(121, 20)
@@ -171,17 +175,17 @@ Partial Class FrmMenuVuelo
         '
         'Btn_Aceptar
         '
-        Me.Btn_Aceptar.Location = New System.Drawing.Point(41, 345)
+        Me.Btn_Aceptar.Location = New System.Drawing.Point(44, 401)
         Me.Btn_Aceptar.Name = "Btn_Aceptar"
         Me.Btn_Aceptar.Size = New System.Drawing.Size(75, 23)
         Me.Btn_Aceptar.TabIndex = 17
-        Me.Btn_Aceptar.Text = "Aceptar"
+        Me.Btn_Aceptar.Text = "Insertar"
         Me.Btn_Aceptar.UseVisualStyleBackColor = True
         '
         'Btn_Cancelar
         '
         Me.Btn_Cancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.Btn_Cancelar.Location = New System.Drawing.Point(152, 345)
+        Me.Btn_Cancelar.Location = New System.Drawing.Point(155, 401)
         Me.Btn_Cancelar.Name = "Btn_Cancelar"
         Me.Btn_Cancelar.Size = New System.Drawing.Size(75, 23)
         Me.Btn_Cancelar.TabIndex = 18
@@ -200,14 +204,14 @@ Partial Class FrmMenuVuelo
         Me.Dgv_Vuelos.GridColor = System.Drawing.SystemColors.Control
         Me.Dgv_Vuelos.Location = New System.Drawing.Point(314, 0)
         Me.Dgv_Vuelos.Name = "Dgv_Vuelos"
-        Me.Dgv_Vuelos.Size = New System.Drawing.Size(560, 409)
+        Me.Dgv_Vuelos.Size = New System.Drawing.Size(560, 510)
         Me.Dgv_Vuelos.TabIndex = 19
         '
         'Dtp_HoraSalida
         '
         Me.Dtp_HoraSalida.CustomFormat = "hh:mm tt"
         Me.Dtp_HoraSalida.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.Dtp_HoraSalida.Location = New System.Drawing.Point(127, 182)
+        Me.Dtp_HoraSalida.Location = New System.Drawing.Point(130, 238)
         Me.Dtp_HoraSalida.MaxDate = New Date(2015, 1, 1, 0, 0, 0, 0)
         Me.Dtp_HoraSalida.Name = "Dtp_HoraSalida"
         Me.Dtp_HoraSalida.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -220,7 +224,7 @@ Partial Class FrmMenuVuelo
         '
         Me.Dtp_HoraLlegada.CustomFormat = "hh:mm tt"
         Me.Dtp_HoraLlegada.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.Dtp_HoraLlegada.Location = New System.Drawing.Point(127, 219)
+        Me.Dtp_HoraLlegada.Location = New System.Drawing.Point(130, 275)
         Me.Dtp_HoraLlegada.MaxDate = New Date(2015, 1, 1, 0, 0, 0, 0)
         Me.Dtp_HoraLlegada.Name = "Dtp_HoraLlegada"
         Me.Dtp_HoraLlegada.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -233,7 +237,7 @@ Partial Class FrmMenuVuelo
         '
         Me.Dtp_FechaVuelo.CustomFormat = ""
         Me.Dtp_FechaVuelo.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.Dtp_FechaVuelo.Location = New System.Drawing.Point(127, 148)
+        Me.Dtp_FechaVuelo.Location = New System.Drawing.Point(130, 204)
         Me.Dtp_FechaVuelo.MaxDate = New Date(2015, 1, 1, 0, 0, 0, 0)
         Me.Dtp_FechaVuelo.Name = "Dtp_FechaVuelo"
         Me.Dtp_FechaVuelo.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -244,11 +248,46 @@ Partial Class FrmMenuVuelo
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(25, 154)
+        Me.Label1.Location = New System.Drawing.Point(28, 210)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(80, 13)
         Me.Label1.TabIndex = 24
         Me.Label1.Text = "Hora de Salida:"
+        '
+        'Bnt_EliminarVuelo
+        '
+        Me.Bnt_EliminarVuelo.Location = New System.Drawing.Point(7, 458)
+        Me.Bnt_EliminarVuelo.Name = "Bnt_EliminarVuelo"
+        Me.Bnt_EliminarVuelo.Size = New System.Drawing.Size(75, 23)
+        Me.Bnt_EliminarVuelo.TabIndex = 26
+        Me.Bnt_EliminarVuelo.Text = "Eliminar"
+        Me.Bnt_EliminarVuelo.UseVisualStyleBackColor = True
+        '
+        'Bnt_ModificarVuelo
+        '
+        Me.Bnt_ModificarVuelo.Location = New System.Drawing.Point(236, 458)
+        Me.Bnt_ModificarVuelo.Name = "Bnt_ModificarVuelo"
+        Me.Bnt_ModificarVuelo.Size = New System.Drawing.Size(75, 23)
+        Me.Bnt_ModificarVuelo.TabIndex = 27
+        Me.Bnt_ModificarVuelo.Text = "Modificar"
+        Me.Bnt_ModificarVuelo.UseVisualStyleBackColor = True
+        '
+        'Bnt_Consultar
+        '
+        Me.Bnt_Consultar.Location = New System.Drawing.Point(115, 458)
+        Me.Bnt_Consultar.Name = "Bnt_Consultar"
+        Me.Bnt_Consultar.Size = New System.Drawing.Size(75, 23)
+        Me.Bnt_Consultar.TabIndex = 28
+        Me.Bnt_Consultar.Text = "Consultar"
+        Me.Bnt_Consultar.UseVisualStyleBackColor = True
+        '
+        'Lb_Confirmacion
+        '
+        Me.Lb_Confirmacion.AutoSize = True
+        Me.Lb_Confirmacion.Location = New System.Drawing.Point(12, 20)
+        Me.Lb_Confirmacion.Name = "Lb_Confirmacion"
+        Me.Lb_Confirmacion.Size = New System.Drawing.Size(0, 13)
+        Me.Lb_Confirmacion.TabIndex = 29
         '
         'FrmMenuVuelo
         '
@@ -256,7 +295,11 @@ Partial Class FrmMenuVuelo
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
         Me.CancelButton = Me.Btn_Cancelar
-        Me.ClientSize = New System.Drawing.Size(874, 409)
+        Me.ClientSize = New System.Drawing.Size(874, 510)
+        Me.Controls.Add(Me.Lb_Confirmacion)
+        Me.Controls.Add(Me.Bnt_Consultar)
+        Me.Controls.Add(Me.Bnt_ModificarVuelo)
+        Me.Controls.Add(Me.Bnt_EliminarVuelo)
         Me.Controls.Add(Me.Dtp_FechaVuelo)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Dtp_HoraLlegada)
@@ -308,4 +351,8 @@ Partial Class FrmMenuVuelo
     Friend WithEvents Dtp_HoraLlegada As System.Windows.Forms.DateTimePicker
     Friend WithEvents Dtp_FechaVuelo As System.Windows.Forms.DateTimePicker
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Bnt_EliminarVuelo As System.Windows.Forms.Button
+    Friend WithEvents Bnt_ModificarVuelo As System.Windows.Forms.Button
+    Friend WithEvents Bnt_Consultar As System.Windows.Forms.Button
+    Friend WithEvents Lb_Confirmacion As System.Windows.Forms.Label
 End Class

@@ -31,6 +31,7 @@ Partial Class FrmMenuLineaAerea
         Me.LsBx_destinos = New System.Windows.Forms.ListBox()
         Me.Bnt_EliminarLineaAerea = New System.Windows.Forms.Button()
         Me.Bnt_ModificarLineaAerea = New System.Windows.Forms.Button()
+        Me.Lb_MensajeConfirmacion = New System.Windows.Forms.Label()
         CType(Me.Dgv_ListaLineasAereas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -114,11 +115,20 @@ Partial Class FrmMenuLineaAerea
         Me.Bnt_ModificarLineaAerea.Text = "Modificar"
         Me.Bnt_ModificarLineaAerea.UseVisualStyleBackColor = True
         '
+        'Lb_MensajeConfirmacion
+        '
+        Me.Lb_MensajeConfirmacion.AutoSize = True
+        Me.Lb_MensajeConfirmacion.Location = New System.Drawing.Point(33, 13)
+        Me.Lb_MensajeConfirmacion.Name = "Lb_MensajeConfirmacion"
+        Me.Lb_MensajeConfirmacion.Size = New System.Drawing.Size(0, 13)
+        Me.Lb_MensajeConfirmacion.TabIndex = 12
+        '
         'FrmMenuLineaAerea
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(696, 269)
+        Me.Controls.Add(Me.Lb_MensajeConfirmacion)
         Me.Controls.Add(Me.Bnt_ModificarLineaAerea)
         Me.Controls.Add(Me.Bnt_EliminarLineaAerea)
         Me.Controls.Add(Me.LsBx_destinos)
@@ -144,4 +154,5 @@ Partial Class FrmMenuLineaAerea
     Friend WithEvents LsBx_destinos As System.Windows.Forms.ListBox
     Friend WithEvents Bnt_EliminarLineaAerea As System.Windows.Forms.Button
     Friend WithEvents Bnt_ModificarLineaAerea As System.Windows.Forms.Button
+    Friend WithEvents Lb_MensajeConfirmacion As System.Windows.Forms.Label
 End Class
